@@ -16,14 +16,6 @@ attempts = [int(attempt) for attempt in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
 
-def sqareSum(num):
-    numStr = str(num)
-    nSum = 0
-    for digit in numStr:
-        nSum += int(digit)**2
-    return nSum
-
-
 def isPalindromic(num):
     strNum = str(num)
     for digit in range(ceil(len(strNum)/2)):
@@ -120,41 +112,25 @@ def conjecture(num):
     return False
 
 trigger = True
-
-mDict = {}
-for j in range(1, 100000):
-    mDict[j] = 0
-mDict[1] = 1
-mDict[89] = 89
-
-mSum = 0
+mList = []
+mSum = 1517926517219802
 count = 0
 largest = 0
-smallest = 0
-n = 5
+smallest = 10827725432
+n = 10543898410+283827021
 
 startTime = time()
+# 1517926306270940 1745260759
+# 283827021
+# while True:
+#     seq = (n*1504170715041707) % 4503599627370517
+#     if seq < smallest:
+#         smallest = seq
+#         mSum += seq
+#         print(mSum, n)
+#     n += 1
 
-print(n)
-for i in range(1,10000001):
-    n = i
-    also = []
-    if i == 1000000:
-        print('mil')
-    while True:
-        n = sqareSum(n)
-        if mDict[n] == 0:
-            also.append(n)
-            continue
-        if mDict[n] == 1:
-            for k in also:
-                mDict[k] = 1
-            break
-        for k in also:
-            mDict[k] = 89
-        count += 1
-        break
-
+# 1517926517477964
 
 
 
