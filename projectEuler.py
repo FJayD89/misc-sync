@@ -10,10 +10,24 @@ def zeroEval(numStr):
 
 
 f = open('eulerText.txt')
-lines = f.read().split('\n')
-attempts = [int(attempt) for attempt in lines]
+nums = f.read().split(',')
+nums = [int(num) for num in nums]
+# nums = [int(attempt) for attempt in lines]
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
+
+
+def decode(cipherNums, key):
+    # cN[i] = pN[i]^k[i mod keyLen]
+    plainNums = ""
+    keyLen = len(key)
+    keyIndex = 0
+    for num in cipherNums:
+        binNum = int(bin(num), 2)
+        plainNum = binNum ^ int(bin(key[keyIndex % keyLen]), 2)
+        plainNums += chr(plainNum)
+        keyIndex += 1
+    return plainNums
 
 
 def sqareSum(num):
@@ -119,47 +133,32 @@ def conjecture(num):
             return True
     return False
 
+
 trigger = True
 
-mDict = {}
-for j in range(1, 100000):
-    mDict[j] = 0
-mDict[1] = 1
-mDict[89] = 89
+mList = []
 
 mSum = 0
 count = 0
 largest = 0
 smallest = 0
-n = 5
+n = 1
 
 startTime = time()
 
-print(n)
-for i in range(1,10000001):
-    n = i
-    also = []
-    if i == 1000000:
-        print('mil')
-    while True:
-        n = sqareSum(n)
-        if mDict[n] == 0:
-            also.append(n)
-            continue
-        if mDict[n] == 1:
-            for k in also:
-                mDict[k] = 1
-            break
-        for k in also:
-            mDict[k] = 89
-        count += 1
-        break
+# print(sqareSum(9999999)
+first = [114,115,116,118]
+second = [113,114]
+third = [98,99]
 
 
-
-
-print(count)
-
+for i in first:
+    for j in second:
+        for k in third:
+            print(i, j, k, '→', decode(nums, [i, j, k]))
+# print(count)
+# print(nums)
+# print( int(bin(107),2) ^ int(bin(42),2))
 
 
 print('This took', time()-startTime)
