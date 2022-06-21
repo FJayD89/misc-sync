@@ -1,6 +1,6 @@
-from math import sqrt, floor, ceil, factorial, comb
+from math import sqrt, floor, ceil, factorial
 from time import time
-from itertools import permutations
+from itertools import permutations, product
 
 
 def zeroEval(numStr):
@@ -19,12 +19,18 @@ nums = [int(num) for num in nums]
 
 def decode(cipherNums, key):
     # cN[i] = pN[i]^k[i mod keyLen]
+
     plainNums = ""
     keyLen = len(key)
     keyIndex = 0
     for num in cipherNums:
         binNum = int(bin(num), 2)
-        plainNum = binNum ^ int(bin(key[keyIndex % keyLen]), 2)
+        modKeyIndex = keyIndex % keyLen
+        binKey = int(bin(key[modKeyIndex]), 2)
+        plainNum = binNum ^ binKey
+        if not (32 <= plainNum <= 57 or 65 <= plainNum <= 90 or 97 <= plainNum <= 122) : # if decodes to a control char
+            keyPossibilities[modKeyIndex].remove(key[modKeyIndex]) # remove part of key from possibilities
+            return ['fail', modKeyIndex]
         plainNums += chr(plainNum)
         keyIndex += 1
     return plainNums
@@ -147,18 +153,33 @@ n = 1
 startTime = time()
 
 # print(sqareSum(9999999)
-first = [114,115,116,118]
-second = [113,114]
-third = [98,99]
+keyPossibilities = []
+for i in range(3):
+    keyPossibilities.append(list(range(97,124)))
+
+possibleKey = [0,0,0]
 
 
-for i in first:
-    for j in second:
-        for k in third:
-            print(i, j, k, '→', decode(nums, [i, j, k]))
+def main():
+    global trigger
+    if not trigger:
+        return ''
+    for possibleKey[0] in keyPossibilities[0]:
+        for possibleKey[1] in keyPossibilities[1]:
+            for possibleKey[2] in keyPossibilities[2]:
+                decoded = decode(nums, possibleKey)
+                if decoded[0] == 'fail':
+                    main()
+                    trigger = False
+                print(possibleKey, '→', decoded)
 # print(count)
 # print(nums)
 # print( int(bin(107),2) ^ int(bin(42),2))
 
+# chr(a), 32 <= a <= 126
+
+# print(keyPossibilities)
+
+# print(decode(nums, [111,111,97]))
 
 print('This took', time()-startTime)
