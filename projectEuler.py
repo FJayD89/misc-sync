@@ -16,8 +16,10 @@ nums = [int(num) for num in nums]
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+fails = 0
 
 def decode(cipherNums, key):
+    global fails
     # cN[i] = pN[i]^k[i mod keyLen]
 
     plainNums = ""
@@ -28,9 +30,13 @@ def decode(cipherNums, key):
         modKeyIndex = keyIndex % keyLen
         binKey = int(bin(key[modKeyIndex]), 2)
         plainNum = binNum ^ binKey
-        if not (32 <= plainNum <= 57 or 65 <= plainNum <= 90 or 97 <= plainNum <= 122) : # if decodes to a control char
+        # if not (32 <= plainNum <= 57 or 65 <= plainNum <= 90 or 97 <= plainNum <= 122) :
+        # if decodes to a control char
+        if not (32 <= plainNum <= 122):
             keyPossibilities[modKeyIndex].remove(key[modKeyIndex]) # remove part of key from possibilities
+            fails += 1
             return ['fail', modKeyIndex]
+
         plainNums += chr(plainNum)
         keyIndex += 1
     return plainNums
@@ -149,6 +155,7 @@ count = 0
 largest = 0
 smallest = 0
 n = 1
+flag = -1
 
 startTime = time()
 
@@ -156,22 +163,28 @@ startTime = time()
 keyPossibilities = []
 for i in range(3):
     keyPossibilities.append(list(range(97,124)))
+keyPossibilities[2] = [112]
 
 possibleKey = [0,0,0]
+# possibleKeys = permutations(range(97, 97+27), 3)
 
 
-def main():
-    global trigger
-    if not trigger:
-        return ''
-    for possibleKey[0] in keyPossibilities[0]:
-        for possibleKey[1] in keyPossibilities[1]:
-            for possibleKey[2] in keyPossibilities[2]:
-                decoded = decode(nums, possibleKey)
-                if decoded[0] == 'fail':
-                    main()
-                    trigger = False
-                print(possibleKey, '→', decoded)
+for possibleKey[0] in keyPossibilities[0]:
+    for possibleKey[1] in keyPossibilities[1]:
+        for possibleKey[2] in keyPossibilities[2]:
+            decoded = decode(nums, possibleKey)
+            if decoded[0] == 'fail':
+                flag = decoded[1]
+                if flag == 2:
+                    continue
+                break
+            print(possibleKey, '→', decoded)
+        if flag == 1:
+            continue
+        if flag == 0:
+            break
+    if flag == 0:
+        continue
 # print(count)
 # print(nums)
 # print( int(bin(107),2) ^ int(bin(42),2))
@@ -182,4 +195,5 @@ def main():
 
 # print(decode(nums, [111,111,97]))
 
+print(fails)
 print('This took', time()-startTime)
