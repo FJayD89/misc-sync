@@ -185,6 +185,8 @@ for possibleKey[0] in keyPossibilities[0]:
             break
     if flag == 0:
         continue
+
+print(keyPossibilities)
 # print(count)
 # print(nums)
 # print( int(bin(107),2) ^ int(bin(42),2))
