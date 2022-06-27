@@ -16,30 +16,50 @@ nums = [int(num) for num in nums]
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
-fails = 0
+bigFibSums = []
 
-def decode(cipherNums, key):
-    global fails
-    # cN[i] = pN[i]^k[i mod keyLen]
 
-    plainNums = ""
-    keyLen = len(key)
-    keyIndex = 0
-    for num in cipherNums:
-        binNum = int(bin(num), 2)
-        modKeyIndex = keyIndex % keyLen
-        binKey = int(bin(key[modKeyIndex]), 2)
-        plainNum = binNum ^ binKey
-        # if not (32 <= plainNum <= 57 or 65 <= plainNum <= 90 or 97 <= plainNum <= 122) :
-        # if decodes to a control char
-        if not (32 <= plainNum <= 122):
-            keyPossibilities[modKeyIndex].remove(key[modKeyIndex]) # remove part of key from possibilities
-            fails += 1
-            return ['fail', modKeyIndex]
+def S(x):
+    sSum = 0
+    for i in range(x):
+        sSum += s(i)
+    return sSum
 
-        plainNums += chr(plainNum)
-        keyIndex += 1
-    return plainNums
+
+def s(x):
+    mod = 1
+    pain = floor(x/9)
+
+    for index, d in enumerate(str(pain)):
+        pow = len(str(pain)) - index - 1
+        d = int(d)
+        mod *= mod10pow10(pow, d, bigNum)
+        mod = mod % bigNum
+
+    multi = (1 + fib[89] + 9 * pain) % bigNum
+
+    mod = (mod * multi) % bigNum  # and THIS is s(f(90))
+
+    return mod
+
+
+def mod10pow10(p, c, m):
+    # 10^(10^p)*c mod m, c < 10
+    X = 10
+    for i in range(p):
+        X = X**10 % m
+    return X**c % m
+
+
+def bigSum(num):
+    bSum = 0
+    for i in range(1,num+1):
+        bSum += smallestDSum(i)
+    return bSum
+
+def smallestDSum(num):
+    x = floor(num/9)
+    return (1+num-x*9)*10**x - 1
 
 
 def sqareSum(num):
@@ -159,43 +179,49 @@ flag = -1
 
 startTime = time()
 
-# print(sqareSum(9999999)
-keyPossibilities = []
-for i in range(3):
-    keyPossibilities.append(list(range(97,124)))
-keyPossibilities[2] = [112]
+fib = [0,1]
 
-possibleKey = [0,0,0]
-# possibleKeys = permutations(range(97, 97+27), 3)
+for i in range(88):
+    fib.append(fib[-1] + fib[-2])
+
+bigNum = 1000000007
+
+# print(bigSum(fib[23]) % bigNum)
+
+# for i in range(2,91):
+#     mSum += bigSum(fib[i]) % bigNum
+
+# print(fib[89])
+# print(floor(fib[89]/9))
+
+pain = floor(fib[89]/9)
+p = 1.97775490667190
+rem = 464*10**(-17)
+X = 10
+mod = 1
+
+for index, d in enumerate(str(pain)):
+    pow = len(str(pain)) - index - 1
+    d = int(d)
+    mod *= mod10pow10(pow, d, bigNum)
+    mod = mod%bigNum
 
 
-for possibleKey[0] in keyPossibilities[0]:
-    for possibleKey[1] in keyPossibilities[1]:
-        for possibleKey[2] in keyPossibilities[2]:
-            decoded = decode(nums, possibleKey)
-            if decoded[0] == 'fail':
-                flag = decoded[1]
-                if flag == 2:
-                    continue
-                break
-            print(possibleKey, '→', decoded)
-        if flag == 1:
-            continue
-        if flag == 0:
-            break
-    if flag == 0:
-        continue
 
-print(keyPossibilities)
-# print(count)
-# print(nums)
-# print( int(bin(107),2) ^ int(bin(42),2))
+print(mod) # 10^pain mod bN
 
-# chr(a), 32 <= a <= 126
+multi = (1+fib[89]+9*pain) % bigNum
 
-# print(keyPossibilities)
+mod = (mod*multi)%bigNum  # and THIS is s(f(90))
 
-# print(decode(nums, [111,111,97]))
+print(mod)
 
-print(fails)
+
+# print((10**10 % bigNum) ** 10 % bigNum)
+
+# print(10**47 % bigNum)
+
+# print(10**50 % bigNum)
+
+# print(mSum)
 print('This took', time()-startTime)
