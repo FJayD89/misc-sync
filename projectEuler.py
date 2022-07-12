@@ -50,6 +50,7 @@ def mod10pow10(p, c, m):
     return X**c % m
 
 
+# <editor-fold desc="misc-funcs">
 def bigSum(num):
     bSum = 0
     for i in range(1,num+1):
@@ -165,7 +166,6 @@ def conjecture(num):
             return True
     return False
 # </editor-fold>
-
 
 trigger = True
 
