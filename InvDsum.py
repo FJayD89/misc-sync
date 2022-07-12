@@ -16,32 +16,33 @@ nums = [int(num) for num in nums]
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
-
-def firstThree(n):
-# returns the first three digits of 2^n, at least hopefully
-# as in, completely unproven
-    a = n % 40  
+bigFibSums = []
 
 
-def p1(L, length, a):
-    while True:
-        if str(2**a)[:length] == L:
-            break
-
-        a += 1
-    return a
+def S(x):
+    sSum = 0
+    for i in range(x):
+        sSum += s(i)
+    return sSum
 
 
-def p(L,n):
-    length = len(L)
-    i = 0
-    a = 0
-    for counter in range(n):
-        a = p1(L, length, a)+1
-    return a-1
+def s(x):
+    mod = 1
+    pain = floor(x/9)
+
+    for index, d in enumerate(str(pain)):
+        pow = len(str(pain)) - index - 1
+        d = int(d)
+        mod *= mod10pow10(pow, d, bigNum)
+        mod = mod % bigNum
+
+    multi = (1 + fib[89] + 9 * pain) % bigNum
+
+    mod = (mod * multi) % bigNum  # and THIS is s(f(90))
+
+    return mod
 
 
-# <editor-fold desc="functions">
 def mod10pow10(p, c, m):
     # 10^(10^p)*c mod m, c < 10
     X = 10
@@ -55,7 +56,6 @@ def bigSum(num):
     for i in range(1,num+1):
         bSum += smallestDSum(i)
     return bSum
-
 
 def smallestDSum(num):
     x = floor(num/9)
@@ -164,7 +164,6 @@ def conjecture(num):
         if isPrime(num - 2 * i**2):
             return True
     return False
-# </editor-fold>
 
 
 trigger = True
@@ -180,7 +179,50 @@ flag = -1
 
 startTime = time()
 
-print(p('123', 45))
+fib = [0,1]
+
+for i in range(88):
+    fib.append(fib[-1] + fib[-2])
+
+bigNum = 1000000007
+
+# print(bigSum(fib[23]) % bigNum)
+
+# for i in range(2,91):
+#     mSum += bigSum(fib[i]) % bigNum
+
+# print(fib[89])
+# print(floor(fib[89]/9))
+
+pain = floor(fib[89]/9)
+p = 1.97775490667190
+rem = 464*10**(-17)
+X = 10
+mod = 1
+
+for index, d in enumerate(str(pain)):
+    pow = len(str(pain)) - index - 1
+    d = int(d)
+    mod *= mod10pow10(pow, d, bigNum)
+    mod = mod%bigNum
 
 
+
+# print(mod) # 10^pain mod bN
+#
+# multi = (1+fib[89]+9*pain) % bigNum
+#
+# mod = (mod*multi)%bigNum  # and THIS is s(f(90))
+#
+# print(mod)
+
+print(S(20))
+
+# print((10**10 % bigNum) ** 10 % bigNum)
+
+# print(10**47 % bigNum)
+
+# print(10**50 % bigNum)
+
+# print(mSum)
 print('This took', time()-startTime)
