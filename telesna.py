@@ -24,7 +24,7 @@ else:
 while not (a == n or b == m):
     out += ' '
     # print('using ', a, b)
-    if numsA[a] < numsB[b]:
+    if numsAd[a] < numsB[b]:
         out += str(numsA[a])
         a += 1
         # print(out)
