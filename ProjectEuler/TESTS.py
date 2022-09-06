@@ -2,6 +2,7 @@ from math import sqrt, floor, ceil, factorial, log10
 from time import time
 from itertools import permutations, product
 from mathReplace import mathReplace
+from projectEuler import hasProperty51
 
 
 def zeroEval(numStr):
@@ -139,15 +140,14 @@ startTime = time()
 
 # num = 1684346
 # foundDigits = []
-for i in range(100, 10**6):
-	# a = mathReplace(i, 0, 2)
-	# a = int(str(i)[:1]+'0'+str(i)[2:])
+for i in range(100, 10**7):
+	# a = mathReplace(i, 0, 2) #10.08, 10.22, 10.39, 10.02
+	# a = int(str(i)[:1]+'0'+str(i)[2:]) #11.04, 11.26, 10.99, 11.30
 
 	# numStr = str(i)
-	# a = int(numStr[:1]+'0'+numStr[2:]) # fastest
+	# a = int(numStr[:1]+str(0)+numStr[2:]) # fastest 9.41, 9.40, 9.92, 9.51
 
 	# a = floor(log10(i))
-
 	# a = len(str(i))-1
 	pass
 

@@ -38,11 +38,12 @@ def hasProperty51(num):
 			continue
 		foundDigits[d].append(index)
 	for d in list(foundDigits.keys()):
-		newNum = strNum
+		newNum = int(strNum)
 		failCount = 0
 		for a in range(int(d), 10):
 			for index in foundDigits[d]:
-				newNum[index] = (a)
+				newNum = mathReplace(newNum, a, index)
+			print(newNum)
 			if not primeSieve[int(newNum)]:
 				failCount += 1
 				if failCount == 3 - int(d):
@@ -204,6 +205,7 @@ mSum = 0
 count = 0
 largest = 0
 smallest = 0
+bigNum = 99
 n = 1
 flag = -1
 a = 1
@@ -217,6 +219,7 @@ if __name__ == '__main__':
 	primeSieve[0] = False
 	primeSieve[1] = False
 	for num in range(2, 100):
+		print(num)
 		if not primeSieve[num]:
 			continue
 		for i in range(2 * num, 100, num):
