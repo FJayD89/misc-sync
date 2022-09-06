@@ -1,6 +1,7 @@
 from math import sqrt, floor, ceil, factorial, log10
 from time import time
 from itertools import permutations, product
+from mathReplace import mathReplace
 
 
 def zeroEval(numStr):
@@ -138,9 +139,17 @@ startTime = time()
 
 # num = 1684346
 # foundDigits = []
-for i in range(1, 10**7):
-	# a = i//(10**floor(log10(i)))
-	a = str(i)[0]
+for i in range(100, 10**6):
+	# a = mathReplace(i, 0, 2)
+	# a = int(str(i)[:1]+'0'+str(i)[2:])
+
+	# numStr = str(i)
+	# a = int(numStr[:1]+'0'+numStr[2:]) # fastest
+
+	# a = floor(log10(i))
+
+	# a = len(str(i))-1
+	pass
 
 
 print("done")
