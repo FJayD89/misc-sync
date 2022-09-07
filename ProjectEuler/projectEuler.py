@@ -21,8 +21,8 @@ def zeroEval(numStr):
 
 
 def mathReplace(x, digit, index):
-	log = 10 ** (floor(log10(x)) - (index - 1))
-	ret = x + log * (10 * (x // (10 * log)) - x // log + digit)
+	log = 10**(floor(log10(x)) - index)
+	ret = x + log*(10*(x//(10*log)) - x//log + digit)
 	return ret
 
 
@@ -40,7 +40,7 @@ def hasProperty51(num):
 	for d in list(foundDigits.keys()):
 		newNum = int(strNum)
 		failCount = 0
-		for a in range(int(d), 10):
+		for a in range(int(d)+1, 10):
 			for index in foundDigits[d]:
 				newNum = mathReplace(newNum, a, index)
 			print(newNum)

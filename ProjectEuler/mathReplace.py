@@ -9,4 +9,4 @@ def mathReplace(x, digit, index):
 
 
 if __name__ == '__main__':
-    print(mathReplace(138432, 2, 5))
+    print(mathReplace(11, 2, 2))
