@@ -2,7 +2,7 @@ from math import sqrt, floor, ceil, factorial, log10
 from time import time
 from itertools import permutations, product
 from mathReplace import mathReplace
-from projectEuler import hasProperty51
+from projectEuler import hasProperty51, primeSieve
 
 
 def zeroEval(numStr):
@@ -138,18 +138,22 @@ def conjecture(num):
 
 startTime = time()
 
+primeSieve = [True for i in range(100)]
+primeSieve[0] = False
+primeSieve[1] = False
+for num in range(2, 100):
+	# print(num)
+	if not primeSieve[num]:
+		continue
+	for i in range(2 * num, 100, num):
+		primeSieve[i] = False
+
 # num = 1684346
 # foundDigits = []
-for i in range(100, 10**7):
-	# a = mathReplace(i, 0, 2) #10.08, 10.22, 10.39, 10.02
-	# a = int(str(i)[:1]+'0'+str(i)[2:]) #11.04, 11.26, 10.99, 11.30
-
-	# numStr = str(i)
-	# a = int(numStr[:1]+str(0)+numStr[2:]) # fastest 9.41, 9.40, 9.92, 9.51
-
-	# a = floor(log10(i))
-	# a = len(str(i))-1
-	pass
+# for i in range(100, 10**7):
+#
+# 	pass
+print(hasProperty51(2))
 
 
 print("done")

@@ -40,14 +40,17 @@ def hasProperty51(num):
 	for d in list(foundDigits.keys()):
 		newNum = int(strNum)
 		failCount = 0
+		failed = False
 		for a in range(int(d)+1, 10):
 			for index in foundDigits[d]:
 				newNum = mathReplace(newNum, a, index)
-			print(newNum)
+			# print(newNum)
 			if not primeSieve[int(newNum)]:
 				failCount += 1
 				if failCount == 3 - int(d):
+					failed = True
 					break
+		if not failed:
 			return True
 	return False
 
@@ -218,16 +221,32 @@ if __name__ == '__main__':
 	primeSieve = [True for i in range(100)]
 	primeSieve[0] = False
 	primeSieve[1] = False
-	for num in range(2, 100):
-		print(num)
-		if not primeSieve[num]:
-			continue
-		for i in range(2 * num, 100, num):
-			primeSieve[i] = False
-		if hasProperty51(num):
-			print(num)
 
-	print(primeSieve)
+
+	while True:
+		for num in range(2, 100**a):
+			# print(num)
+			if not primeSieve[num]:
+				continue
+			for i in range(2 * num, 100**a, num):
+				primeSieve[i] = False
+			if hasProperty51(num):
+				print(num)
+		a += 1
+		primeSieve.append([True for i in range(100**a * 99)])
+		for num in range(2, 100 ** (a - 1)):
+			if not primeSieve[num]:
+				continue
+			for i in range(num*(100//num +1), 100**a-1, num):
+				primeSieve[i] = False
+		for num in range(100 ** (a-1), 100**a):
+			if not primeSieve[num]:
+				continue
+			for i in range(2*num, 100**a, num):
+				primeSieve[i] = False
+			if hasProperty51(num):
+				print(num)
+
 
 	print("done")
 	print('This took', time() - startTime)
