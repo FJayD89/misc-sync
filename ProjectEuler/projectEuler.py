@@ -20,39 +20,7 @@ def zeroEval(numStr):
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
 
-def mathReplace(x, digit, index):
-	log = 10**(floor(log10(x)) - index)
-	ret = x + log*(10*(x//(10*log)) - x//log + digit)
-	return ret
 
-
-def hasProperty51(num):
-	foundDigits = {}
-	strNum = str(num)
-	for index in range(len(strNum)):
-		d = strNum[index]
-		if int(d) > 2:
-			continue
-		if d not in list(foundDigits.keys()):
-			foundDigits[d] = [index]
-			continue
-		foundDigits[d].append(index)
-	for d in list(foundDigits.keys()):
-		newNum = int(strNum)
-		failCount = 0
-		failed = False
-		for a in range(int(d)+1, 10):
-			for index in foundDigits[d]:
-				newNum = mathReplace(newNum, a, index)
-			# print(newNum)
-			if not primeSieve[int(newNum)]:
-				failCount += 1
-				if failCount == 3 - int(d):
-					failed = True
-					break
-		if not failed:
-			return True
-	return False
 
 
 def p1(L, length, a):
@@ -82,6 +50,12 @@ def mod10pow10(p, c, m):
 
 
 # <editor-fold desc="misc-funcs">
+def mathReplace(x, digit, index):
+	log = 10**(floor(log10(x)) - index)
+	ret = x + log*(10*(x//(10*log)) - x//log + digit)
+	return ret
+
+
 def bigSum(num):
 	bSum = 0
 	for i in range(1, num + 1):
@@ -217,35 +191,6 @@ b = 1
 if __name__ == '__main__':
 
 	startTime = time()
-
-	primeSieve = [True for i in range(100)]
-	primeSieve[0] = False
-	primeSieve[1] = False
-
-
-	while True:
-		for num in range(2, 100**a):
-			# print(num)
-			if not primeSieve[num]:
-				continue
-			for i in range(2 * num, 100**a, num):
-				primeSieve[i] = False
-			if hasProperty51(num):
-				print(num)
-		a += 1
-		primeSieve.append([True for i in range(100**a * 99)])
-		for num in range(2, 100 ** (a - 1)):
-			if not primeSieve[num]:
-				continue
-			for i in range(num*(100//num +1), 100**a-1, num):
-				primeSieve[i] = False
-		for num in range(100 ** (a-1), 100**a):
-			if not primeSieve[num]:
-				continue
-			for i in range(2*num, 100**a, num):
-				primeSieve[i] = False
-			if hasProperty51(num):
-				print(num)
 
 
 	print("done")
