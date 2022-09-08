@@ -19,10 +19,6 @@ def zeroEval(numStr):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
-
-
-
-
 def p1(L, length, a):
 	while True:
 		if str(2 ** a)[:length] == L:
@@ -54,7 +50,6 @@ def mathReplace(x, digit, index):
 	log = 10**(floor(log10(x)) - index)
 	ret = x + log*(10*(x//(10*log)) - x//log + digit)
 	return ret
-
 
 def bigSum(num):
 	bSum = 0
@@ -191,6 +186,29 @@ b = 1
 if __name__ == '__main__':
 
 	startTime = time()
+
+	primeSieve = [True for i in range(10**8)]
+	primeSieve[0] = False
+	primeSieve[1] = False
+	print(time()-startTime)
+
+
+	for num in range(2, 10**5):
+		# print(num)
+		if not primeSieve[num]:
+			continue
+		for i in range(2 * num, 10**5, num):
+			primeSieve[i] = False
+	primeSieve[2] = False
+	primeSieve[5] = False
+	for i in range(10**3):
+		if primeSieve[i]:
+			for j in range(i+2, 10**2, 3):
+				if primeSieve[j]:
+					if primeSieve[int(str(i)+str(j))] and primeSieve[int(str(j)+str(i))]:
+						print(i, j)
+			break
+
 
 
 	print("done")
