@@ -187,28 +187,27 @@ if __name__ == '__main__':
 
 	startTime = time()
 
-	primeSieve = [True for i in range(10**8)]
+	primeSieve = [True for i in range(10**6)]
 	primeSieve[0] = False
 	primeSieve[1] = False
 	print(time()-startTime)
 
 
-	for num in range(2, 10**5):
+	for num in range(2, 10**6):
 		# print(num)
 		if not primeSieve[num]:
 			continue
-		for i in range(2 * num, 10**5, num):
+		for i in range(2 * num, 10**6, num):
 			primeSieve[i] = False
 	primeSieve[2] = False
 	primeSieve[5] = False
 	for i in range(10**3):
 		if primeSieve[i]:
-			for j in range(i+2, 10**2, 3):
+			for j in range(i+2, 10**3, 6):
 				if primeSieve[j]:
 					if primeSieve[int(str(i)+str(j))] and primeSieve[int(str(j)+str(i))]:
 						print(i, j)
-			break
-
+			pass
 
 
 	print("done")
