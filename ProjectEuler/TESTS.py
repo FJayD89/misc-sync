@@ -2,7 +2,7 @@ from math import sqrt, floor, ceil, factorial, log10
 from time import time
 from itertools import permutations, product
 from mathReplace import mathReplace
-from projectEuler import hasProperty51, primeSieve
+from projectEuler import primeConc
 
 
 def zeroEval(numStr):
@@ -136,16 +136,18 @@ def conjecture(num):
 	return False
 # </editor-fold>
 
+sieveSize = 6*10**7
+
 startTime = time()
 
-primeSieve = [True for i in range(100)]
+primeSieve = [True for i in range(sieveSize)]
 primeSieve[0] = False
 primeSieve[1] = False
-for num in range(2, 100):
+for num in range(2, sieveSize):
 	# print(num)
 	if not primeSieve[num]:
 		continue
-	for i in range(2 * num, 100, num):
+	for i in range(2 * num, sieveSize, num):
 		primeSieve[i] = False
 
 # num = 1684346
@@ -153,7 +155,7 @@ for num in range(2, 100):
 # for i in range(100, 10**7):
 #
 # 	pass
-print(hasProperty51(2))
+print(primeConc(2377, 5923, primeSieve))
 
 
 print("done")

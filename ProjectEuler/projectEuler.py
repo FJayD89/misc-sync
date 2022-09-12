@@ -2,6 +2,31 @@ from math import sqrt, floor, ceil, factorial, log10, log
 from time import time
 from itertools import permutations, product
 
+def prettify(treeList):
+	strList = str(treeList)
+	strOut = ''
+	tabLevel = 0
+	for charIndex in range(len(strList)):
+		char = strList[charIndex]
+		strOut += char
+		if char == ']':
+			if charIndex +1 >= len(strList):
+				continue
+			nextChar = strList[charIndex+1]
+			if nextChar == ']':
+				strOut += '\n'
+				tabLevel -= 1
+				for i in range(tabLevel):
+					strOut += '\t'
+				continue
+		if char == ',':
+			strOut += '\n'
+			if strList[charIndex-1] != ']':
+				tabLevel += 1
+			for i in range(tabLevel):
+				strOut += '\t'
+	return strOut
+
 
 def zeroEval(numStr):
 	if numStr[0] == '0':
@@ -23,6 +48,56 @@ def primeConc(a, b, sieve):
 	strA, strB = str(a), str(b)
 	return sieve[int(strA + strB)] and sieve[int(strB + strA)]
 
+
+def list60(leastPrime, upLimit, primeSieve):
+	mList = [leastPrime]
+	sList = [leastPrime]
+	i = leastPrime+1
+	while True:
+		if primeSieve[i]:
+			nextPrime = i
+			break
+		i += 1
+
+	for j in range(nextPrime, upLimit, 6):
+		if primeSieve[j]:
+			if primeConc(leastPrime, j, primeSieve):
+				mList.append([j])
+	# print(mList)
+	for subListIndex in range(1, len(mList)):
+		hasChild = False
+		subList = mList[subListIndex]
+		lead = subList[0]
+		for j in mList[subListIndex + 1:]:
+			potentialConc = j[0]
+			if primeConc(lead, potentialConc, primeSieve):
+				subList.append([potentialConc])
+				hasChild = True
+		if hasChild:
+			sList.append(subList)
+	# print(sList)
+	mList = [leastPrime]
+
+	for subListIndex1 in range(1,len(sList)):
+		hasChild1 = False
+		subList1 = list(sList[subListIndex1])
+		mSubList1 = list([subList1[0]])
+		for subListIndex2 in range(1,len(subList1)):
+			hasChild2 = False
+			subList2 = list(subList1[subListIndex2])
+			lead = subList2[0]
+			for j in subList1[subListIndex2+1:]: # maybe start from +1
+				potentialConc = j[0]
+				if primeConc(lead, potentialConc, primeSieve):
+					subList2.append([potentialConc])
+					hasChild1 = True
+					hasChild2 = True
+			if hasChild2: # hasChild2
+				mSubList1.append(subList2)
+		if hasChild1: # hasChild1
+			mList.append(mSubList1)
+
+	return mList
 
 def p1(L, length, a):
 	while True:
@@ -177,6 +252,7 @@ def conjecture(num):
 trigger = True
 
 mList = []
+sList = []
 
 mSum = 0
 count = 0
@@ -188,48 +264,34 @@ flag = -1
 a = 1
 b = 1
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-	startTime = time()
+sieveSize = 10**8
+startTime = time()
 
-	primeSieve = [True for i in range(10**6)]
-	primeSieve[0] = False
-	primeSieve[1] = False
-	print(time()-startTime)
+mySieve = [True for i in range(sieveSize)]
+mySieve[0] = False
+mySieve[1] = False
+print('prep for sieve time was', time()-startTime)
 
-	# setting up the sieve
-	for num in range(2, 10**6):
-		# print(num)
-		if not primeSieve[num]:
-			continue
-		for i in range(2 * num, 10**6, num):
-			primeSieve[i] = False
-	primeSieve[2] = False
-	primeSieve[5] = False
-
-
-	list3 = []
-	for j in range(7, 10**3, 6):
-		if primeSieve[j]:
-			if primeConc(3, j, primeSieve):
-				print(3, j)
-				list3.append(j)
-	for j in range(len(list3)):
-		for k in list3[j+1:]:
-			if primeConc(list3[j], k, primeSieve):
-				print(3, list3[j], k)
+# setting up the sieve
+for num in range(2, sieveSize):
+	# print(num)
+	if not mySieve[num]:
+		continue
+	for subListIndex in range(2 * num, sieveSize, num):
+		mySieve[subListIndex] = False
+mySieve[2] = False
+mySieve[5] = False
+# setup done
+print('total sieve setup time was', time()-startTime)
 
 
 
-
-	# for i in range(10**3):
-	# 	if primeSieve[i]:
-	# 		for j in range(i+2, 10**3, 6):
-	# 			if primeSieve[j]:
-	# 				if primeSieve[int(str(i)+str(j))] and primeSieve[int(str(j)+str(i))]:
-	# 					print(i, j)
-	# 		pass
+print(prettify(list60(3, int(sqrt(sieveSize)), mySieve)))
+print(prettify(list60(7, int(sqrt(sieveSize)), mySieve)))
 
 
-	print("done")
-	print('This took', time() - startTime)
+
+print("done")
+print('This took', time() - startTime)
