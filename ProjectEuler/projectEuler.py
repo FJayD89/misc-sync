@@ -19,6 +19,11 @@ def zeroEval(numStr):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+def primeConc(a, b, sieve):
+	strA, strB = str(a), str(b)
+	return sieve[int(strA + strB)] and sieve[int(strB + strA)]
+
+
 def p1(L, length, a):
 	while True:
 		if str(2 ** a)[:length] == L:
@@ -192,7 +197,7 @@ if __name__ == '__main__':
 	primeSieve[1] = False
 	print(time()-startTime)
 
-
+	# setting up the sieve
 	for num in range(2, 10**6):
 		# print(num)
 		if not primeSieve[num]:
@@ -201,13 +206,29 @@ if __name__ == '__main__':
 			primeSieve[i] = False
 	primeSieve[2] = False
 	primeSieve[5] = False
-	for i in range(10**3):
-		if primeSieve[i]:
-			for j in range(i+2, 10**3, 6):
-				if primeSieve[j]:
-					if primeSieve[int(str(i)+str(j))] and primeSieve[int(str(j)+str(i))]:
-						print(i, j)
-			pass
+
+
+	list3 = []
+	for j in range(7, 10**3, 6):
+		if primeSieve[j]:
+			if primeConc(3, j, primeSieve):
+				print(3, j)
+				list3.append(j)
+	for j in range(len(list3)):
+		for k in list3[j+1:]:
+			if primeConc(list3[j], k, primeSieve):
+				print(3, list3[j], k)
+
+
+
+
+	# for i in range(10**3):
+	# 	if primeSieve[i]:
+	# 		for j in range(i+2, 10**3, 6):
+	# 			if primeSieve[j]:
+	# 				if primeSieve[int(str(i)+str(j))] and primeSieve[int(str(j)+str(i))]:
+	# 					print(i, j)
+	# 		pass
 
 
 	print("done")
