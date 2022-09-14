@@ -2,7 +2,7 @@ from math import sqrt, floor, ceil, factorial, log10
 from time import time
 from itertools import permutations, product
 from mathReplace import mathReplace
-from projectEuler import primeConc
+from projectEuler import primeConc, makeSieve, existsPrimeConcatenation
 
 
 def zeroEval(numStr):
@@ -10,6 +10,10 @@ def zeroEval(numStr):
 		return zeroEval(numStr[1:])
 	return int(numStr)
 
+def mathConc(a,b, sieve):
+	aLen = floor(log10(a))+1
+	bLen = floor(log10(b))+1
+	return sieve[b*10**aLen + a] and sieve[a*10**bLen + b]
 
 
 # f = open('eulerText.txt')
@@ -136,27 +140,20 @@ def conjecture(num):
 	return False
 # </editor-fold>
 
-sieveSize = 6*10**7
 
 startTime = time()
 
-primeSieve = [True for i in range(sieveSize)]
-primeSieve[0] = False
-primeSieve[1] = False
-for num in range(2, sieveSize):
-	# print(num)
-	if not primeSieve[num]:
-		continue
-	for i in range(2 * num, sieveSize, num):
-		primeSieve[i] = False
+primeSieve = makeSieve(10**8)
+print('Sieve setup done')
 
-# num = 1684346
-# foundDigits = []
-# for i in range(100, 10**7):
-#
-# 	pass
-print(primeConc(2377, 5923, primeSieve))
+# for i in range(1,10000):
+# 	for j in range(1,10000):
+# 		mathConc(i,j,primeSieve) # 134.6022346019745
+# 		# primeConc(i,j,primeSieve) # 110.62362289428711
+a = 302
 
+if a:
+	print('true')
 
 print("done")
 print('This took', time()-startTime)

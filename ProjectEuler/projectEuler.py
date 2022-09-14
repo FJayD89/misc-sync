@@ -2,6 +2,7 @@ from math import sqrt, floor, ceil, factorial, log10, log
 from time import time
 from itertools import permutations, product
 
+
 def prettify(treeList):
 	strList = str(treeList)
 	strOut = ''
@@ -10,9 +11,9 @@ def prettify(treeList):
 		char = strList[charIndex]
 		strOut += char
 		if char == ']':
-			if charIndex +1 >= len(strList):
+			if charIndex + 1 >= len(strList):
 				continue
-			nextChar = strList[charIndex+1]
+			nextChar = strList[charIndex + 1]
 			if nextChar == ']':
 				strOut += '\n'
 				tabLevel -= 1
@@ -21,7 +22,7 @@ def prettify(treeList):
 				continue
 		if char == ',':
 			strOut += '\n'
-			if strList[charIndex-1] != ']':
+			if strList[charIndex - 1] != ']':
 				tabLevel += 1
 			for i in range(tabLevel):
 				strOut += '\t'
@@ -49,15 +50,44 @@ def primeConc(a, b, sieve):
 	return sieve[int(strA + strB)] and sieve[int(strB + strA)]
 
 
+def existsPrimeConcatenation(primeListList, sieve):
+	for i in range(len(primeListList)):
+		for j in range(i + 1, len(primeListList)):
+			if primeConc(primeListList[i][0], primeListList[j][0], sieve):
+				return [True, [primeListList[i][0], primeListList[j][0]]]
+
+
+def makeSieve(sieveSize):
+	sieve = [True for i in range(sieveSize)]
+	sieve[0] = False
+	sieve[1] = False
+
+	# setting up the sieve
+
+	for composite in range(4, sieveSize, 2):
+		sieve[composite] = False
+
+	for num in range(3, int(sqrt(sieveSize))):
+		# print(num)
+		if not sieve[num]:
+			continue
+		for composite in range(num ** 2, sieveSize, 2 * num):
+			sieve[composite] = False
+	return sieve
+
+
 def list60(leastPrime, upLimit, primeSieve):
 	mList = [leastPrime]
 	sList = [leastPrime]
-	i = leastPrime+1
-	while True:
-		if primeSieve[i]:
-			nextPrime = i
-			break
-		i += 1
+
+	nextPrime = 7  # if leastPrime == 3
+	if leastPrime != 3:
+		i = leastPrime + 6
+		while True:
+			if primeSieve[i]:
+				nextPrime = i
+				break
+			i += 6
 
 	for j in range(nextPrime, upLimit, 6):
 		if primeSieve[j]:
@@ -78,26 +108,36 @@ def list60(leastPrime, upLimit, primeSieve):
 	# print(sList)
 	mList = [leastPrime]
 
-	for subListIndex1 in range(1,len(sList)):
+	for subListIndex1 in range(1, len(sList)):
 		hasChild1 = False
 		subList1 = list(sList[subListIndex1])
 		mSubList1 = list([subList1[0]])
-		for subListIndex2 in range(1,len(subList1)):
+		for subListIndex2 in range(1, len(subList1)):
 			hasChild2 = False
 			subList2 = list(subList1[subListIndex2])
 			lead = subList2[0]
-			for j in subList1[subListIndex2+1:]: # maybe start from +1
+			for j in subList1[subListIndex2 + 1:]:  # maybe start from +1
 				potentialConc = j[0]
 				if primeConc(lead, potentialConc, primeSieve):
 					subList2.append([potentialConc])
 					hasChild1 = True
 					hasChild2 = True
-			if hasChild2: # hasChild2
-				mSubList1.append(subList2)
-		if hasChild1: # hasChild1
+			if hasChild2:  # hasChild2
+				if len(subList2) >= 3:
+					concatenation = existsPrimeConcatenation(subList2[1:], primeSieve)
+					if concatenation[0]:
+						print('FOUND!!!')
+						setSum = sum([leastPrime, subList1[0], subList2[0],
+						              concatenation[1][0], concatenation[1][1]])
+						return setSum
+					# return True
+					mSubList1.append(subList2)
+		if hasChild1:  # hasChild1
 			mList.append(mSubList1)
 
-	return mList
+	# return mList
+	return False
+
 
 def p1(L, length, a):
 	while True:
@@ -127,9 +167,10 @@ def mod10pow10(p, c, m):
 
 # <editor-fold desc="misc-funcs">
 def mathReplace(x, digit, index):
-	log = 10**(floor(log10(x)) - index)
-	ret = x + log*(10*(x//(10*log)) - x//log + digit)
+	log = 10 ** (floor(log10(x)) - index)
+	ret = x + log * (10 * (x // (10 * log)) - x // log + digit)
 	return ret
+
 
 def bigSum(num):
 	bSum = 0
@@ -264,34 +305,23 @@ flag = -1
 a = 1
 b = 1
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
+	startTime = time()
 
-sieveSize = 10**8
-startTime = time()
+	mySieve = makeSieve(10 ** 8)
 
-mySieve = [True for i in range(sieveSize)]
-mySieve[0] = False
-mySieve[1] = False
-print('prep for sieve time was', time()-startTime)
+	mySieve[2] = False
+	mySieve[5] = False
+	# setup done
+	print('total sieve setup time was', time() - startTime)
 
-# setting up the sieve
-for num in range(2, sieveSize):
-	# print(num)
-	if not mySieve[num]:
-		continue
-	for subListIndex in range(2 * num, sieveSize, num):
-		mySieve[subListIndex] = False
-mySieve[2] = False
-mySieve[5] = False
-# setup done
-print('total sieve setup time was', time()-startTime)
+	for prime in range(10 ** 3):
+		if mySieve[prime]:
+			outcome = list60(prime, int(sqrt(10 ** 8)), mySieve)
+			if outcome != False:
+				print(outcome)
+			break
 
 
-
-print(prettify(list60(3, int(sqrt(sieveSize)), mySieve)))
-print(prettify(list60(7, int(sqrt(sieveSize)), mySieve)))
-
-
-
-print("done")
-print('This took', time() - startTime)
+	print("done")
+	print('This took', time() - startTime)
