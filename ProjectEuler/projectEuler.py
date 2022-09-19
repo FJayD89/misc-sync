@@ -140,6 +140,10 @@ def list60(leastPrime, upLimit, primeSieve):
 
 
 # <editor-fold desc="misc-funcs">
+
+def polygonNum(n, degree):
+	return n*(n*(degree-2) + 4 - degree)/2
+
 def mod10pow10(p, c, m):
 	# 10^(10^p)*c mod m, c < 10
 	X = 10
