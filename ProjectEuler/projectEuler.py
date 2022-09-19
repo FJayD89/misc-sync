@@ -55,6 +55,7 @@ def existsPrimeConcatenation(primeListList, sieve):
 		for j in range(i + 1, len(primeListList)):
 			if primeConc(primeListList[i][0], primeListList[j][0], sieve):
 				return [True, [primeListList[i][0], primeListList[j][0]]]
+	return [False]
 
 
 def makeSieve(sieveSize):
@@ -62,8 +63,7 @@ def makeSieve(sieveSize):
 	sieve[0] = False
 	sieve[1] = False
 
-	# setting up the sieve
-
+	# declare all multiples of two nonprime
 	for composite in range(4, sieveSize, 2):
 		sieve[composite] = False
 
@@ -128,7 +128,7 @@ def list60(leastPrime, upLimit, primeSieve):
 					if concatenation[0]:
 						print('FOUND!!!')
 						setSum = sum([leastPrime, subList1[0], subList2[0],
-						              concatenation[1][0], concatenation[1][1]])
+								concatenation[1][0], concatenation[1][1]])
 						return setSum
 					# return True
 					mSubList1.append(subList2)
@@ -139,24 +139,7 @@ def list60(leastPrime, upLimit, primeSieve):
 	return False
 
 
-def p1(L, length, a):
-	while True:
-		if str(2 ** a)[:length] == L:
-			break
-
-		a += 1
-	return a
-
-
-def p(L, n):
-	length = len(L)
-	i = 0
-	a = 0
-	for counter in range(n):
-		a = p1(L, length, a) + 1
-	return a - 1
-
-
+# <editor-fold desc="misc-funcs">
 def mod10pow10(p, c, m):
 	# 10^(10^p)*c mod m, c < 10
 	X = 10
@@ -165,7 +148,6 @@ def mod10pow10(p, c, m):
 	return X ** c % m
 
 
-# <editor-fold desc="misc-funcs">
 def mathReplace(x, digit, index):
 	log = 10 ** (floor(log10(x)) - index)
 	ret = x + log * (10 * (x // (10 * log)) - x // log + digit)
@@ -315,13 +297,12 @@ if __name__ == '__main__':
 	# setup done
 	print('total sieve setup time was', time() - startTime)
 
-	for prime in range(10 ** 3):
+	for prime in range(3, 10 ** 3, 2):
 		if mySieve[prime]:
 			outcome = list60(prime, int(sqrt(10 ** 8)), mySieve)
 			if outcome != False:
 				print(outcome)
 			break
-
 
 	print("done")
 	print('This took', time() - startTime)
