@@ -45,10 +45,19 @@ def zeroEval(numStr):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+def minMax4Digit(k):
+	max = (k-4+sqrt((4-k)**2 + (k-2)*8*10**4))/(2*(k-2))
+	min = (k-4+sqrt((4-k)**2 + (k-2)*8*10**3))/(2*(k-2))
+	return [ceil(min), floor(max)]
+
+def minMaxStart(k,m):
+	min = (k-4+sqrt((4-k)**2 + (k-2)*m*800))/(2*(k-2))
+	max = (k-4+sqrt((4-k)**2 + 8*(k-2)*(m*100+99)))/(2*(k-2))
+	return [ceil(min), floor(max)]
+
 def primeConc(a, b, sieve):
 	strA, strB = str(a), str(b)
 	return sieve[int(strA + strB)] and sieve[int(strB + strA)]
-
 
 def existsPrimeConcatenation(primeListList, sieve):
 	for i in range(len(primeListList)):
@@ -56,25 +65,6 @@ def existsPrimeConcatenation(primeListList, sieve):
 			if primeConc(primeListList[i][0], primeListList[j][0], sieve):
 				return [True, [primeListList[i][0], primeListList[j][0]]]
 	return [False]
-
-
-def makeSieve(sieveSize):
-	sieve = [True for i in range(sieveSize)]
-	sieve[0] = False
-	sieve[1] = False
-
-	# declare all multiples of two nonprime
-	for composite in range(4, sieveSize, 2):
-		sieve[composite] = False
-
-	for num in range(3, int(sqrt(sieveSize))):
-		# print(num)
-		if not sieve[num]:
-			continue
-		for composite in range(num ** 2, sieveSize, 2 * num):
-			sieve[composite] = False
-	return sieve
-
 
 def list60(leastPrime, upLimit, primeSieve):
 	mList = [leastPrime]
@@ -140,6 +130,24 @@ def list60(leastPrime, upLimit, primeSieve):
 
 
 # <editor-fold desc="misc-funcs">
+
+def makeSieve(sieveSize):
+	sieve = [True for i in range(sieveSize)]
+	sieve[0] = False
+	sieve[1] = False
+
+	# declare all multiples of two nonprime
+	for composite in range(4, sieveSize, 2):
+		sieve[composite] = False
+
+	for num in range(3, int(sqrt(sieveSize))):
+		# print(num)
+		if not sieve[num]:
+			continue
+		for composite in range(num ** 2, sieveSize, 2 * num):
+			sieve[composite] = False
+	return sieve
+
 
 def polygonNum(n, degree):
 	return n*(n*(degree-2) + 4 - degree)/2
@@ -287,26 +295,35 @@ largest = 0
 smallest = 0
 bigNum = 99
 n = 1
-flag = -1
+flag = True
 a = 1
 b = 1
 
 if __name__ == '__main__':
 	startTime = time()
+	maxMin = minMax4Digit(3)
+	startIndex = maxMin[0]
+	endIndex = maxMin[1]
+	a = polygonNum(startIndex, 3)
+	b = startIndex
+	while a < 10**4:
+		print(a, b)
+		M = a - 100*(a//100)
+		K = 4
+		for i in range()
+		while flag:
 
-	mySieve = makeSieve(10 ** 8)
 
-	mySieve[2] = False
-	mySieve[5] = False
-	# setup done
-	print('total sieve setup time was', time() - startTime)
+			K += 1
 
-	for prime in range(3, 10 ** 3, 2):
-		if mySieve[prime]:
-			outcome = list60(prime, int(sqrt(10 ** 8)), mySieve)
-			if outcome != False:
-				print(outcome)
-			break
+
+		a += b*(3-2)+1
+		b += 1
+	# desmos https://www.desmos.com/calculator/ivixfwuuks
+
+
+
+
 
 	print("done")
 	print('This took', time() - startTime)
