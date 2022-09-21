@@ -45,6 +45,21 @@ def zeroEval(numStr):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+
+def cyclePolygons(k, m):
+	polygons = []
+	minIndex = minMaxStart(k, m)[0]
+	maxIndex = minMaxStart(k, m)[1]
+	maxNum = polygonNum(maxIndex, k)
+	index = minIndex
+	num = polygonNum(index, k)
+	while num <= maxNum:
+		polygons.append(num)
+		num += index*(k-2)+1
+		index += 1
+	return polygons
+
+
 def minMax4Digit(k):
 	max = (k-4+sqrt((4-k)**2 + (k-2)*8*10**4))/(2*(k-2))
 	min = (k-4+sqrt((4-k)**2 + (k-2)*8*10**3))/(2*(k-2))
@@ -304,21 +319,53 @@ if __name__ == '__main__':
 	maxMin = minMax4Digit(3)
 	startIndex = maxMin[0]
 	endIndex = maxMin[1]
-	a = polygonNum(startIndex, 3)
-	b = startIndex
-	while a < 10**4:
-		print(a, b)
-		M = a - 100*(a//100)
-		K = 4
-		for i in range()
-		while flag:
+	tris = []
+	index = startIndex
+	num = polygonNum(index, 3)
+	while index <= endIndex:
+		tris.append(num)
+		num += index+1
+		index += 1
 
+	kChoices = [4,5,6,7,8]
+	# kChoices = [4,5]
+	for tri in tris:
+		m1 = tri - 100*(tri//100)
+		for k1 in list(kChoices):
+			kChoices.remove(k1)
+			for p1 in cyclePolygons(k1, m1):
+				# if p1 < 1000:
+				# 	continue
+				for k2 in list(kChoices):
+					kChoices.remove(k2)
+					m2 = p1 - 100*(p1//100)
+					for p2 in cyclePolygons(k2, m2):
+						if p2 < 1000:
+							continue
+						for k3 in list(kChoices):
+							kChoices.remove(k3)
+							m3 = p2 - 100*(p2//100)
+							for p3 in cyclePolygons(k3, m3):
+								if p3 < 1000:
+									continue
+								for k4 in list(kChoices):
+									kChoices.remove(k4)
+									m4 = p3 - 100*(p3//100)
+									for p4 in cyclePolygons(k4, m4):
+										if p4 < 1000:
+											continue
+										k5 = kChoices[0]
+										m5 = p4 - 100*(p4//100)
+										for p5 in cyclePolygons(k5, m5):
+											if p5 < 1000:
+												continue
+											if p5 - 100*(p5//100) == p1//100:
+												print(p1, p2, p3, p4, p5)
+									kChoices.append(k4)
+							kChoices.append(k3)
+					kChoices.append(k2)
+			kChoices.append(k1)
 
-			K += 1
-
-
-		a += b*(3-2)+1
-		b += 1
 	# desmos https://www.desmos.com/calculator/ivixfwuuks
 
 
