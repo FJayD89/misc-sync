@@ -334,8 +334,8 @@ if __name__ == '__main__':
 		for k1 in list(kChoices):
 			kChoices.remove(k1)
 			for p1 in cyclePolygons(k1, m1):
-				# if p1 < 1000:
-				# 	continue
+				if p1 < 1000:
+					continue
 				for k2 in list(kChoices):
 					kChoices.remove(k2)
 					m2 = p1 - 100*(p1//100)
@@ -359,8 +359,8 @@ if __name__ == '__main__':
 										for p5 in cyclePolygons(k5, m5):
 											if p5 < 1000:
 												continue
-											if p5 - 100*(p5//100) == p1//100:
-												print(p1, p2, p3, p4, p5)
+											if p5 - 100*(p5//100) == tri//100:
+												print(sum([tri, p1, p2, p3, p4, p5]))
 									kChoices.append(k4)
 							kChoices.append(k3)
 					kChoices.append(k2)
