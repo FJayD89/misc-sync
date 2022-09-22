@@ -48,11 +48,14 @@ def zeroEval(numStr):
 
 def cyclePolygons(k, m):
 	polygons = []
-	minIndex = minMaxStart(k, m)[0]
-	maxIndex = minMaxStart(k, m)[1]
+	minMaxIndex = minMaxStart(k, m)
+	minIndex = minMaxIndex[0]
+	maxIndex = minMaxIndex[1]
 	maxNum = polygonNum(maxIndex, k)
 	index = minIndex
 	num = polygonNum(index, k)
+	if num < 1000:
+		return []
 	while num <= maxNum:
 		polygons.append(num)
 		num += index*(k-2)+1
@@ -142,6 +145,28 @@ def list60(leastPrime, upLimit, primeSieve):
 
 	# return mList
 	return False
+
+
+def polygons(kChoices, m, polySequence):
+	if not kChoices:
+		firstTwo = polySequence[0]//100
+		if m == firstTwo:
+			return sum(polySequence)
+	for k in kChoices:
+		polygonList = cyclePolygons(k, m)
+		for polygon in polygonList:
+			newM = polygon - 100*(polygon//100)
+			if newM < 10:
+				continue
+			newChoices = list(kChoices)
+			newChoices.remove(k)
+			newSeq = list(polySequence)
+			newSeq.append(polygon)
+			return polygons(newChoices, newM, newSeq)
+	if len(polySequence) == 1:
+		return 0
+
+
 
 
 # <editor-fold desc="misc-funcs">
@@ -329,42 +354,41 @@ if __name__ == '__main__':
 
 	kChoices = [4,5,6,7,8]
 	# kChoices = [4,5]
+	# [8256.0,  5625.0, 2512.0, 1281.0, 8128.0, 2882.0]
+	# [3,       4,      7,      8,      6,      5]
+
 	for tri in tris:
+		if tri < 8256:
+			continue
 		m1 = tri - 100*(tri//100)
-		for k1 in list(kChoices):
-			kChoices.remove(k1)
-			for p1 in cyclePolygons(k1, m1):
-				if p1 < 1000:
-					continue
-				for k2 in list(kChoices):
-					kChoices.remove(k2)
-					m2 = p1 - 100*(p1//100)
-					for p2 in cyclePolygons(k2, m2):
-						if p2 < 1000:
-							continue
-						for k3 in list(kChoices):
-							kChoices.remove(k3)
-							m3 = p2 - 100*(p2//100)
-							for p3 in cyclePolygons(k3, m3):
-								if p3 < 1000:
-									continue
-								for k4 in list(kChoices):
-									kChoices.remove(k4)
-									m4 = p3 - 100*(p3//100)
-									for p4 in cyclePolygons(k4, m4):
-										if p4 < 1000:
-											continue
-										k5 = kChoices[0]
-										m5 = p4 - 100*(p4//100)
-										for p5 in cyclePolygons(k5, m5):
-											if p5 < 1000:
-												continue
-											if p5 - 100*(p5//100) == tri//100:
-												print(sum([tri, p1, p2, p3, p4, p5]))
-									kChoices.append(k4)
-							kChoices.append(k3)
-					kChoices.append(k2)
-			kChoices.append(k1)
+		result = polygons([4, 5, 6, 7, 8], m1, [tri])
+		if not result == 0:
+			print(result)
+
+		# for k1 in list(kChoices):
+		# 	kChoices.remove(k1)
+		# 	for p1 in cyclePolygons(k1, m1):
+		# 		for k2 in list(kChoices):
+		# 			kChoices.remove(k2)
+		# 			m2 = p1 - 100*(p1//100)
+		# 			for p2 in cyclePolygons(k2, m2):
+		# 				for k3 in list(kChoices):
+		# 					kChoices.remove(k3)
+		# 					m3 = p2 - 100*(p2//100)
+		# 					for p3 in cyclePolygons(k3, m3):
+		# 						for k4 in list(kChoices):
+		# 							kChoices.remove(k4)
+		# 							m4 = p3 - 100*(p3//100)
+		# 							for p4 in cyclePolygons(k4, m4):
+		# 								k5 = kChoices[0]
+		# 								m5 = p4 - 100*(p4//100)
+		# 								for p5 in cyclePolygons(k5, m5):
+		# 									if p5 - 100*(p5//100) == tri//100:
+		# 										print([tri, k1, k2, k3, k4, k5])
+		# 							kChoices.append(k4)
+		# 					kChoices.append(k3)
+		# 			kChoices.append(k2)
+		# 	kChoices.append(k1)
 
 	# desmos https://www.desmos.com/calculator/ivixfwuuks
 
