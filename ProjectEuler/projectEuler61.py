@@ -46,6 +46,27 @@ def zeroEval(numStr):
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
 
+def cyclePolygons(k, m):
+	polygons = []
+	minMaxIndex = minMaxPolygonal(k, m*100, (m+1)*100)
+	minIndex = minMaxIndex[0]
+	maxIndex = minMaxIndex[1]
+	maxNum = polygonNum(maxIndex, k)
+	index = minIndex
+	polygon = polygonNum(index, k)
+	while polygon <= maxNum:
+		if polygon < 1000:
+			continue
+		polygons.append(polygon)
+		polygon += index*(k-2)+1
+		index += 1
+	return polygons
+
+
+def minMaxPolygonal(k, a, b):
+	min = (k-4+sqrt((4-k)**2 + 8*(k-2)*a))/(2*(k-2))
+	max = (k-4+sqrt((4-k)**2 + 8*(k-2)*b))/(2*(k-2))
+	return [ceil(min), ceil(max)]
 
 
 def primeConc(a, b, sieve):
@@ -122,6 +143,45 @@ def list60(leastPrime, upLimit, primeSieve):
 	return False
 
 
+def polygons(kChoices, m, polySequence):
+	if not kChoices:
+		firstTwo = polySequence[0]//100
+		if m == firstTwo:
+			return polySequence
+	for k in kChoices:
+		# polygonList = cyclePolygons(k, m)
+		polygonList = []
+
+		minMaxIndex = minMaxPolygonal(k, m * 100, (m + 1) * 100)
+		if minMaxIndex[0] >= minMaxIndex[1]:
+			continue
+		minIndex = minMaxIndex[0]
+		maxIndex = minMaxIndex[1]
+		maxNum = polygonNum(maxIndex, k)
+		index = minIndex-1
+		polygon = polygonNum(index, k)
+		while True:
+			polygon += index * (k - 2) + 1
+			index += 1
+			if polygon >= maxNum:
+				break
+			if polygon < 1000:
+				continue
+
+			polygonList.append(polygon)
+			newM = polygon - 100 * (polygon // 100)
+			if newM < 10:
+				continue
+			newChoices = list(kChoices)
+			newChoices.remove(k)
+			newSeq = list(polySequence)
+			newSeq.append(polygon)
+			newPolygons = polygons(newChoices, newM, newSeq)
+			if newPolygons is not None:
+				return newPolygons
+
+		for polygon in polygonList:
+			pass
 
 
 # <editor-fold desc="misc-funcs">
@@ -142,12 +202,6 @@ def makeSieve(sieveSize):
 		for composite in range(num ** 2, sieveSize, 2 * num):
 			sieve[composite] = False
 	return sieve
-
-
-def minMaxPolygonal(k, a, b):
-	min = (k-4+sqrt((4-k)**2 + 8*(k-2)*a))/(2*(k-2))
-	max = (k-4+sqrt((4-k)**2 + 8*(k-2)*b))/(2*(k-2))
-	return [ceil(min), ceil(max)]
 
 
 def polygonNum(n, degree):
