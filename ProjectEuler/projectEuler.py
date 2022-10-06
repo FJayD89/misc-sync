@@ -46,6 +46,45 @@ def zeroEval(numStr):
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
 
+Values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+def evalHands(hand):
+	rank = {}
+	for i in range(len(Values)):
+		rank[Values[i]] = i
+
+	sameSuit = True
+	suit = hand[0][1]
+	counts = {}
+	for value in Values:
+		counts[value] = 0
+	for card in hand:
+		if card[1] != suit:
+			sameSuit = False
+		counts[card[0]] += 1
+
+	count1 = 0
+	val1 = ''
+	count2 = 0
+	val2 = ''
+	for value in Values:
+		if counts[value] >= 2:
+			if count1 == 0:
+				count1 = counts[value]
+				val1 = value
+			count2 = counts[value]
+			val2 = value
+	if count1 < count2: # maybe wrong
+		val1, val2 = val2, val1
+
+	if sameSuit:
+		if counts['A'] >= 1 and counts['K'] >= 1 and counts['Q'] >= 1 and counts['J'] >= 1:
+			return 9
+		
+
+
+
+
+
 
 
 def primeConc(a, b, sieve):
@@ -302,30 +341,9 @@ b = 1
 
 if __name__ == '__main__':
 	startTime = time()
-	maxMin = minMaxPolygonal(3, 10**3, 10**4)
-	startIndex = maxMin[0]
-	endIndex = maxMin[1]
-	tris = []
-	index = startIndex
-	num = polygonNum(index, 3)
-	while index <= endIndex:
-		tris.append(num)
-		num += index+1
-		index += 1
-
-	kChoices = [4,5,6,7,8]
-	# kChoices = [4,5]
-	# [8256.0,  5625.0, 2512.0, 1281.0, 8128.0, 2882.0]
-	# [3,       4,      7,      8,      6,      5]
-
-	for tri in tris:
-		m1 = tri - 100*(tri//100)
-		result = polygons([4, 5, 6, 7, 8], m1, [tri])
-		if result is not None:
-			print(result)
 
 
-	# desmos https://www.desmos.com/calculator/ivixfwuuks
+
 
 
 
