@@ -35,9 +35,10 @@ def zeroEval(numStr):
 	return int(numStr)
 
 
-# f = open('C:/aCoding/Python/PycharmProjects/misc-sync/ProjectEuler/eulerText.txt')
-# numPairs = f.read().split('\n')
-
+f = open('eulerText.txt')
+handPairs = f.read().split('\n')
+handPairs = [[handPair[:14], handPair[15:]] for handPair in handPairs]
+handPairs = [[hand.split(' ') for hand in handPair] for handPair in handPairs]
 
 # numPairs = [[int(num) for num in numPair.split(',')] for numPair in numPairs]
 # print(numPairs)
@@ -45,12 +46,44 @@ def zeroEval(numStr):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+Values = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
+valsDict = {Values[i]: i for i in range(13)}
 
-Values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-def evalHands(hand):
-	rank = {}
-	for i in range(len(Values)):
-		rank[Values[i]] = i
+def areConsecutive(num_list):
+	minVal = min(num_list)
+	maxVal = max(num_list)
+	if minVal + maxVal + 1 != len(num_list):
+		return False
+	visited = [False for i in num_list]
+	for num in num_list:
+		if visited[num-minVal]:
+			return False
+		visited[num-minVal] = True
+	return True
+
+def compareHands(hand1, hand2):
+	eval1 = evalHand(hand1)
+	eval2 = evalHand(hand2)
+	handValsIndex = len(eval1)-1
+	compIndex = 0
+	while compIndex != handValsIndex:
+		if eval1[compIndex] > eval2[compIndex]:
+			return 1
+		if eval2[compIndex] > eval1[compIndex]:
+			return 0
+		compIndex += 1
+	for i in range(len(eval1[-1])):
+		val1 = eval1[-1][i]
+		val2 = eval2[-1][i]
+		if val1 > val2:
+			return 1
+		if val2 > val1:
+			return 0
+	print('well crap')
+
+def evalHand(hand):
+	handValues = [valsDict[val] for val in [hand[i][0] for i in range(5)]] # 5 = len(hand), returns indexed
+	# print(handValues)
 
 	sameSuit = True
 	suit = hand[0][1]
@@ -61,31 +94,62 @@ def evalHands(hand):
 		if card[1] != suit:
 			sameSuit = False
 		counts[card[0]] += 1
-
-	count1 = 0
-	val1 = ''
-	count2 = 0
-	val2 = ''
+	
+	highCount = 0
+	highVal = ''
+	lowCount = 0
+	lowVal = ''
 	for value in Values:
-		if counts[value] >= 2:
-			if count1 == 0:
-				count1 = counts[value]
-				val1 = value
-			count2 = counts[value]
-			val2 = value
-	if count1 < count2: # maybe wrong
-		val1, val2 = val2, val1
+		if counts[value] >= 3:
+			highCount = counts[value]
+			highVal = value
+			continue
+		if highCount == 0:
+			highCount = counts[value]
+			highVal = value
+			continue
+		lowCount = counts[value]
+		lowVal = value
+	if highCount < lowCount: # maybe wrong
+		highVal, lowVal = lowVal, highVal
+	
+	royal = True
+	for i in range(8, 13):
+		val = Values[i]
+		if counts[val] < 1:
+			royal = False
+			break
+	
+	handValues = sorted(handValues, reverse=True)
+	highVal = valsDict[highVal]
+	if lowVal != '':
+		lowVal = valsDict[lowVal]
+	return rankHand(sameSuit, highCount, highVal, lowCount, lowVal, handValues, royal)
 
-	if sameSuit:
-		if counts['A'] >= 1 and counts['K'] >= 1 and counts['Q'] >= 1 and counts['J'] >= 1:
-			return 9
-		
 
+def rankHand(same_suit, high_count, high_val, low_count, low_val, hand_values, royal):
+	if same_suit:
+		if royal:
+			return [9, []]  # royal flush
+			
+		if areConsecutive(hand_values):
+			return [8, hand_values[-1]]  # Straight flush + highest card
 
-
-
-
-
+	if high_count == 4:
+		return [7, high_val, low_val]  # four of a kind + rank + kicker
+	if high_count == 3 and low_count == 2:
+		return [6, high_val, low_val]  # full house + highVal (3) + lowVal (2)
+	if same_suit:
+		return [5, hand_values]  # flush + ranks
+	if areConsecutive(hand_values):
+		return [4, hand_values[-1]]  # Straight + highVal(highest)
+	if high_count == 3:
+		return [3, high_val, hand_values]  # three of a kind + tripsVal + highKick + lowKick
+	if high_count == 2:
+		if low_count == 2:
+			return [2, high_val, low_val, hand_values]  # two pairs + highPairVal + lowPairVal + kicker
+		return [1, high_val, hand_values]  # one pair + pairVal + kickers
+	return [0, hand_values]  # high card + kickers
 
 def primeConc(a, b, sieve):
 	strA, strB = str(a), str(b)
@@ -159,9 +223,6 @@ def list60(leastPrime, upLimit, primeSieve):
 
 	# return mList
 	return False
-
-
-
 
 # <editor-fold desc="misc-funcs">
 
@@ -341,13 +402,15 @@ b = 1
 
 if __name__ == '__main__':
 	startTime = time()
-
-
-
-
-
-
-
+	
+	handPair = handPairs[4]
+	
+	print(evalHand(handPair[0]))
+	
+	# for handPair in handPairs:
+	# 	print(compareHands(handPair[0], handPair[1]))
+		# mSum += compareHands(handPair[0], handPair[1])
+	# print(mSum)
 
 	print("done")
 	print('This took', time() - startTime)
