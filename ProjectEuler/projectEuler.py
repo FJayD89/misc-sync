@@ -35,9 +35,10 @@ def zeroEval(numStr):
 	return int(numStr)
 
 
-# f = open('C:/aCoding/Python/PycharmProjects/misc-sync/ProjectEuler/eulerText.txt')
-# numPairs = f.read().split('\n')
-
+f = open('eulerText.txt')
+handPairs = f.read().split('\n')
+handPairs = [[handPair[:14], handPair[15:]] for handPair in handPairs]
+handPairs = [[hand.split(' ') for hand in handPair] for handPair in handPairs]
 
 # numPairs = [[int(num) for num in numPair.split(',')] for numPair in numPairs]
 # print(numPairs)
@@ -45,8 +46,109 @@ def zeroEval(numStr):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+Values = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
+valsDict = {Values[i]: i for i in range(13)}
 
 
+def areConsecutive(num_list):
+	minVal = min(num_list)
+	maxVal = max(num_list)
+	if minVal + maxVal + 1 != len(num_list):
+		return False
+	visited = [False for i in num_list]
+	for num in num_list:
+		if visited[num-minVal]:
+			return False
+		visited[num-minVal] = True
+	return True
+
+
+def compareHands(hand1, hand2):
+	eval1 = evalHand(hand1)
+	eval2 = evalHand(hand2)
+	handValsIndex = len(eval1)-1
+	compIndex = 0
+	while compIndex != handValsIndex:
+		if eval1[compIndex] > eval2[compIndex]:
+			return 1
+		if eval2[compIndex] > eval1[compIndex]:
+			return 0
+		compIndex += 1
+	for i in range(len(eval1[-1])):
+		val1 = eval1[-1][i]
+		val2 = eval2[-1][i]
+		if val1 > val2:
+			return 1
+		if val2 > val1:
+			return 0
+	print('well crap')
+
+
+def evalHand(hand):
+	handValues = [valsDict[val] for val in [hand[i][0] for i in range(5)]] # 5 = len(hand), returns indexed
+	# print(handValues)
+
+	sameSuit = True
+	suit = hand[0][1]
+	counts = {}
+	for value in Values:
+		counts[value] = 0
+	for card in hand:
+		if card[1] != suit:
+			sameSuit = False
+		counts[card[0]] += 1
+	
+	highCount = 0
+	highVal = ''
+	lowCount = 0
+	lowVal = ''
+	for value in Values:
+		if highCount == 0:
+			if counts[value] == max(counts.values()):
+				highCount = counts[value]
+				highVal = value
+				continue
+		if counts[value] > lowCount:
+			lowCount = counts[value]
+			lowVal = value
+	
+	royal = True
+	for i in range(8, 13):
+		val = Values[i]
+		if counts[val] < 1:
+			royal = False
+			break
+	
+	handValues = sorted(handValues, reverse=True)
+	highVal = valsDict[highVal]
+	if lowVal != '':
+		lowVal = valsDict[lowVal]
+	return rankHand(sameSuit, highCount, highVal, lowCount, lowVal, handValues, royal)
+
+
+def rankHand(same_suit, high_count, high_val, low_count, low_val, hand_values, royal):
+	if same_suit:
+		if royal:
+			return [9, []]  # royal flush
+			
+		if areConsecutive(hand_values):
+			return [8, hand_values[-1]]  # Straight flush + highest card
+
+	if high_count == 4:
+		return [7, high_val, low_val]  # four of a kind + rank + kicker
+	if high_count == 3 and low_count == 2:
+		return [6, high_val, hand_values]  # full house + highVal (3) + lowVal (2)
+	if same_suit:
+		return [5, hand_values]  # flush + ranks
+	if areConsecutive(hand_values):
+		return [4, high_val]  # Straight + mostVal
+	if high_count == 3:
+		return [3, high_val, hand_values]  # three of a kind + tripsVal + highKick + lowKick
+	if high_count == 2:
+		if low_count == 2:
+			return [2, high_val, hand_values]  # two pairs + highPairVal + lowPairVal + kicker
+		return [1, high_val, hand_values]  # one pair + pairVal + kickers
+	return [0, hand_values]  # high card + kickers
 
 def primeConc(a, b, sieve):
 	strA, strB = str(a), str(b)
@@ -120,9 +222,6 @@ def list60(leastPrime, upLimit, primeSieve):
 
 	# return mList
 	return False
-
-
-
 
 # <editor-fold desc="misc-funcs">
 
@@ -302,34 +401,15 @@ b = 1
 
 if __name__ == '__main__':
 	startTime = time()
-	maxMin = minMaxPolygonal(3, 10**3, 10**4)
-	startIndex = maxMin[0]
-	endIndex = maxMin[1]
-	tris = []
-	index = startIndex
-	num = polygonNum(index, 3)
-	while index <= endIndex:
-		tris.append(num)
-		num += index+1
-		index += 1
-
-	kChoices = [4,5,6,7,8]
-	# kChoices = [4,5]
-	# [8256.0,  5625.0, 2512.0, 1281.0, 8128.0, 2882.0]
-	# [3,       4,      7,      8,      6,      5]
-
-	for tri in tris:
-		m1 = tri - 100*(tri//100)
-		result = polygons([4, 5, 6, 7, 8], m1, [tri])
-		if result is not None:
-			print(result)
-
-
-	# desmos https://www.desmos.com/calculator/ivixfwuuks
-
-
-
-
+	
+	# handPair = handPairs[4]
+	#
+	# print(evalHand(handPair[0]))
+	
+	for handPair in handPairs:
+		print(handPair, '→', evalHand(handPair[0]), 'vs', evalHand(handPair[1]), '=', compareHands(handPair[0], handPair[1]))
+		mSum += compareHands(handPair[0], handPair[1])
+	print(mSum)
 
 	print("done")
 	print('This took', time() - startTime)
