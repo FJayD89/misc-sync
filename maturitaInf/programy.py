@@ -1,4 +1,5 @@
 from math import sqrt, ceil
+from random import randint
 
 def makeSieve(sieveSize):
 	sieve = [True for i in range(sieveSize)]
@@ -59,7 +60,7 @@ def three():
 	B = nums[1]
 	C = nums[2]
 	if B**2 < 4*A*C:
-		print('nemá korene')
+		print('nema korene')
 		return
 	if B**2 >= 4*A*C:
 		root = roots(A,B,C)
@@ -68,7 +69,6 @@ def three():
 		print(root[1])
 
 def four():
-
 	f = open('04.txt')
 	txt = f.read()
 	str = input('Prosim retazec:\n')
@@ -134,11 +134,16 @@ def eight():
 	vstup = input('Prosim si znak a cislo vo formate ?,20\n').split(',')
 	znak = vstup[0]
 	cislo = int(vstup[1])
+	
+	bigOut = ''
 	for i in range(cislo):
 		out = ''
 		for j in range (cislo):
 			out += znak
-		print(out)
+		bigOut += out+'\n'
+	print(bigOut)
+
+	
 	
 	bigOut = ''
 	for i in range(cislo):
@@ -148,13 +153,160 @@ def eight():
 		bigOut += out+'\n'
 		
 	print(bigOut)
+	
+	bigOut = ''
+	for i in range(cislo):
+		line = ''
+		for j in range(cislo-1-i):
+			line += ' '
+		out = line
+		for j in range(2*i+1):
+			out += znak
+		out += line
+		bigOut += out + '\n'
+	
 	print(bigOut)
+	out = ''
+	outEmpty = znak
+	for i in range(cislo):
+	  out += znak
+	for i in range(cislo-2):
+	  outEmpty += ' '
+	outEmpty += znak
+	
+	print(out)
+	for i in range(cislo-2):
+	  print(outEmpty)
+	print(out)
+	
+def experiments():
+	count = 0
+	for i in range(10):
+		rand = randint(1,10)
+		if rand > 5:
+			count += 1
+	return count
+	
+def ten():
+	success = [0 for i in range(11)]
+	for i in range(400):
+		success[experiments()] += 1
+	print(success)
+
+def eleven():
+	pScore = 0
+	aiScore = 0
+	plays = {
+		'r':0,
+		'p':1,
+		's':2
+		}
+	choices = ['rock', 'paper', 'scissors']
+	counter = int(input('How many iterations?\n'))
+	for i in range(counter):
+		choice = input('Rock, paper, scissors! (r/p/s)\n')
+		choice = plays[choice]
+		print('Player chose', choices[choice],'!')
+		aiChoice = randint(0,2)
+		print('Computer chose', choices[aiChoice], '!')
+		if choice == aiChoice:
+			print('tie')
+			continue
+		if choice+1 % 3 == aiChoice:
+			pScore += 1
+			print('You won!')
+			continue
+		print('You lost!')
+		aiScore += 1
+	print('Results:')
+	print('You:', pScore)
+	print('Computer:', aiScore)
+	winText = 'You win!'
+	if pScore < aiScore:
+		winText = 'Computer wins!'
+	if pScore == aiScore:
+		winText = 'It\'s a tie!'
+	print(winText)
+		
+def twelve():
+	m = int(input('Zadaj cislo:\n'))
+	n = int(input('Este jedno:\n'))
+	c = input('A este znak:\n')
+	
+	line1 = ''
+	for i in range(m*n-m+1):
+		line1 += c
 	
 	
-	for 
+	line2 = c
+	for i in range(n-2):
+		line2 += ' '
+	line3 = ''
+	for i in range(m):
+		line3 += line2
+	line3 += c
+	
+	line4 = line1 + '\n'
+	for i in range(n-3):
+		line4 += line3+'\n'
+	line4 += line3
+	
+	for i in range(m):
+		print(line4)
+	print(line1)
+	
+def thirteen():
+	attempts = 1
+	done = False
+	cislo = randint(1,100)
+	tip = int(input('Tipni si cislo: \n'))
+	if tip == cislo:
+		print('Super, vyhral si na 1. pokus!')
+		return 0
+	if tip > cislo:
+		print('To je vela')
+	if tip < cislo:
+		print('To je malo')	
+	while True:
+		attempts += 1
+		if input('Nechces sa vzdat?\n') == 'ano':
+			if attempts == 2:
+				print('ts, ty lemra')
+				break
+			print('Ok, ani mne uz sa nechce')
+			print('BTW, vzdal si sa po', attempts-1, 'pokusoch')
+			break
+		tip = int(input('Skus este raz: \n'))
+		if tip == cislo:
+			print('Super, uhadol si na', attempts, 'pokusov!')
+			break
+		if tip > cislo:
+			print('To je vela')
+			continue
+		print('To je malo')
+	
+def fifteen():
+	hodnoty = [a*10**i for i in range(2,-3, -1) for a in [5,2,1]]
+	
+	pocty = {a:0 for a in hodnoty}
+	
+	suma = float(input('Zadaj sumu vo formate 123.45 \n'))
+	# print(hodnoty)
+	# print (pocty)
+	
+	while suma != 0:
+		for hodnota in hodnoty:
+			if hodnota <= suma:
+				suma -= hodnota
+				pocty[hodnota] += 1
+				break
+	for hodnota in hodnoty:
+		if pocty[hodnota] != 0:
+			print(hodnota, pocty[hodnota])
+	
+	
 
-
-eight()
+fifteen()
 
 
 
