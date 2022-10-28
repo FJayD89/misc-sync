@@ -3,8 +3,8 @@ from random import randint
 
 base_path = Path(__file__).parent
 file_path_nika = (base_path / "../nikaSlovicka/wordlistU1.txt").resolve()
-file_path_joni_eng = (base_path / "../nikaSlovicka/Prj2_U1_eng.txt").resolve()
-file_path_joni_svk = (base_path / "../nikaSlovicka/Prj2_U1_svk.txt").resolve()
+file_path_joni_eng = (base_path / "../nikaSlovicka/Prj2_U2_eng.txt").resolve()
+file_path_joni_svk = (base_path / "../nikaSlovicka/Prj2_U2_svk.txt").resolve()
 
 
 with open(file_path_nika, errors='ignore') as f:
