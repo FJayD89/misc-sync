@@ -66,11 +66,15 @@ def revisionJoni():
 			continue
 		seen.append(index)
 		pair = wordsJoni[index]
-		print(pair[1], end='')
+		print(pair[1], end='') # switch for
 		input()
+		# if input() != pair[0]:
+		# 	print('zle')
+		# 	seen.pop()
+		# 	continue
 		print(pair[0], end='')
 		if input() == 'w':
-			learned.append(index)
+			seen.pop()
 	print('Super, vies vsetko!')
 	if input('Este raz? (ano/nie)') == 'ano':
 		revisionJoni()
