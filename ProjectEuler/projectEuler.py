@@ -49,6 +49,7 @@ handPairs = [[hand.split(' ') for hand in handPair] for handPair in handPairs]
 Values = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
 valsDict = {Values[i]: i for i in range(13)}
 
+
 def areConsecutive(num_list):
 	minVal = min(num_list)
 	maxVal = max(num_list)
@@ -60,6 +61,7 @@ def areConsecutive(num_list):
 			return False
 		visited[num-minVal] = True
 	return True
+
 
 def compareHands(hand1, hand2):
 	eval1 = evalHand(hand1)
@@ -81,6 +83,7 @@ def compareHands(hand1, hand2):
 			return 0
 	print('well crap')
 
+
 def evalHand(hand):
 	handValues = [valsDict[val] for val in [hand[i][0] for i in range(5)]] # 5 = len(hand), returns indexed
 	# print(handValues)
@@ -100,18 +103,14 @@ def evalHand(hand):
 	lowCount = 0
 	lowVal = ''
 	for value in Values:
-		if counts[value] >= 3:
-			highCount = counts[value]
-			highVal = value
-			continue
 		if highCount == 0:
-			highCount = counts[value]
-			highVal = value
-			continue
-		lowCount = counts[value]
-		lowVal = value
-	if highCount < lowCount: # maybe wrong
-		highVal, lowVal = lowVal, highVal
+			if counts[value] == max(counts.values()):
+				highCount = counts[value]
+				highVal = value
+				continue
+		if counts[value] > lowCount:
+			lowCount = counts[value]
+			lowVal = value
 	
 	royal = True
 	for i in range(8, 13):
@@ -138,16 +137,16 @@ def rankHand(same_suit, high_count, high_val, low_count, low_val, hand_values, r
 	if high_count == 4:
 		return [7, high_val, low_val]  # four of a kind + rank + kicker
 	if high_count == 3 and low_count == 2:
-		return [6, high_val, low_val]  # full house + highVal (3) + lowVal (2)
+		return [6, high_val, hand_values]  # full house + highVal (3) + lowVal (2)
 	if same_suit:
 		return [5, hand_values]  # flush + ranks
 	if areConsecutive(hand_values):
-		return [4, hand_values[-1]]  # Straight + highVal(highest)
+		return [4, high_val]  # Straight + mostVal
 	if high_count == 3:
 		return [3, high_val, hand_values]  # three of a kind + tripsVal + highKick + lowKick
 	if high_count == 2:
 		if low_count == 2:
-			return [2, high_val, low_val, hand_values]  # two pairs + highPairVal + lowPairVal + kicker
+			return [2, high_val, hand_values]  # two pairs + highPairVal + lowPairVal + kicker
 		return [1, high_val, hand_values]  # one pair + pairVal + kickers
 	return [0, hand_values]  # high card + kickers
 
@@ -403,14 +402,14 @@ b = 1
 if __name__ == '__main__':
 	startTime = time()
 	
-	handPair = handPairs[4]
+	# handPair = handPairs[4]
+	#
+	# print(evalHand(handPair[0]))
 	
-	print(evalHand(handPair[0]))
-	
-	# for handPair in handPairs:
-	# 	print(compareHands(handPair[0], handPair[1]))
-		# mSum += compareHands(handPair[0], handPair[1])
-	# print(mSum)
+	for handPair in handPairs:
+		print(handPair, '→', evalHand(handPair[0]), 'vs', evalHand(handPair[1]), '=', compareHands(handPair[0], handPair[1]))
+		mSum += compareHands(handPair[0], handPair[1])
+	print(mSum)
 
 	print("done")
 	print('This took', time() - startTime)
