@@ -9,9 +9,9 @@ def zeroEval(numStr):
 	return int(numStr)
 
 
-f = open('eulerText.txt')
-lines = f.read().split('\n')
-attempts = [int(attempt) for attempt in lines]
+# f = open('eulerText.txt')
+# lines = f.read().split('\n')
+# attempts = [int(attempt) for attempt in lines]
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
@@ -116,26 +116,19 @@ mList = []
 mSum = 1517926517219802
 count = 0
 largest = 0
-smallest = 10827725432
-n = 10543898410+283827021
+smallest = 1517926517219802
+n = 1
 
 startTime = time()
 # 1517926306270940 1745260759
 # 283827021
-# while True:
-#     seq = (n*1504170715041707) % 4503599627370517
-#     if seq < smallest:
-#         smallest = seq
-#         mSum += seq
-#         print(mSum, n)
-#     n += 1
-
-# 1517926517477964
-
-
-
-print(count)
-
+while True:
+	seq = (n*1504170715041707) % 4503599627370517
+	if seq < smallest:
+		smallest = seq
+		# mSum += seq
+		print(seq, n)
+	n += 1
 
 
 print('This took', time()-startTime)

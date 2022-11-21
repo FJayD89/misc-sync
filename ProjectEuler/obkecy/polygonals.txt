@@ -1,0 +1,94 @@
+Polygons = Ordered 5-set of polygonalNums: for i in range(3, 8+1) p(n,i) \in Polygons
+p(n,i) = nth i-gonal num
+
+def polygonNum(n, degree):
+	return n*(n*(degree-2) + 4 - degree)/2
+
+def minMaxPolygonal(k, a, b):
+	#  the [indexes] of the least and least over k-gonal num >= a, <= b 
+	min = (k-4+sqrt((4-k)**2 + 8*(k-2)*a))/(2*(k-2))
+	max = (k-4+sqrt((4-k)**2 + 8*(k-2)*b))/(2*(k-2))
+	return [ceil(min), floor(max)+1]
+	
+	
+def cyclePolygons(k, m):
+	#  all 4digit k-gonal nums starting with a 2digit m
+	polygons = []
+	minMaxIndex = minMaxPolygonal(k, m*100, (m+1)*100)
+	minIndex = minMaxIndex[0]
+	maxIndex = minMaxIndex[1]
+	maxNum = polygonNum(maxIndex, k)
+	index = minIndex
+	polygon = polygonNum(index, k)
+	while polygon < maxNum:
+		if polygon < 1000:
+			continue
+		polygons.append(polygon)
+		polygon += index*(k-2)+1
+		index += 1
+	return polygons
+	
+def polygons(kChoices, m, polySequence):
+	#  main recursive thing 
+	#  kChoices are polyDegrees not yet chosen
+	if not kChoices:
+	#  last one, check if cycles back to first num
+		firstTwo = polySequence[0]//100
+		if m == firstTwo:
+			return polySequence
+	for k in kChoices:
+		#  generate all cycling polygonNums for given k
+		polygonList = []
+
+		minMaxIndex = minMaxPolygonal(k, m * 100, (m + 1) * 100)
+		if minMaxIndex[0] >= minMaxIndex[1]:
+			continue
+		minIndex = minMaxIndex[0]
+		maxIndex = minMaxIndex[1]
+		maxNum = polygonNum(maxIndex, k)
+		index = minIndex-1
+		polygon = polygonNum(index, k)
+		while True:
+			polygon += index * (k - 2) + 1
+			index += 1
+			if polygon >= maxNum:
+				break
+			if polygon < 1000:
+				continue
+
+			polygonList.append(polygon)
+			newM = polygon - 100 * (polygon // 100)
+			if newM < 10:
+				continue
+			newChoices = list(kChoices)
+			newChoices.remove(k)
+			newSeq = list(polySequence)
+			newSeq.append(polygon)
+			newPolygons = polygons(newChoices, newM, newSeq)
+			#  and again we go
+			if newPolygons is not None:
+				#  can be None if gets to end of func - minIndex +1 = maxIndex for all possible k, so pointless to continue branch
+				return newPolygons
+			
+# start with all 3gonals
+maxMin = minMaxPolygonal(3, 10**3, 10**4)
+startIndex = maxMin[0]
+endIndex = maxMin[1]
+tris = []
+index = startIndex
+num = polygonNum(index, 3)
+while index <= endIndex:
+	tris.append(num)
+	num += index+1
+	index += 1
+
+kChoices = [4,5,6,7,8]
+# kChoices = [4,5]
+# [8256.0,  5625.0, 2512.0, 1281.0, 8128.0, 2882.0]
+# [3,       4,      7,      8,      6,      5]
+
+for tri in tris:
+	m1 = tri - 100*(tri//100)
+	result = polygons([4, 5, 6, 7, 8], m1, [tri])
+	if result is not None:
+		print(result)
