@@ -111,24 +111,38 @@ def conjecture(num):
 			return True
 	return False
 
+def nsd(a,b):
+	if a < b:
+		a,b = b,a
+	while b > 0:
+		a,b = b,a%b
+	return(a)
+
 trigger = True
 mList = []
-mSum = 1517926517219802
+mSum = 0
 count = 0
 largest = 0
 smallest = 1517926517219802
 n = 1
 
+#  smallestSoFar = 13760607 for n = 1461433738
+
 startTime = time()
 # 1517926306270940 1745260759
 # 283827021
-while True:
-	seq = (n*1504170715041707) % 4503599627370517
-	if seq < smallest:
-		smallest = seq
-		# mSum += seq
-		print(seq, n)
-	n += 1
 
+# is linear from 15806432 at 42298633, step 409165 every 283827021
+# for i in range(12263410):
+# 	seq = (n*1504170715041707) % 4503599627370517
+# 	if seq < smallest:
+# 		smallest = seq
+# 		mSum += seq
+# 		print(seq, n)
+# 	n += 1
 
-print('This took', time()-startTime)
+#  sum(n = 0...38):15806432-n*409165
+
+# print(mSum+313259583)
+print(nsd(1504170715041707,4503599627370517))
+# print('This took', time()-startTime)
