@@ -51,15 +51,12 @@ valsDict = {Values[i]: i for i in range(13)}
 
 
 def areConsecutive(num_list):
-	minVal = min(num_list)
-	maxVal = max(num_list)
-	if minVal + maxVal + 1 != len(num_list):
+	if len(num_list) != 5:
 		return False
-	visited = [False for i in num_list]
-	for num in num_list:
-		if visited[num-minVal]:
+	num_list = sorted(num_list)
+	for index in range(4): # 5 = len(hand)
+		if num_list[index]+1 != num_list[index+1]:
 			return False
-		visited[num-minVal] = True
 	return True
 
 
@@ -85,7 +82,7 @@ def compareHands(hand1, hand2):
 
 
 def evalHand(hand):
-	handValues = [valsDict[val] for val in [hand[i][0] for i in range(5)]] # 5 = len(hand), returns indexed
+	# handValues = list(sorted([valsDict[val] for val in [hand[i][0] for i in range(5)]])) # 5 = len(hand), returns indexed
 	# print(handValues)
 
 	sameSuit = True
@@ -102,7 +99,10 @@ def evalHand(hand):
 	highVal = ''
 	lowCount = 0
 	lowVal = ''
+	handValues = []
 	for value in Values:
+		if counts[value] == 1:
+			handValues.append(valsDict[value])
 		if highCount == 0:
 			if counts[value] == max(counts.values()):
 				highCount = counts[value]
@@ -111,6 +111,7 @@ def evalHand(hand):
 		if counts[value] > lowCount:
 			lowCount = counts[value]
 			lowVal = value
+			continue
 	
 	royal = True
 	for i in range(8, 13):
@@ -120,9 +121,15 @@ def evalHand(hand):
 			break
 	
 	handValues = sorted(handValues, reverse=True)
+	# handValues = list(reversed(handValues))
 	highVal = valsDict[highVal]
 	if lowVal != '':
 		lowVal = valsDict[lowVal]
+	
+	if highCount == lowCount:
+		if lowVal > highVal:
+			lowVal, highVal = highVal, lowVal
+	
 	return rankHand(sameSuit, highCount, highVal, lowCount, lowVal, handValues, royal)
 
 
@@ -137,16 +144,16 @@ def rankHand(same_suit, high_count, high_val, low_count, low_val, hand_values, r
 	if high_count == 4:
 		return [7, high_val, low_val]  # four of a kind + rank + kicker
 	if high_count == 3 and low_count == 2:
-		return [6, high_val, hand_values]  # full house + highVal (3) + lowVal (2)
+		return [6, high_val, low_val]  # full house + highVal (3) + lowVal (2)
 	if same_suit:
 		return [5, hand_values]  # flush + ranks
 	if areConsecutive(hand_values):
-		return [4, high_val]  # Straight + mostVal
+		return [4, max(hand_values)]  # Straight + mostVal
 	if high_count == 3:
 		return [3, high_val, hand_values]  # three of a kind + tripsVal + highKick + lowKick
 	if high_count == 2:
 		if low_count == 2:
-			return [2, high_val, hand_values]  # two pairs + highPairVal + lowPairVal + kicker
+			return [2, high_val, low_val, hand_values]  # two pairs + highPairVal + lowPairVal + kicker
 		return [1, high_val, hand_values]  # one pair + pairVal + kickers
 	return [0, hand_values]  # high card + kickers
 
