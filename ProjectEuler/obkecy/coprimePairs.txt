@@ -1,0 +1,29 @@
+Count of reduced proper fractions with denominator <= n
+how many of them have numerator 1?
+n-1 of them, since 1/x is reduced, but 1/1 is not proper
+how many have 2?
+all that are odd, the count of which up to n is ceil(n/2)-1 excluding 1
+what about 3?
+going by the denominator k, all those where not k|3, which is about 2/3 of n -> ceil(n*2/3)-1
+so for n=8 that would make 3/1, 3/2, 3/4, 3/5, 3/7, 3/8
+but for k up to 3 don't count, so we have to modify a slight bit
+so, -(k-1) instead of -1
+4 is 2^2, so it's coprime to everything that 2 is to, we only don't count the 3, which 2 is coprime to as 3<4
+5 is relatively simple-for the primes p, n-ceil(n*(i-1)/i)-(i-1) works.
+for composites, not so easy. For primes p&q, p*q is comprime to those coprime to p AND to q, and we only count those >p*q
+Which brings us to 6 = 2*3. 2 is comprime to every odd number, and 3 is coprime to not every third number. We know 6 is coprime to 6n+1 and 6n+5, but that's just not ideal. If we try to use this,  
+
+
+example, n=8:
+k = 1:
+1/2, 1/3, 1/4, 1/5, 1/6, 1/7, 1/8	total=7
+k = 2:
+2/3, 2/5, 2/7 						total=3
+k = 3:
+3/4, 3/5, 3/7, 3/8					total=4
+k = 4:
+4/5, 4/7
+k = 5:
+5/6, 5/7, 5/8
+k = 6:
+6/7

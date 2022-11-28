@@ -84,7 +84,7 @@ def compareHands(hand1, hand2):
 def evalHand(hand):
 	# handValues = list(sorted([valsDict[val] for val in [hand[i][0] for i in range(5)]])) # 5 = len(hand), returns indexed
 	# print(handValues)
-	
+
 	sameSuit = True
 	suit = hand[0][1]
 	counts = {}
@@ -94,7 +94,7 @@ def evalHand(hand):
 		if card[1] != suit:
 			sameSuit = False
 		counts[card[0]] += 1
-	
+
 	highCount = 0
 	highVal = ''
 	lowCount = 0
@@ -112,24 +112,24 @@ def evalHand(hand):
 			lowCount = counts[value]
 			lowVal = value
 			continue
-	
+
 	royal = True
 	for i in range(8, 13):
 		val = Values[i]
 		if counts[val] < 1:
 			royal = False
 			break
-	
+
 	handValues = sorted(handValues, reverse=True)
 	# handValues = list(reversed(handValues))
 	highVal = valsDict[highVal]
 	if lowVal != '':
 		lowVal = valsDict[lowVal]
-	
+
 	if highCount == lowCount:
 		if lowVal > highVal:
 			lowVal, highVal = highVal, lowVal
-	
+
 	return rankHand(sameSuit, highCount, highVal, lowCount, lowVal, handValues, royal)
 
 
@@ -137,10 +137,10 @@ def rankHand(same_suit, high_count, high_val, low_count, low_val, hand_values, r
 	if same_suit:
 		if royal:
 			return [9, []]  # royal flush
-		
+
 		if areConsecutive(hand_values):
 			return [8, hand_values[-1]]  # Straight flush + highest card
-	
+
 	if high_count == 4:
 		return [7, high_val, low_val]  # four of a kind + rank + kicker
 	if high_count == 3 and low_count == 2:
@@ -223,7 +223,7 @@ def list60(leastPrime, upLimit, primeSieve):
 					if concatenation[0]:
 						print('FOUND!!!')
 						setSum = sum([leastPrime, subList1[0], subList2[0],
-						  concatenation[1][0], concatenation[1][1]])
+							concatenation[1][0], concatenation[1][1]])
 						return setSum
 					# return True
 					mSubList1.append(subList2)
@@ -320,7 +320,7 @@ def isLychrel(num, iteration):
 		return True
 	if isPalindromic(num):
 		return False
-	
+
 	return isLychrel(num, iteration + 1)
 
 
@@ -350,14 +350,14 @@ def isCool(a0, d):
 def isAPermutation(numStr1, numStr2):
 	if not len(numStr1) == len(numStr2):
 		return False
-	
+
 	for digit in numStr1:
 		if not digit in numStr2:
 			return False
 	for digit in numStr2:
 		if not digit in numStr1:
 			return False
-	
+
 	return True
 
 
@@ -371,7 +371,7 @@ def factors(num):
 			break
 		if i == floor(sqrt(num)):
 			return [num]
-	
+
 	for factor in factors(num / fList[0]):
 		if not factor in fList:
 			fList.append(factor)
@@ -380,7 +380,7 @@ def factors(num):
 
 def isPrime(num):
 	# if num == 1:
-	# return False
+	#     return False
 	for i in range(2, floor(sqrt(num)) + 1):
 		if num % i == 0:
 			return False
@@ -413,11 +413,11 @@ b = 1
 
 if __name__ == '__main__':
 	startTime = time()
-	
+
 	# handPair = handPairs[4]
 	#
 	# print(evalHand(handPair[0]))
-	
+
 	for handPair in handPairs:
 		print(handPair, '→', evalHand(handPair[0]), 'vs', evalHand(handPair[1]), '=',
 			compareHands(handPair[0], handPair[1]))

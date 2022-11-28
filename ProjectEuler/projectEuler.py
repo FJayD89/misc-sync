@@ -45,17 +45,8 @@ handPairs = f.read().split('\n')
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
 
-
-
-
 # <editor-fold desc="misc-funcs">
 
-def gcd(a, b):
-	if a < b:
-		a,b = b,a
-	while b > 0:
-		a,b = b,a%b
-	return(a)
 
 def areConsecutive(num_list):
 	if len(num_list) != 5:
@@ -93,6 +84,7 @@ def minMaxPolygonal(k, a, b):
 
 def polygonNum(n, degree):
 	return n*(n*(degree-2) + 4 - degree)/2
+
 
 def mod10pow10(p, c, m):
 	# 10^(10^p)*c mod m, c < 10
@@ -236,17 +228,19 @@ count = 0
 largest = 0
 smallest = 0
 bigNum = 99
-n = 1
+n = 8
 flag = True
 a = 1
 b = 1
-done = False
 
 if __name__ == '__main__':
 	startTime = time()
-	
-	for i in range(1,9):
-		mSum += ceil(8*(i-1)/i)
+	mSum += n-1
+	for i in range(2,n+1):
+		print(str(i) + " → ", end = '')
+		print(ceil(n*(i-1)/i)-(i-1))
+
+
 	print(mSum)
 	print("done")
 	print('This took', time() - startTime)
