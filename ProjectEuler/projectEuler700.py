@@ -111,7 +111,7 @@ def conjecture(num):
 			return True
 	return False
 
-def nsd(a,b):
+def gcd(a, b):
 	if a < b:
 		a,b = b,a
 	while b > 0:
@@ -144,5 +144,5 @@ startTime = time()
 #  sum(n = 0...38):15806432-n*409165
 
 # print(mSum+313259583)
-print(nsd(1504170715041707,4503599627370517))
+print(gcd(1504170715041707, 4503599627370517))
 # print('This took', time()-startTime)

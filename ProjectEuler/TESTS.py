@@ -2,7 +2,7 @@ from math import sqrt, floor, ceil, factorial, log10
 from time import time
 from itertools import permutations, product
 from mathReplace import mathReplace
-from projectEuler import primeConc, makeSieve, existsPrimeConcatenation
+from projectEuler import makeSieve
 
 
 def zeroEval(numStr):
@@ -23,20 +23,27 @@ def mathConc(a,b, sieve):
 # lines = [line.split(' ') for line in lines]
 # lines = [[zeroEval(numStr) for numStr in line] for line in lines]
 
+def dupeFree(str):
+	found = []
+	for char in str:
+		if char in found:
+			return False
+		found.append(char)
+	return True
+
+def fastDupeFree(str):
+	return len(set(str)) == len(str)
 
 startTime = time()
 
-primeSieve = makeSieve(10**8)
-print('Sieve setup done')
+# primeSieve = makeSieve(10**8)
+# print('Sieve setup done')
 
-# for i in range(1,10000):
-# 	for j in range(1,10000):
-# 		mathConc(i,j,primeSieve) # 134.6022346019745
-# 		# primeConc(i,j,primeSieve) # 110.62362289428711
-a = 302
-
-if a:
-	print('true')
+for i in range(1,100):
+	for j in range(10 ** 3, 10 ** 4):
+		if fastDupeFree(str(j)):
+			pass
+			print(j)
 
 print("done")
 print('This took', time()-startTime)
