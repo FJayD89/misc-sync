@@ -1,0 +1,15 @@
+sMat
+
+výrazy, rovnice, nerovnice
+sqrt(x+2) = x-4
+x+2 = x^2-8x+16
+0 = x^2+7x+14
+x = -7 \pm sqrt(49 - 56)  /2
+
+|(x-1)(x-3)|=1
+(x-1)(x-3) = 1
+
+x^2 - 4x + 4 = 0 = (x-2)^2 => 2
+
+
+x^2 - 4x + 2 = 0 = 
