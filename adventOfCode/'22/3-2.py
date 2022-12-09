@@ -1,7 +1,7 @@
-f = open('AoC.txt')
+f = open('adventText.txt')
 rucksacks = f.read().split('\n')
 # rucksacks = [[rucksack[:len(rucksack)//2], rucksack[len(rucksack)//2:]] for rucksack in rucksacks]
-rucksacks = [rucksacks[i:i+3] for i in range(len(rucksacks) // 3)]
+rucksacks = [rucksacks[3*i:3*i+3] for i in range(len(rucksacks) // 3)]
 print(rucksacks)
 def priority(itemType):
 	typeId = ord(itemType)
@@ -23,6 +23,7 @@ for rucksackTriple in rucksacks:
 		if itemType in rucksackTriple[1]:
 			if itemType in rucksackTriple[2]:
 				prioritySum += priority(itemType)
+				break
 
 
 print(prioritySum)

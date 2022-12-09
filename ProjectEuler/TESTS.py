@@ -10,10 +10,11 @@ def zeroEval(numStr):
 		return zeroEval(numStr[1:])
 	return int(numStr)
 
-def mathConc(a,b, sieve):
-	aLen = floor(log10(a))+1
-	bLen = floor(log10(b))+1
-	return sieve[b*10**aLen + a] and sieve[a*10**bLen + b]
+
+def mathConc(a, b, sieve):
+	aLen = floor(log10(a)) + 1
+	bLen = floor(log10(b)) + 1
+	return sieve[b * 10 ** aLen + a] and sieve[a * 10 ** bLen + b]
 
 
 # f = open('eulerText.txt')
@@ -31,19 +32,32 @@ def dupeFree(str):
 		found.append(char)
 	return True
 
+
 def fastDupeFree(str):
 	return len(set(str)) == len(str)
 
+
 startTime = time()
+
+someDict = {
+			'1': {'3':1},
+			'2': 2,
+			'3': 3
+			}
+
+dictSlice = someDict['1']
+dictSlice['4'] = 4
+
+print(someDict)
 
 # primeSieve = makeSieve(10**8)
 # print('Sieve setup done')
 
-for i in range(1,100):
-	for j in range(10 ** 3, 10 ** 4):
-		if fastDupeFree(str(j)):
-			pass
-			print(j)
+# for i in range(1, 100):
+# 	for j in range(10 ** 3, 10 ** 4):
+# 		if fastDupeFree(str(j)):
+# 			pass
+# 			print(j)
 
 print("done")
-print('This took', time()-startTime)
+print('This took', time() - startTime)
