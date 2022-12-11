@@ -34,9 +34,7 @@ def zeroEval(numStr):
 		return zeroEval(numStr[1:])
 	return int(numStr)
 
-
-f = open('eulerText.txt')
-handPairs = f.read().split('\n')
+ 
 
 # numPairs = [[int(num) for num in numPair.split(',')] for numPair in numPairs]
 # print(numPairs)
