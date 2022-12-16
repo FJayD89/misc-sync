@@ -39,16 +39,16 @@ def fastDupeFree(str):
 
 startTime = time()
 
-someDict = {
-			'1': {'3':1},
-			'2': 2,
-			'3': 3
-			}
+# someDict = {
+# 			'1': {'3':1},
+# 			'2': 2,
+# 			'3': 3
+# 			}
 
-dictSlice = someDict['1']
-dictSlice['4'] = 4
-
-print(someDict)
+# dictSlice = someDict['1']
+# dictSlice['4'] = 4
+#
+# print(someDict)
 
 # primeSieve = makeSieve(10**8)
 # print('Sieve setup done')
@@ -58,6 +58,17 @@ print(someDict)
 # 		if fastDupeFree(str(j)):
 # 			pass
 # 			print(j)
+count = 0
+problemSets = permutations([0,1,2,3])
+for problemSet in problemSets:
+	pList = list(problemSet)
+	for i in range(4):
+		if pList[i] == i:
+			count += 1
+			print(problemSet)
+			break
+	
 
+print(count)
 print("done")
 print('This took', time() - startTime)

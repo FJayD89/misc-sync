@@ -140,11 +140,18 @@ Overall thoughts on Germany:
 7. = 12:30 preventivka, mám pár kazov, not cool. Obed - zeleninové tofu tortilly
 8. = 
 9. =
-10. = Mikulášský seminár, síce som meškal 90min a komplet som missol ukážky, zacvičil som si fajne, stretol som maxima+heshama
-12. = 
-13. = Olympiáda kritického myslenia, 9-12(1h)
-15. = Hygiene appointment 12:30
-
+10. = Mikulášský seminár, síce som meškal 90min a komplet som missol ukážky, zacvičil som si fajne (nukite waza, renzoku waza L6 = otoshi uke, ), stretol som Maxima+Heshama
+11. = I was doing the a AIS hackercallenge the other day, in particular one on some base64 decoding. After running the text through a standard online decoder and copying it over to n++, I saw it was mostly a garbled mess, with a few legible filenames here and there, mostly .xml files. For the rest, it was a seemingly random combination of alphanumerics, control characters, and characters from all over Unicode. As for whatever reason, one in particular stood out to me - ܓ - partly because it was notably larger than the other monospaced characters. And that was that.
+Today, on Sunday, I'm listening to a lecture on vigilance by Juro Kohút, with a nice paralell between the calming of the storm and Jesus' time in the garden of Gethsemane. Roman asked me to read these texts beforehand, guess that went well.
+Wanting to take some notes, I looked up the 'correct' name of the garden, as there were  at least four possible spellings I could think of - Ge(th/t)seman(e/y). And on the snippet of the english wiki page, there was the name of the garden in Aramaic - ܓܕܣܡܢ. Yeah. Mass christmas post enveloping, got a pizza out of it, truly hope someone actually comes
+Mir talk on differatiating relationships, it got really cold
+12. = AJ maturitné prechádzanie
+13. = Olympiáda kritického myslenia, 9-12(1h), nie úplne som ju dával, nestihol som dosť úloh vrátane vlastného argumentu. Vianočné fyzikálne vysedávanie - prednášky o verschiedene schoene Physik, ukážka školskej zásoby uránu, cherenkovov radiation, sranda s tekutým N, cool aerodynamika okolo yachtingu, started 15-solver
+14. = Vianočná cukráreň, maturita sjl. Veci na kt. treba popracovať by som si mal spísať do docu. Aďa Pindurová odletela na Hawai'i lol čiže ktovie akok s našou AJ. Sleep time = 0:45
+15. = Mal som celú jednu hodinu dnes, popri akože príprave na Stužkovú. Hygiene appointment 12:30, bolo fajn. Ne waza + general opakovanie na tréningu, fakt som to pozabúdal. Sleep time = 1:20
+16. = Akadémia Trojstenu
+17. = 
+18. = Moji googlači
 24. = CHMAS
 1.1. 23 NEWYRS
 
