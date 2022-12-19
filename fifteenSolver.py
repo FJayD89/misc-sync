@@ -6,6 +6,7 @@ class slideBoard:
 		self.board = boardSetup
 		self.size = [len(self.board[0]), len(self.board)]
 		self.emptyPos = self.findNum(0)
+		self.nums = self.size[0] * self.size[1] - 1
 
 	def findNum(self, searched_num):
 		for x in range(self.size[0]):
@@ -95,42 +96,46 @@ class slideBoard:
 			self.multi_swap([-1, 0], 2)
 			self.swap_relative([0, -1])
 			self.swap_relative([1, 0])
-			
-	
+
+	def numToGoal(self, num):
+		goal = self.end_pos(num)
+
+		if self.findNum(num)[0] == self.size[0]-1:
+			self.empty_to_pos(self.findNum(num), [-1, 0])
+			self.swap_relative([1, 0])
+
+		if self.findNum(num)[1] == self.size[1]-1:
+			self.empty_to_pos(self.findNum(num), [0, -1])
+			self.swap_relative([0, 1])
+
+		yDistToGoal = self.emptyPos[1] - goal[1] - 1
+		if yDistToGoal > 0:
+			self.empty_to_pos(self.findNum(num), [0, 1])
+			self.cycle_up(yDistToGoal)
+
+		xDistToGoal = self.emptyPos[0] - goal[0]
+		if xDistToGoal > 0:
+			self.empty_to_pos(self.findNum(num), [1, 0])
+			self.cycle_right(xDistToGoal)
 
 
 board = slideBoard([
-		[5,2,3],
-		[4,0,2],
+		[5,7,3],
+		[8,0,2],
 		[6,4,1]
-		] )
+		] ) 
 
-# board.print_board()
+board.numToGoal(1)
+board.numToGoal(2)
+board.numToGoal(4)
+for i in range(1, board.size[0]*board.size[1]):
+	if i % board.size[0] == board.size[0] - 2:
+		continue
+	if i % board.size[0] == board.size[0]-1:
+		board.numToGoal(i)
 
-def numToGoal
+	board.numToGoal(i)
 
-goal = board.end_pos(1)
-
-if board.findNum(1)[0] == board.size[0]-1:
-	board.empty_to_pos(board.findNum(1), [-1,0])
-	board.swap_relative([1,0])
-
-if board.findNum(1)[1] == board.size[1]-1:
-	board.empty_to_pos(board.findNum(1), [0,-1])
-	board.swap_relative([0,1])
-
-yDistToGoal = board.emptyPos[1] - goal[1] - 1
-if yDistToGoal > 0:
-	board.empty_to_pos(board.findNum(1), [0,1])
-	board.cycle_up(yDistToGoal)
-
-xDistToGoal = board.emptyPos[0]-goal[0]
-if xDistToGoal > 0:
-	board.empty_to_pos(board.findNum(1), [1,0])
-	board.cycle_right(xDistToGoal)
-
-
-	
 # if we get to a sich like 1243
 #                          xx0x
 # we go
