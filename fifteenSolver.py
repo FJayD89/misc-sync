@@ -1,6 +1,12 @@
 # from math import abs
 
 class slideBoard:
+	cmdDict = {
+		"U": [0, -1],
+		"D": [0, 1],
+		"R": [1, 0],
+		"L": [-1, 0]
+	}
 	
 	def __init__(self, boardSetup):
 		self.board = boardSetup
@@ -80,33 +86,26 @@ class slideBoard:
 		self.multi_swap(direction, abs(yDif))
 		self.empty_to_pos(pos, rel_pos)
 		
-	
 	def cycle_up(self, cycle_count):
 		# only from the cell directly underneath the moved num
 		for i in range(cycle_count):
-			self.swap_relative([1, 0])
-			self.multi_swap([0, -1], 2)
-			self.swap_relative([-1, 0])
-			self.swap_relative([0, 1])
+			self.parse_commands('RUULD')
 		
 	def cycle_right(self, cycleCount):
 		# only from the cell directly left of the moved num
 		for i in range(cycleCount):
-			self.swap_relative([0, 1])
-			self.multi_swap([-1, 0], 2)
-			self.swap_relative([0, -1])
-			self.swap_relative([1, 0])
+			self.parse_commands("DLLUR")
 
 	def numToGoal(self, num):
 		goal = self.end_pos(num)
 
 		if self.findNum(num)[0] == self.size[0]-1:
 			self.empty_to_pos(self.findNum(num), [-1, 0])
-			self.swap_relative([1, 0])
+			self.parse_commands("R")
 
 		if self.findNum(num)[1] == self.size[1]-1:
 			self.empty_to_pos(self.findNum(num), [0, -1])
-			self.swap_relative([0, 1])
+			self.parse_commands("D")
 
 		yDistToGoal = self.emptyPos[1] - goal[1] - 1
 		if yDistToGoal > 0:
@@ -117,6 +116,12 @@ class slideBoard:
 		if xDistToGoal > 0:
 			self.empty_to_pos(self.findNum(num), [1, 0])
 			self.cycle_right(xDistToGoal)
+			
+	def parse_commands(self, cmds):
+		for cmd in cmds:
+			self.swap_relative(slideBoard.cmdDict[cmd])
+			
+	
 
 
 board = slideBoard([
@@ -133,6 +138,7 @@ for i in range(1, board.size[0]*board.size[1]):
 		continue
 	if i % board.size[0] == board.size[0]-1:
 		board.numToGoal(i)
+		if i %
 
 	board.numToGoal(i)
 
