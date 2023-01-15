@@ -1,0 +1,29 @@
+Personal details
+phone number, e-mail address, residence
+
+
+Personal profile
+Briefly describe who you are, what you have to offer and what your objective/ambition is. This part should be no more than 3-4 lines. 
+
+Education
+4+9
+8yr gymn
+vocational = phys/math/inf
+SoČ - designed+coded RushHour solver in Python
+
+Start with your most recent study, stating the full name of the program and institute. To give a more clear undertanding of what your studies entail, add a notable project such as your Bachelor End Project and/or a few relevant courses or minor to the description.
+
+Work experience
+nope
+Describe your position(s) and briefly elaborate on your responsibilities and obtained results. Quantify information as much as possible!
+
+Extracurricular activities
+KOZA - 
+
+
+Skills
+
+Technical skills (e.g. software programs) and languages you speak. If possible, also state your current level (e.g. full working proficiency).
+
+Personal interests
+Use a few keywords to mention what you like to do to in your spare time (e.g. drawing, soccer, 3D printing).

@@ -1,0 +1,71 @@
+Hello,
+my name is Filip Jay Doba, I'm a Slovak student, finishing high school this year. Throughout my studies and extracurricular time I've found myself to be a great team player and communnicator, whether it's technical or more presonal topics. I often find it easier to support leaders (when it comes to in my eyes sensible ideas ofc) than to lead personally, though I don't have a problem with either. 
+
+2014 - present = Škola pre Mimoriadne Nadané Deti a Gymnázium, Teplická 7, BA = School for gifted children Bratislava
+Focus on physics, mathematics and informatics through vocational subjects
+Leaving Exam (Maturitná skúška) chosen subjects - Slovak Language, English Language B2, Physics, Mathematics, Informatics
+
+
+Work experience
+None so far, school and extracurricular activities take up too much time to practically consider extra work
+
+Extracurricular activities
+2019 - present = member of KOZA - Carpathian nature protection and altruism association - weekend/week-long stays in landscape parks and other protected natural areas focused on the protection
+
+Skills
+
+Languages:
+	English - C2 certificate
+	German - B2 based on school german studies
+	Slovak - native
+SW skills:
+	Python - Advanced
+	C - Intermediate
+	Java - 
+	JS - basics
+	
+	and IDEs - JetBrains/VSCode
+	LaTeX - advanced math usage
+	
+	Google/Libreoffice suite
+	
+	
+	
+Competitions:
+	Slovak mathematical correspondence seminar: https://kms.sk
+	Programming correspondence seminar https://ksp.sk
+	What are correspondence seminars: 
+	https://en.wikipedia.org/wiki/Physics_Correspondence_Seminar
+	
+	Slovak Mathematical Olympiad: https://skmo.sk/index.php?jazyk=en
+		2021/22 - 37. out of 46 at regional level, cat. A
+		2020/21 - 25. out of 30 at regional level, cat. B
+	
+	Physics Náboj: https://physics.naboj.org/sk/en/
+		2022/23 - 7. out of 133. international, cat. Seniors
+		2021/22 - 116. out of 184. international, cat. Seniors
+		
+	Mathematics Náboj: https://math.naboj.org/index.php?country=GB
+		2021/22 - 122. out of 622 international, cat. Seniors
+		2020/21 - 64. out of 591 international, cat. Juniors
+		2019/20 - 83. out of 569 international, cat. Juniors
+		
+	Fyzikláni: https://fyziklani.org/about
+		2021/22 - 30. out of 61, cat. B, 99. out of 162 overall
+		
+	Zenith of programming: https://zenit.ksp.sk/
+		2022/23 - 28. out of 35, regional level 
+		
+Non-competition activites:
+	Project Euler: https://projecteuler.net/about
+		75 problems solved, highest difficulty 20%
+	Designed and built solver for generalized 15-puzzle with Python
+	Built a solver for a generalized Rush Hour in Python over the course of the year as part of a school project
+	https://en.wikipedia.org/wiki/Rush_Hour_(puzzle)
+	
+	
+	
+Technical skills (e.g. software programs) and languages you speak. If possible, also state your current level (e.g. full working proficiency).
+
+Personal interests
+Use a few keywords to mention what you like to do to in your spare time (e.g. drawing, soccer, 3D printing).
