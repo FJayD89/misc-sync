@@ -1,0 +1,10 @@
+in getFlag
+getMac == "de:ad:be:ef:fa:ce"
+
+local_48 = strdup(pdVar2->d_name);
+
+pdVar2 = readdir64(__dirp);
+
+__dirp = opendir("/sys/class/net");
+
+
