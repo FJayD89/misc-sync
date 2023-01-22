@@ -1,0 +1,48 @@
+100 DIM LINES$(height)
+101 LOCATE 2,1 : REM top left corner of the maze
+102 FOR Y = 0 TO height-1
+103   LET LINE$ =  ""
+104   FOR X = 0 TO width-1
+105     
+106     LET cell = PEEK(16 + Y * width + X)
+107     IF cell = 0 THEN LINE$ = LINE$ + " ";
+108     IF cell = 1 THEN LINE$ = LINE$ + "X";
+109     NEXT X
+110   PRINT LINE$
+120   LINES$(Y) = LINE$
+140   NEXT Y
+150 LOCATE 1, 10 : PRINT "STEPS: "
+160 LET X = PEEK(1)
+170 LET PREVY = PEEK(2)
+180 LET Y = 1
+
+
+
+
+600 REM START HERE
+
+602 
+605 LOCATE 1, 17 : PRINT steps
+606 
+610 LET LINE$ = ""
+620 Y = PEEK(1)
+670 FOR X=0 TO width-1
+671   LET CELL = PEEK(16 + Y * width + X)
+672   IF X = PEEK(2) THEN 
+673     LET LINE$ = LINE$ + "@" 
+677   ELSE
+678     IF CELL = 0 THEN 
+683       LINE$ = LINE$ + " "
+684       END IF  
+685     IF CELL = 1 THEN 
+690       LINE$ = LINE$ + "X"
+691       END IF
+693   END IF
+695   NEXT X
+696 LOCATE PREVY+2, 1
+697 PRINT LINES$(PREVY)
+699 LOCATE Y+2, 1
+700 PRINT LINE$
+900 PREVY = PEEK(1)
+999 steps = steps + 1
+1000 RETURN
