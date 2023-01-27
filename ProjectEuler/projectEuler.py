@@ -34,7 +34,34 @@ def zeroEval(numStr):
 		return zeroEval(numStr[1:])
 	return int(numStr)
 
- 
+
+def isPermuted(num1, num2):
+	str_num1 = str(num1)
+	str_num2 = str(num2)
+	digits = {digit:0 for digit in str_num1}
+	for digit in str_num1:
+		digits[digit] += 1
+	for digit in str_num2:
+		if not digit in digits:
+			return False
+		digits[digit] -= 1
+	for digitCount in digits.values():
+		if digitCount != 0:
+			return False
+	return True
+
+
+def largest_permutation(num):
+	num_str = str(num)
+	num_str = sorted(num_str, reverse=True)
+	num_str = ''.join(num_str)
+	return int(num_str)
+
+
+f = open('eulerText.txt')
+lines = f.read().split('\n')
+lines = [line.split(',') for line in lines]
+lines = [[int(numStr) for numStr in line] for line in lines]
 
 # numPairs = [[int(num) for num in numPair.split(',')] for numPair in numPairs]
 # print(numPairs)
@@ -233,12 +260,33 @@ b = 1
 
 if __name__ == '__main__':
 	startTime = time()
-	mSum += n-1
-	for i in range(2,n+1):
-		print(str(i) + " → ", end = '')
-		print(ceil(n*(i-1)/i)-(i-1))
-
-
+	newColumn = [0 for _ in range(len(lines))]
+	previousColumnVals = [lines[row][0] for row in range(len(lines))]
+	for column in range(1,len(lines[0])):
+		columnVals = [lines[row][column] for row in range(len(lines))]
+		newColumnVals = []
+		# print(columnVals)
+		prefixes = []
+		prefSum = 0
+		for val in columnVals:
+			prefSum += val
+			prefixes.append(prefSum)
+		
+		for endRow in range(len(lines)):
+			leastSum = previousColumnVals[0] + prefixes[endRow]
+			for startRow in range(1,len(lines)):
+				vertDiff = abs(endRow-startRow)
+				smaller = min(startRow, endRow)
+				pathSum = previousColumnVals[startRow] + columnVals[smaller] + abs(prefixes[endRow] - prefixes[startRow])
+				# if startRow == endRow:
+				# 	pathSum -= previousColumnVals[startRow]
+				if pathSum < leastSum:
+					leastSum = pathSum
+			newColumnVals.append(leastSum)
+		
+		previousColumnVals = list(newColumnVals)
+	
+	print(previousColumnVals)
 	print(mSum)
 	print("done")
 	print('This took', time() - startTime)

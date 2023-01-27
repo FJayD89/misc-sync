@@ -164,14 +164,14 @@ Mir talk on differatiating relationships, it got really cold
 28. = Došli Bagoví = druhé Vianoce - kopec oblečenia + horáčik a čelovka
 29. = Nejaké ďalšie frisbee s J, už dobre triafa bránu. Missnutá socializácia v Žiline, ale myslím, že doma made up for it
 30. = Anna catchup call :) Short, but nice
-31. = Spoločenské hry okolo Nového roku v Jure, 3D Ubongo je fakt cool koncept, hangoutovanie s googlačmi cez spol. terapiu
+31. = Spoločenské hry okolo Nového roku v Jure, 3D Ubongo je fakt cool koncept, hangoutovanie s googlačmi cez spol. terapiu, novorocny prespavac v Jure, fancy fireworks
 1.1. 23 NEWYRS
 2. = woke up suuper late today, still tired from ney year's, who knew keyboard clacking was such a relaxing and sleep-inducing sound
 @ 23:00 15 DONE almost i mean the 4x4 case works but obvs it broke when adding a row;
 		@ 23:21 hopefully fixed, testing
 		@ 23:51 fixed sth a bit too hard, 6x6 has yet undiscovered problems
 		After a bit of reflection, I'm getting washed up and some rest
-3. = I didn't get that rest, woke up a bit better today. Got outside, though everythings damp. Dealing with schools again, finally as per my parent's request, for which I am thankul as I was doing a crap job of kicking myself to get it done
+3. = I didn't get that rest, woke up a bit better today. Got outside, though everything's damp. Dealing with schools again, finally as per my parent's request, for which I am thankul as I was doing a crap job of kicking myself to get it done
 @ 21:54 SOLVED!! Although it's not perfect, I could find a case that didn't run into the one problem I didn't feel like covering, which is another medium-scale coding project done!
 4. = Meet up with the Delegation to Germany, was pretty great. Went out to Ihrysko for a few hours, Bang + Vúdú. Got a bit awkwarad around Lucy by the end, who needed some getting over outpouring time.
 5. = Karate guys meetup, coupled with a trip to Žilina with Marek, Paľo, Adam and Maťa. Checked out the squares, Martinus&PantaRhei, went for a chinese lunch. Fun times all around, though I wasn't quite 'there', was texting luc about some unresolved stuff and felt weird, probably due to it idk
@@ -184,9 +184,19 @@ Mir talk on differatiating relationships, it got really cold
 12.1. = Went to Dancehaus after morning physics to get some practice in the slightly constrained space, got the entrance down after quite a few attempts despite all complaining, sang a bit, went over the formal procedures and dances, set up the tech table and stashed our props. Training afterwards has me brush up trap&rolls, we'll apparently be leading training for next week, Laco should come over once though I've already managed to forget exactly when.
 13.1. = some more dance practice, feel like I just about have it down though not 100%. Trying out the play was fun
 14.1. = STUZKOVA Got to Dancehaus around eleven (should've gotten there an hour earlier but nope, you're going with dad), last last last tries to get everything and everyone working together, get home for lunch. Get dressed, shaved, find the how to tie a tie video 5 mins pre departure, all in good order obvs. Back then it hit me that that was one of my first internet memories, connected to any 'how to' lookup. Got back late again, later than advertised, but I wasn't going to push it. The vid's gonna come out eventually, so a few hiccups - my teacher dance partner Katush couldn't come, which led to me frantically searching for her and, well, obviously failing. Mirko came too :) Finally saw/met Zuzka's date Pat, seems cool, probably is. I slightly screwed up my (and by extension Sab's) dance, as I didn't practice alone... ah.
-15. = Most of Netherlands apps closed (Eindhoven, Delft, Twente, Vrije)
-20. @ 17:00 End of discounted application fee (Online, 30E)
-22. = Moji googlači Lk16
+15. = Disco po odchode väčšiny učiteľov, fajn hudba, komplet som sa odosobnil od sickeho a isiel som ako sa dalo :) Kusok českej politiky s Aninom, Mirko s Pederom prilis takto netancujú, že im to príde trápne (seba). Došli naši starí známi, Sasai masívne vyrástol, Samo asi tak ako sa dalo čakať, no ani s jednym som nemal moc rečí - už skôr s Rorom, ktorý sa istým smerom dosť zmenil. Po všetkom Andrej zviezol aj Simona, Anomáliu a Mirka. Ráno som spal, hnusne som nedošiel pomôcť spratať veci. Zvyšok to nejak zvládol.
+	@ 24:00 Most of Netherlands apps closed (Eindhoven, Delft, Twente, Vrije).
+16. = Učitelia nám gratulujú k úspešnej stužkovej mostly, až na pár nehostí čo urvávali ŠPZky :/ Dojedanie kapustnice na obed
+17. = Spravil som (s pomocou) tréning, nie úplne vyšlo nakoľko som nestíhal obiehať a dávať robiť, najmä maldším. Deni si potom zobrala malých na katy, Paľo na morote zuki
+18. = K obedu smažené toasty, hneď po matická maturita, v prepočne na čas dosť dobré score
+19. = Tréning o dosť lepšie, s Ninou+Matúšom kakie, zvyšok kihonido, mladší ushiro ukemi
+20. =
+    @ 17:00 End of discounted application fee (Online, 30E)
+21. =
+22. = Moji googlači Lk16, nevyšlo príliš, všetci zdeptaní/unavení/bijú sa vankúšmi o vankúše
+23. =
+24. = AJ Maturita zrána, 3ch je za mňa úspech. XORring DONE!! A rather ugly and manual solution, but it works and got me to over 900.
+25. =
 
 9.-10.2. = Fyziklání
 14.2 = UTwente questionnaire completion
