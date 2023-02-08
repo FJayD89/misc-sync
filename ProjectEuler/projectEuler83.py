@@ -58,27 +58,6 @@ def largest_permutation(num):
 	return int(num_str)
 
 
-def sum_combinations(num):
-	if num == 2:
-		return [0,1,2]  # 1+1, 2
-	
-	if num == 3:
-		return [0,2,2,3]  # 1+1+1, 1+2, 3
-	combins = [0]
-	for i in range(1,num//2 +1):
-		# i is the smallest number in the sum
-		# in the list, the index is <= the smallest num in the sum and the value is how many such sums there are
-		# so we want the following
-		combins.append(0)
-		[ for i in range(2)]
-		# combins.append(combins[-1] + sum_combinations(num - i)[i])
-		
-	[combins.append(combins[-1]) for _ in range(num - num//2 - 1)]
-	
-	combins.append(combins[-1]+1)
-	return combins
-
-
 f = open('eulerText.txt')
 lines = f.read().split('\n')
 lines = [line.split(',') for line in lines]
@@ -281,11 +260,33 @@ b = 1
 
 if __name__ == '__main__':
 	startTime = time()
+	newColumn = [0 for _ in range(len(lines))]
+	previousColumnVals = [lines[row][0] for row in range(len(lines))]
+	for column in range(1,len(lines[0])):
+		columnVals = [lines[row][column] for row in range(len(lines))]
+		newColumnVals = []
+		# print(columnVals)
+		prefixes = []
+		prefSum = 0
+		for val in columnVals:
+			prefSum += val
+			prefixes.append(prefSum)
+		
+		for endRow in range(len(lines)):
+			leastSum = previousColumnVals[0] + prefixes[endRow]
+			for startRow in range(0,len(lines)):
+				vertDiff = abs(endRow-startRow)
+				smaller = min(startRow, endRow)
+				pathSum = previousColumnVals[startRow] + columnVals[smaller] + abs(prefixes[endRow] - prefixes[startRow])
+				# if startRow == endRow:
+				# 	pathSum -= previousColumnVals[startRow]
+				if pathSum < leastSum:
+					leastSum = pathSum
+			newColumnVals.append(leastSum)
+		
+		previousColumnVals = list(newColumnVals)
 	
-	# take a number, say 5
-	# start the counter at 1
-	print(sum_combinations(4))
-	
+	print(min(previousColumnVals))
 	print(mSum)
 	print("done")
 	print('This took', time() - startTime)
