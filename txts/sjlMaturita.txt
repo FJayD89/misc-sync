@@ -30,3 +30,107 @@ rozhodoval som sa, či pôjdem autom alebo kolobežkou
 meškal, ale učiteľ ho nezapísal
 
 apoziopéza
+
+časopis/kniha/knižnica/rozhlas/televízia/film/inscenácia/
+autorská poznámka:
+	v scenári všetko také to v zátvorkách, čo priamo nehovoria
+	STRÁŽNY (potichu): Čože?
+
+Stavba divadelnej hry:
+	predpremiéra
+	premiéra
+	repríza
+	derniéra
+
+náučná
+	populárnonáučná = učebnice, 
+	teoretickonáučná = skriptá
+lit. faktu
+vecná lit.
+populárnovedecká lit.
+dobrodružná lit.
+umelecká lit.
+
+Lit. forma = len z pozretia
+ - Próza = súvislý text
+ - poézia = nesúvislý
+ 
+Lyrika:
+ - duchovná
+ - ľubostná
+ - spoločenská
+ - čistá = forma nad obsah, aby sa čitateľ do nej mohlo vložiť
+ - reflexivna = úvahová
+ - prírodná
+
+ - lyr. poézia: 
+   - báseň
+    - sonet = lyr. básnicka forma
+	 - 14 veršov 
+	  - 4+4+3+3 - Petrarca
+	  - 4+4+6
+	 - téza, antitéza, syntéza
+   - pásmo (G Apol), zdnalivo nesúvisiace celky v jednej téme
+
+Epika:
+
+   Bájka v Báj v Balada
+   Epos = epická poézia
+	- dej = propozícia
+	- múzy = invokácia
+	- predstavenie postáv
+	- dej
+	- ponaučenie, záver
+	
+   Anekdota
+    - krátky vtipny príbeh
+   Aforizmus
+    - krátke tvrdenie
+   Epická hádanka
+   Legenda = stredoveký žáner o svätých
+   Rozprávka
+	 - televízna = na pokračovanie
+	 - filmová
+    - autorská/ľudová
+   Vyčítanka/riekanka - ľudová slovesnosť
+   Román
+    - rozsiahly dej. útvar
+	- množstvo rozvitých meniacich sa postáv
+	- detek., histor., ľúb., vedeckofantastický., dobrodružný, (auto)biografický, genger romány, denníky, fantastický
+    - psychologický = rozoberá vnútorné myšlienký postáv
+	- sociálny = rieši postavenie postáv v spoločnosti
+	-
+	
+   Novela = stredný epický útvar
+    - rel. málo postáv
+   Poviedka
+    - bez vývoja postáv
+    - málo postáv
+   Podobenstvo
+    - asi najmä Biblia = starovek
+    - využívané v stredoveku
+    - príbeh na vysvetlenie životného múdra
+   Povesť
+    - viažu sa na miesto/erb (heraldické)/udalosť (historické)
+    - ľudová/autorská (len pri zbierkach)
+   Porekadlo
+    - životné konštatovanie
+   Príslovie
+    - ponaučenie
+   Pranostika = k počasiu
+   
+Dráma
+ Absurdná
+  - bez deja, rozuzlenia
+ Činohra
+  - vyobrazenia aktuálneho života
+  - môže obsahovať prvky trag/komédie
+ Komédia
+  - veselohra
+  - eh pozitívny záver
+  - bez tragických prvkov, ťažkých tém
+  
+ Tragédia
+  - hlboké témy
+  - tragická momenty
+ Automatické texty

@@ -35,7 +35,7 @@ def zeroEval(numStr):
 	return int(numStr)
 
 
-def isPermuted(num1, num2):
+def is_permuted(num1, num2):
 	str_num1 = str(num1)
 	str_num2 = str(num2)
 	digits = {digit:0 for digit in str_num1}
@@ -59,24 +59,43 @@ def largest_permutation(num):
 
 
 def sum_combinations(num):
-	if num == 2:
-		return [0,1,2]  # 1+1, 2
-	
-	if num == 3:
-		return [0,2,2,3]  # 1+1+1, 1+2, 3
-	combins = [0]
-	for i in range(1,num//2 +1):
+	global allCombins
+	combins = [0 for _ in range(num+1)]
+	for k in range(1,num//2 +1):
 		# i is the smallest number in the sum
 		# in the list, the index is <= the smallest num in the sum and the value is how many such sums there are
 		# so we want the following
-		combins.append(0)
-		[ for i in range(2)]
-		# combins.append(combins[-1] + sum_combinations(num - i)[i])
-		
-	[combins.append(combins[-1]) for _ in range(num - num//2 - 1)]
+		# for 1
+		sumCount = allCombins.get(k, -1)
+		if sumCount == -1:
+			allCombins[num-k] = (sum_combinations(num-k))
+		combins[k] = sum(allCombins[num-k][k:])
+	combins[num] = 1
+	# if combin in
 	
-	combins.append(combins[-1]+1)
 	return combins
+
+
+def factorial_digit_sum(num):
+	facts = [factorial(int(i)) for i in str(num)]
+	return sum(facts)
+
+def len_factorial_chain(start_num):
+	global factSums
+	encountered = [start_num]
+	next = start_num
+	while True:
+		getNext = factSums.get(next, -1)
+		if getNext == -1:
+			factSums[next] = factorial_digit_sum(next)
+			getNext = factSums[next]
+		next = getNext
+		if next in encountered:
+			# take all the nums encountered and add them to the dict, with the value as inverse index
+			for encIndex in range(len(encountered)):
+				factSums[encountered[encIndex]] = encIndex
+			return len(encountered)
+		encountered.append(next)
 
 
 f = open('eulerText.txt')
@@ -278,14 +297,19 @@ n = 8
 flag = True
 a = 1
 b = 1
+allCombins = {}  # protected
+factSums = {}  # protected
 
 if __name__ == '__main__':
 	startTime = time()
 	
-	# take a number, say 5
-	# start the counter at 1
-	print(sum_combinations(4))
+	# print(len_factorial_chain(69))
 	
-	print(mSum)
+	for i in range(10**5):
+		if len_factorial_chain(i) == 60:
+			count += 1
+	
+	print(len(factSums))
+	# print(count)
 	print("done")
 	print('This took', time() - startTime)

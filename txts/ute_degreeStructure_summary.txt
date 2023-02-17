@@ -1,0 +1,34 @@
+UT/e CS Degree Structure Summarized
+
+Mutiple learning trajectories, each includes several related courses from a specific domain. 
+
+Core courses:
+   Calculus
+   Statistics
+   Linear Algebra
+   Logic and set theory
+
+From year 1: 
+   Systems
+   Software Development
+   Algorithms & Theory of computing.
+
+Systems -> Security, Networks and Databases
+Software development -> Programming and Software Engineering
+Algorithms & Theory of computing -> data structures and algorithms
+
+A few project courses
+
+third year, choice of in-depth course in one of the three learning lines, which will help you make a choice for your graduation project. 
+
+SW Engi group project on OpSrc in 10 weeks
+
+2 courses in Impact of Technology
+ - focus on Engineering Ethics and Engineering for Society
+
+Challenge based learning = an opportunity to apply knowledge and to develop professional skills through group problem solving
+In addition, several first year and second year courses also have CBL components. 
+
+first year: user-friendly web portal
+second year: cross-program group project on open Sustainable Development problem  
+third year: extend or improve an Open-source software system.

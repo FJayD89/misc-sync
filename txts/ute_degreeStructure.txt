@@ -1,0 +1,18 @@
+UT/e CS Degree Structure
+
+The Computer Science and Engineering bachelor’s degree program consists of a number of learning trajectories. Each trajectory includes several related courses from a specific domain. 
+
+The program starts with a number of core courses. These are intended to ensure that all students have the required basic knowledge to start with the specific computer science subjects. Core courses are Calculus, Statistics, Linear Algebra and Logic and set theory. 
+
+From year 1, you will additionally receive subjects in the trajectories: Systems, Software Development and Algorithms & Theory of computing.
+
+The Systems learning trajectory revolves around subjects such as Security, Networks and Databases. The Software development learning trajectory revolves around Programming and Software Engineering. Algorithms & Theory of computing provides knowledge of data structures and algorithms. Each year includes several courses in which you can apply your knowledge in projects. 
+
+In your third year, you choose an in-depth course in one of the three learning lines, which will help you make a choice for your graduation project. Additionally, you will participate in the Software Engineering project in which you will work with a group of fellow students on an Open Source software project in 10 weeks.
+
+As a program, we believe it is important that our students not only acquire solid professional knowledge and skills, but also learn to look beyond the boundaries of their profession to the impact on and contribution to social issues. Therefore, all students take 2 courses in Impact of Technology that focus on Engineering Ethics and Engineering for Society.
+
+Challenge based learning 
+In addition to the subject-specific knowledge you gain during the Bachelor Computer Science and Engineering at TU/e, there is ample opportunity to apply this knowledge and to develop professional skills.  The program consists of courses and Challenge Based Learning (CBL). In CBL, students work on problems in groups. More information about CBL.
+
+Projects are an integral part of your studies. Therefore, as your studies progress, you will spend more and more time on them. In the first year, you work on developing a user-friendly web portal. In the second year, you will work with students from other bachelor programs on an open problem related to the Sustainable Development Goals. As a Computer Science student you bring Computer Science knowledge, for example, in the areas of algorithmics, systems knowledge, and software development. In addition, several first year and second year courses also have CBL components. In the third year, your Bachelor Final Project will be a special project in which you have to extend or improve an Open-source software system.
