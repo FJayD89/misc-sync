@@ -100,8 +100,8 @@ class SlideBoard:
 		return [x,y]
 
 	def is_at_rel_pos(self, pos, rel_pos):
-		for i in [0,1]:
-			if self.emptyPos[i] != pos[i] + rel_pos[i]:
+		for XorY in [0,1]:
+			if self.emptyPos[XorY] != pos[XorY] + rel_pos[XorY]:
 				return False
 		return True
 
@@ -109,81 +109,45 @@ class SlideBoard:
 		if self.is_at_rel_pos(pos, rel_pos):
 			return
 
-		distToPos = [pos[i] - self.emptyPos[i] for i in [0, 1]]  # dist to pos
+		distToPos = [pos[XorY] - self.emptyPos[XorY] for XorY in [0, 1]]  # dist to pos
 
-		distance = [pos[i] + rel_pos[i] - self.emptyPos[i] for i in [0, 1]]  # dist to pos+rel_pos
+		distance = [pos[XorY] + rel_pos[XorY] - self.emptyPos[XorY] for XorY in [0, 1]]  # dist to pos+rel_pos
 
-		targetRelPos = [-sign(distToPos[i]) for i in [0, 1]]  # closest point around POS to empty = target
+		targetRelPos = [-sign(distToPos[XorY]) for XorY in [0, 1]]  # closest point around POS to empty = target
 
-		distToTarget = [distance[i] - rel_pos[i] + targetRelPos[i] for i in [0, 1]]  # dist to this target
+		distToTarget = [distance[XorY] - rel_pos[XorY] + targetRelPos[XorY] for XorY in [0, 1]]  # dist to this target
 
 		self.multi_swap_new(distToTarget, 1)  # move to target
 
-		difference = [rel_pos[i] - targetRelPos[i] for i in [0, 1]]
+		# both pos on the edge of [-1,1] square
+		# if in the middle horizontally, move vertically
+		# actually not always
+		# 12XX you have to go around
+		# X04X so get to the bottom right corner if possible
+		if pos[0] != self.size[0]-1 and pos[1] != self.size[1]-1:
+			move = [1-targetRelPos[XorY] for XorY in [0,1]]
 
-		for i in [0, 1]:  # if in same row/column
-			if difference[i] == 0:
-				if difference[1 - i] == 0:
-					return
-				baseCorrection = 'R'
-				if i == 1:
-					baseCorrection = 'D'
-				if pos[i] == self.size[i] - 1:
-					baseCorrection = SlideBoard.HVInverter(baseCorrection, i)
+		toMove = 0 if targetRelPos[0] == 0 else 1
+		move = [0, 0]
+		move[toMove] = 1
+		if self.emptyPos[toMove] == self.size[toMove]-1:
+			move = [-move[XorY] for XorY in [0,1]]
+		board.multi_swap_new(move)
 
-				correction = ''
+		differenceFinal = [pos[XorY] + rel_pos[XorY] - self.emptyPos[XorY] for XorY in [0, 1]]
 
-				# what exactly is this doing here
-				# i would love to know
-				if rel_pos[i] == 0:
-					self.parse_commands(baseCorrection)
-					correction = SlideBoard.HVInverter(baseCorrection, i)
-				self.multi_swap_new(difference)
-				self.parse_commands(correction)
-				return
+		firstMove = 1 if abs(differenceFinal[0]) == 1 else 0
 
-		if abs(difference[0]) == abs(difference[1]) == 2:
-			# if diagonal to rel_pos
-			yCorrection = 0
-			if pos[1] == self.size[1] - 1:
-				# go up instead of down if you can't go down
-				yCorrection = -2
-			self.multi_swap_new([difference[0], 1 - targetRelPos[1] + yCorrection])
-			self.multi_swap_new([0, rel_pos[1] - 1 - yCorrection])
-			return
 
-		correction = [0, 0]
+		self.multi_swap_new(differenceFinal, firstMove)
 
-		for i in [0, 1]:
-			if pos[i] == self.size[i] - 1:
-				# go up instead of down if you can't go down
-				correction[i] = -2
-
-		unchanged = 1
-
-		if correction[1] != 0:
-			unchanged = 0
-
-		toCorner = [1 - targetRelPos[i] + correction[i] for i in [0, 1]]
-
-		self.multi_swap_new(toCorner)
-
-		differenceFinal = [pos[i] + rel_pos[i] - self.emptyPos[i] for i in [0, 1]]
-
-		self.multi_swap_new(differenceFinal, unchanged)
-
-	def cycle_vertical(self, cycles):
-		direction = abs(cycles)//cycles
+	def cycle_vertical(self, cycle_count, direction):
+		# direction = abs(cycle_count) // cycle_count
 		baseCmd = "RUULD"  # UpWARD CYCLE
 		if direction == 1: # 1 means Down
 			baseCmd = SlideBoard.invertCmdsVertically(baseCmd)
-		for cycle in range(abs(cycles)):
+		for cycle in range(abs(cycle_count)):
 			self.parse_commands(baseCmd)
-		
-	def cycle_right(self, cycle_count):
-		# only from the cell directly left of the moved num
-		for i in range(cycle_count):
-			self.parse_commands("DLLUR")
 
 	def cycle_horizontal(self, cycle_count, direction):
 		baseCmd = "DLLUR"  # LeftWARD CYCL
@@ -201,30 +165,34 @@ class SlideBoard:
 			self.parse_commands("D")
 
 		if self.findNum(num)[0] == self.size[0]-1:
-			# reference_pos = [self.findNum(num)[i]-1 for i in [0,1]]
-			# self.empty_to_pos(reference_pos, [0, 1])
 			self.empty_to_pos(self.findNum(num), [-1, 0])
 			self.parse_commands("R")
+
+
+		xDistToGoal = pos[0] - self.findNum(num)[0]
+		if xDistToGoal != 0:
+			xDirection = abs(xDistToGoal) // xDistToGoal  # dir 1 == cycle right
+			self.empty_to_pos(self.findNum(num), [xDirection, 0])
+			baseCmd = 'R'  # for direction = 1
+			if xDirection == 1:
+				# baseCmd = SlideBoard.invertCmdsHorizontally(baseCmd)
+				baseCmd = 'L'
+			self.parse_commands(baseCmd)
+			self.cycle_horizontal(abs(xDistToGoal)-1, xDirection)
 
 		yDistToGoal = pos[1] - self.findNum(num)[1]
 		#  dir 1 == cycle down
 		if yDistToGoal != 0:
-			self.empty_to_pos(self.findNum(num), [0, 1])
-			self.cycle_vertical(yDistToGoal) # UP
-
-		xDistToGoal = pos[0] - self.findNum(num)[0]
-		if xDistToGoal != 0:
-			direction = abs(xDistToGoal) // xDistToGoal  # dir 1 == cycle right
-			# self.empty_to_pos(self.findNum(num), [-direction, 0])
-			# self.cycle_horizontal(abs(xDistToGoal), direction)
-			self.empty_to_pos(self.findNum(num), [direction, 0]) # Mucked with this
-			baseCmd = 'R'  # for dierction = 1
-			if direction == 1:
+			yDirection = abs(yDistToGoal) // yDistToGoal  # dir 1 == cycle down
+			self.empty_to_pos(self.findNum(num), [0, yDirection])
+			baseCmd = 'D'  # for direction = 1
+			if yDirection == 1:
 				# baseCmd = SlideBoard.invertCmdsHorizontally(baseCmd)
-				baseCmd = 'L'
+				baseCmd = 'U'
 			self.parse_commands(baseCmd)
-			self.cycle_horizontal(abs(xDistToGoal)-1, direction)
-			
+			self.cycle_vertical(abs(yDistToGoal)-1, yDirection)
+			# self.cycle_vertical(yDistToGoal, yDirection) # UP
+
 	def parse_commands(self, cmds):
 		for cmd in cmds:
 			self.swap_relative(SlideBoard.cmdDict[cmd])
@@ -239,12 +207,13 @@ class SlideBoard:
 		goal = self.end_pos(num)
 		self.num_to_pos(num, goal)
 
+
 if __name__ == "__main__":
 	board = SlideBoard([
-			[13,2,3,4],
-			[5,6,9,14],
-			[0,7,11,15],
-			[10,12,8,1]
+			[11,5,4,3],
+			[1,14,10,13],
+			[8,15,9,2],
+			[7,0,12,6]
 			] )
 
 	# board2 = SlideBoard([
@@ -260,10 +229,6 @@ if __name__ == "__main__":
 
 
 	for i in range(1,(board.size[1]-2)*board.size[0]+1):
-		pass
-		if board.findNum(i) == board.end_pos(i):
-			# skip if already in correct position
-			continue
 		if (i+1) % board.size[0] == 0:
 			# those that will end up in the next to rightmost column get special treatment afterwards
 			continue
@@ -276,15 +241,18 @@ if __name__ == "__main__":
 				continue
 			underLast = [board.end_pos(i-1)[0], board.end_pos(i-1)[1]+1]
 			board.num_to_pos(i-1, underLast)
+			board.empty_to_pos(underLast, [0,1])
 			board.parse_commands('RUULD')
+			continue
+
+		if board.findNum(i) == board.end_pos(i):
+			# skip if already in correct position
 			continue
 
 		board.num_to_goal(i)
 
-
 	# last 2 rows get extra treatment
 	# StartIndex is the first index in the last row
-
 
 	startIndex = (board.size[1]-1)*board.size[0]+1
 	endIndex = board.size[0]*board.size[1]
@@ -297,17 +265,12 @@ if __name__ == "__main__":
 			board.parse_commands("LDRRULDLURRDLULDRU")
 			continue
 		board.num_to_pos(i-board.size[0], board.end_pos(i-board.size[0]+1))
+		board.empty_to_pos(board.end_pos(i-board.size[0]+1), [1,0])
 		board.parse_commands("DLLUR")
 
-	# if we get to a sich like 1243
-	#                          xxx0
-	# we go
-	# URDLDRUULDRDRUULD
-	# and we get 1234
-	# #          xx0x
+	lowerRight = [board.size[XorY] for XorY in [0,1]]
+	board.empty_to_pos(lowerRight, [-1,-1])
 
-	# print('')
-	#
 	board.print_board()
 	#
 # print(board.end_pos(5))

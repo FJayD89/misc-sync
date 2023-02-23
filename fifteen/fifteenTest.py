@@ -1,8 +1,8 @@
 from fifteenSolver import SlideBoard, sign
 
 board = SlideBoard([
-	[1,1,2,1,0],
-	[1,1,5,1,1],
+	[1,1,1,1,1],
+	[1,1,0,1,2],
 	[1,1,1,1,1],
 	[1,1,1,1,1]
 ])
@@ -78,8 +78,19 @@ def empty_to_pos_new(pos, rel_pos):
 
 	board.multi_swap_new(differenceFinal, unchanged)
 
-# empty_to_pos_new(board.findNum(5), [-1,0])
-board.empty_to_pos(board.findNum(5), [-1,0])
+def move_to_corner(rel_pos, target_rel_pos):
+	# both pos on the edge of [-1,1] square
+	# if in the middle horizontally, move vertically
+	toMove = 0 if rel_pos[0] == 0 else 1
+	move = [0,0]
+	move[toMove] = 1
+	board.multi_swap_new(move)
+
+# empty_to_pos_new(board.findNum(2), [-1,0])
+board.empty_to_pos(board.findNum(2), [0,-1])
+
+# is new actually better?
+
 
 # board.num_to_pos(5, [1,2])
 # if board.emptyPos[0] <=

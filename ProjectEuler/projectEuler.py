@@ -3,8 +3,8 @@ from time import time
 from itertools import permutations, product
 
 
-def prettify(treeList):
-	strList = str(treeList)
+def prettify(tree_list):
+	strList = str(tree_list)
 	strOut = ''
 	tabLevel = 0
 	for charIndex in range(len(strList)):
@@ -29,10 +29,10 @@ def prettify(treeList):
 	return strOut
 
 
-def zeroEval(numStr):
-	if numStr[0] == '0':
-		return zeroEval(numStr[1:])
-	return int(numStr)
+def zeroEval(num_str):
+	if num_str[0] == '0':
+		return zeroEval(num_str[1:])
+	return int(num_str)
 
 
 def is_permuted(num1, num2):
@@ -51,51 +51,72 @@ def is_permuted(num1, num2):
 	return True
 
 
-def largest_permutation(num):
+def largest_digit_permutation(num):
 	num_str = str(num)
 	num_str = sorted(num_str, reverse=True)
 	num_str = ''.join(num_str)
 	return int(num_str)
 
 
-def sum_combinations(num):
-	global allCombins
-	combins = [0 for _ in range(num+1)]
-	for k in range(1,num//2 +1):
-		# i is the smallest number in the sum
-		# in the list, the index is <= the smallest num in the sum and the value is how many such sums there are
-		# so we want the following
-		# for 1
-		sumCount = allCombins.get(k, -1)
-		if sumCount == -1:
-			allCombins[num-k] = (sum_combinations(num-k))
-		combins[k] = sum(allCombins[num-k][k:])
-	combins[num] = 1
-	# if combin in
-	
-	return combins
+def least_digit_permutation(num):
+	num_str = str(num)
+	num_str = sorted(num_str)
+	num_str = ''.join(num_str)
+	return int(num_str)
 
 
-def factorial_digit_sum(num):
-	facts = [factorial(int(i)) for i in str(num)]
-	return sum(facts)
+def ldp(num):
+	digitCounts = {str(digit):0 for digit in range(10)}
+	num_str = str(num)
+	for num_digit in num_str:
+		digitCounts[num_digit] += 1
+	leastPermutation = ''
+	for digit in digitCounts.keys():
+		for _ in range(1,digitCounts[digit]+1):
+			leastPermutation += digit
 
-def len_factorial_chain(start_num):
+	return int(leastPermutation)
+
+
+
+
+def len_factorial_chain(start_num, do_print = False):
 	global factSums
 	encountered = [start_num]
-	next = start_num
+	nextNum = start_num
 	while True:
-		getNext = factSums.get(next, -1)
-		if getNext == -1:
-			factSums[next] = factorial_digit_sum(next)
-			getNext = factSums[next]
-		next = getNext
-		if next in encountered:
+		# first, check if there's an entry for the num
+		foundChainLen = factSums[nextNum]
+
+		if foundChainLen != -1:
+			# if there is, cool!
+			# we can go back through all the encounters and add them to the list
+			# excluding this last
+			# say we have an encountered = [A,B,FOUND] and fcl
+			# fcl[A] = len(enc)-index - 1 + fcl
+			# fcl[B] = len(enc)-index - 1 + fcl
+			for encIndex in range(len(encountered)-1):
+				encounteredNum = encountered[encIndex]
+				factSums[encounteredNum] = len(encountered) -1 - encIndex + foundChainLen
+			# and return
+			if do_print:
+				print(encountered)
+			return factSums[start_num]
+
+		nextNum = factorial_digit_sum(nextNum)
+		if nextNum in encountered:
 			# take all the nums encountered and add them to the dict, with the value as inverse index
+			# since we want the len of the unique num string
+			# so for instance if we have 69 → 363600 → 1454 → 169 → 363601 (→ 1454)
+			# encIndex(363600) == 1
+			# expected value == 4 == len - encIndex
 			for encIndex in range(len(encountered)):
-				factSums[encountered[encIndex]] = encIndex
+				encounteredNum = encountered[encIndex]
+				factSums[encounteredNum] = len(encountered) - encIndex
+			if do_print:
+				print(encountered)
 			return len(encountered)
-		encountered.append(next)
+		encountered.append(nextNum)
 
 
 f = open('eulerText.txt')
@@ -113,6 +134,29 @@ lines = [[int(numStr) for numStr in line] for line in lines]
 # <editor-fold desc="misc-funcs">
 
 
+def sum_combinations(num):
+	global allCombins  # required external empty dict
+	combins = [0 for _ in range(num + 1)]
+	for k in range(1, num // 2 + 1):
+		# i is the smallest number in the sum
+		# in the list, the index is <= the smallest num in the sum and the value is how many such sums there are
+		# so we want the following
+		# for 1
+		sumCount = allCombins.get(k, -1)
+		if sumCount == -1:
+			allCombins[num - k] = (sum_combinations(num - k))
+		combins[k] = sum(allCombins[num - k][k:])
+	combins[num] = 1
+	# if combin in
+
+	return combins
+
+
+def factorial_digit_sum(num):
+	facts = [factorial(int(i)) for i in str(num)]
+	return sum(facts)
+
+
 def areConsecutive(num_list):
 	if len(num_list) != 5:
 		return False
@@ -123,28 +167,29 @@ def areConsecutive(num_list):
 	return True
 
 
-def makeSieve(sieveSize):
-	sieve = [True for i in range(sieveSize)]
+def makeSieve(sieve_size):
+	sieve = [True for i in range(sieve_size)]
 	sieve[0] = False
 	sieve[1] = False
 
 	# declare all multiples of two nonprime
-	for composite in range(4, sieveSize, 2):
+	for composite in range(4, sieve_size, 2):
 		sieve[composite] = False
 
-	for num in range(3, int(sqrt(sieveSize))):
+	for num in range(3, int(sqrt(sieve_size))):
 		# print(num)
 		if not sieve[num]:
 			continue
-		for composite in range(num ** 2, sieveSize, 2 * num):
+		for composite in range(num ** 2, sieve_size, 2 * num):
 			sieve[composite] = False
 	return sieve
 
 
-def minMaxPolygonal(k, a, b):
-	min = (k-4+sqrt((4-k)**2 + 8*(k-2)*a))/(2*(k-2))
-	max = (k-4+sqrt((4-k)**2 + 8*(k-2)*b))/(2*(k-2))
-	return [ceil(min), ceil(max)]
+def minMaxPolygonal(k, lim_low, lim_high):
+	# returns the smallest polygNum > a, and the largest < b
+	minPolygonal = (k-4+sqrt((4-k)**2 + 8*(k-2)*lim_low))/(2*(k-2))
+	maxPolygonal = (k-4+sqrt((4-k)**2 + 8*(k-2)*lim_high))/(2*(k-2))
+	return [ceil(minPolygonal), ceil(maxPolygonal)]
 
 
 def polygonNum(n, degree):
@@ -173,6 +218,7 @@ def bigSum(num):
 
 
 def smallestDSum(num):
+	# what black magic is this
 	x = floor(num / 9)
 	return (1 + num - x * 9) * 10 ** x - 1
 
@@ -234,15 +280,15 @@ def isCool(a0, d):
 	return True
 
 
-def isAPermutation(numStr1, numStr2):
-	if not len(numStr1) == len(numStr2):
+def isAPermutation(num_str1, num_str2):
+	if not len(num_str1) == len(num_str2):
 		return False
 
-	for digit in numStr1:
-		if not digit in numStr2:
+	for digit in num_str1:
+		if not digit in num_str2:
 			return False
-	for digit in numStr2:
-		if not digit in numStr1:
+	for digit in num_str2:
+		if not digit in num_str1:
 			return False
 
 	return True
@@ -292,24 +338,22 @@ mSum = 0
 count = 0
 largest = 0
 smallest = 0
-bigNum = 99
+bigNum = 14502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250
 n = 8
 flag = True
 a = 1
 b = 1
 allCombins = {}  # protected
-factSums = {}  # protected
+factSums = [-1 for _ in range(2540160)]  # protected
 
 if __name__ == '__main__':
 	startTime = time()
-	
-	# print(len_factorial_chain(69))
-	
-	for i in range(10**5):
-		if len_factorial_chain(i) == 60:
-			count += 1
-	
-	print(len(factSums))
-	# print(count)
+
+	for _ in range(10**5):
+		least_digit_permutation(bigNum**3)
+		# ldp(bigNum**3)
+
+	# print(len(factSums))
+	print(count)
 	print("done")
 	print('This took', time() - startTime)
