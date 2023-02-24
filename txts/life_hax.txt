@@ -1,0 +1,9 @@
+Mindustry fix port forwarding issue
+connecting from windows to linux
+TCP: 6567
+UDP: None
+In Windows Defender firewall > Inbound rules > New Rule > Port, type in the port and name
+Should work
+
+When searching diacritic-insensitive in notepad++, use regex [[=X=]], where X is the diacriticless char
+ - make a plugin for easier support?
