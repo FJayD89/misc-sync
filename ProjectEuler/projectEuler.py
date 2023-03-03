@@ -35,6 +35,22 @@ def zeroEval(num_str):
 	return int(num_str)
 
 
+
+f = open('eulerText.txt')
+lines = f.read().split('\n')
+lines = [line.split(',') for line in lines]
+lines = [[int(numStr) for numStr in line] for line in lines]
+
+# numPairs = [[int(num) for num in numPair.split(',')] for numPair in numPairs]
+# print(numPairs)
+# nums = [int(attempt) for attempt in lines]
+# lines = [line.split(' ') for line in lines]
+# lines = [[zeroEval(numStr) for numStr in line] for line in lines]
+
+
+# <editor-fold desc="misc-funcs">
+
+
 def is_permuted(num1, num2):
 	str_num1 = str(num1)
 	str_num2 = str(num2)
@@ -66,22 +82,22 @@ def least_digit_permutation(num):
 
 
 def ldp(num):
+	# somehow this is almost exactly as good as the other one
+	# thought sorted was going to take longer, apparently not
 	digitCounts = {str(digit):0 for digit in range(10)}
 	num_str = str(num)
 	for num_digit in num_str:
 		digitCounts[num_digit] += 1
 	leastPermutation = ''
 	for digit in digitCounts.keys():
-		for _ in range(1,digitCounts[digit]+1):
-			leastPermutation += digit
+		leastPermutation += digit*digitCounts[digit]
 
 	return int(leastPermutation)
 
 
-
-
 def len_factorial_chain(start_num, do_print = False):
-	global factSums
+	
+	global factSums  # required factSums = [-1 for _ in range(neededSize)]
 	encountered = [start_num]
 	nextNum = start_num
 	while True:
@@ -117,21 +133,6 @@ def len_factorial_chain(start_num, do_print = False):
 				print(encountered)
 			return len(encountered)
 		encountered.append(nextNum)
-
-
-f = open('eulerText.txt')
-lines = f.read().split('\n')
-lines = [line.split(',') for line in lines]
-lines = [[int(numStr) for numStr in line] for line in lines]
-
-# numPairs = [[int(num) for num in numPair.split(',')] for numPair in numPairs]
-# print(numPairs)
-# nums = [int(attempt) for attempt in lines]
-# lines = [line.split(' ') for line in lines]
-# lines = [[zeroEval(numStr) for numStr in line] for line in lines]
-
-
-# <editor-fold desc="misc-funcs">
 
 
 def sum_combinations(num):
@@ -338,7 +339,8 @@ mSum = 0
 count = 0
 largest = 0
 smallest = 0
-bigNum = 14502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250145025014502501450250
+bigNum = 10**7
+largestPrime = floor(sqrt(bigNum))
 n = 8
 flag = True
 a = 1
@@ -346,14 +348,30 @@ b = 1
 allCombins = {}  # protected
 factSums = [-1 for _ in range(2540160)]  # protected
 
+sieve = makeSieve(largestPrime)
+primes = [potential for potential in range(largestPrime) if sieve[potential]]
+def eulerPhi(num):
+	numRange = [True for _ in range(0,num)]
+	for p in primes:
+		if num//p == num/p:
+			coef = 0
+			while coef*p < num:
+				numRange[p*coef] = False
+				
+				coef += 1
+	totient = 0
+	for isCoprime in numRange:
+		if isCoprime:
+			totient += 1
+	return totient
+		
+
 if __name__ == '__main__':
 	startTime = time()
-
-	for _ in range(10**5):
-		least_digit_permutation(bigNum**3)
-		# ldp(bigNum**3)
-
-	# print(len(factSums))
+	
+	print(eulerPhi(10))
+	
+	
 	print(count)
 	print("done")
 	print('This took', time() - startTime)
