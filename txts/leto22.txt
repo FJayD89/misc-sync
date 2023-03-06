@@ -153,20 +153,20 @@ Mir talk on differatiating relationships, it got really cold
 17. = Ráno má byť ešte hra okolo MFI, ale už sa poberám nakoľko som fakt jednak zaspal, nie najpríjemnejšie vyspal a prespal vlastný budík. Odchádzam s Mir, nejak prázdna debata. Prespávanie v CB_obyvacke, Sleep time = 1:15
 18. = Moji googlači
 19. = Baba is You v triede, idem naposledy v roku do knižnice
-20. = Vianočný futbalový turnaj, klavírové cvičenie v Jure, cestou tam som sa omylom otočil v Pezninku lebo nezvládam dávať pozor. Pocvičili sme, fakt by som mal hrať skôr akordy, maybe ešte niečo fancy vymyslím na pravú ruku. Meškal mi vlak späť a teda ja na tréning, prechádzali sme si kihon ippon, ku koncu jiyu ne waza kumite. Marek oficiálne končí s karate, veľmi emočne sa lúčime
+20. = Vianočný futbalový turnaj, klavírové cvičenie v Jure, cestou tam som sa omylom otočil v Pezninku na stanici lebo nezvládam dávať pozor. Pocvičili sme, fakt by som mal hrať skôr akordy, maybe ešte niečo fancy vymyslím na pravú ruku. Meškal mi vlak späť a teda ja na tréning, prechádzali sme si kihon ippon, ku koncu jiyu ne waza kumite. Marek oficiálne končí s karate, veľmi emočne sa lúčime
 21. = 1st day of the holidays! Slept in for a good bit, went on a shopping trip right after - trekking pants, hand excercise rings for J,
 22. = Sleep time = 0:15
 23. = Posledná koledová skúška, požičiavame si hry z kanclu
 24. = Welp, 'tis ChMas. It's about 10° out, the sun is shining (in comparison to the mostly overcast skies we've been having). Koledovec v Jure, vyšlo všetko fajn. Došla Táňa, boli tak nejaké štandardné, čo sa domachodu týka.
-25. = Vianočné bohoslužby
-26. =
+25. = Vianočné bohoslužby, došiel niekto z pozvných, teda úspech obálkovania :)
+26. = 
 27. = Great catchup call w/ Peťo
 28. = Došli Bagoví = druhé Vianoce - kopec oblečenia + horáčik a čelovka
 29. = Nejaké ďalšie frisbee s J, už dobre triafa bránu. Missnutá socializácia v Žiline, ale myslím, že doma made up for it
 30. = Anna catchup call :) Short, but nice
 31. = Spoločenské hry okolo Nového roku v Jure, 3D Ubongo je fakt cool koncept, hangoutovanie s googlačmi cez spol. terapiu, novorocny prespavac v Jure, fancy fireworks
 1.1. 23 NEWYRS
-2. = woke up suuper late today, still tired from ney year's, who knew keyboard clacking was such a relaxing and sleep-inducing sound
+2. = woke up suuper late today, still tired from new year's, who knew keyboard clacking was such a relaxing and sleep-inducing sound
 @ 23:00 15 DONE almost i mean the 4x4 case works but obvs it broke when adding a row;
 		@ 23:21 hopefully fixed, testing
 		@ 23:51 fixed sth a bit too hard, 6x6 has yet undiscovered problems
@@ -223,6 +223,11 @@ Mir talk on differatiating relationships, it got really cold
 19. = Jefte
 20. = Free day, tuším práve dnes sme s J boli na bikoch, šli sme do lesa a komplétne sme sa zablatili
 21. =
+22. = found out that shakshouka and tteok bokki exist from OSP's BotW stream (amazing background audio) 
+23. = 
+24. = Prvé frisbee sezóny! Došla kopa ľudí, s Julie sme prebrali školy a eseje thereof, dala mi pár hintov ako ďalej s nimi (fakt sme túto debatu mohli mať 2 týždne dozadu ale tak no). Had a bit of a headache, but didn't think much of it, had a ton of fun regardless. Mišo is actually Šimon To
+25. = Spoločenské Rewatch Waters of Nazareth/Megalovania, čo asi bol prvý krok do Undertale. Wow
+
 26.2. = UTEindhoven questionnaire completion
 28.2. MUNI apps closed
 
@@ -247,6 +252,8 @@ Mir talk on differatiating relationships, it got really cold
 29.5.-4.6. = KOZA Tábor Kuchyňa
 
 7.6. = CUNI Prijmacky
+
+17.6 = Welcome event for TU/e successful students
 
 1.7. = Change of mind CAO deadline
 

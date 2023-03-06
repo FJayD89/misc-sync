@@ -11,7 +11,7 @@ Core courses:
 From year 1: 
    Systems
    Software Development
-   Algorithms & Theory of computing.
+   Algorithms & Theory of computing
 
 Systems -> Security, Networks and Databases
 Software development -> Programming and Software Engineering

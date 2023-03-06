@@ -1,11 +1,12 @@
 TU/e program structure
 
-3 years
-4 quartiles per year
-60 ECTS (credits) per year
+3 years - 4 quartiles/year
+60 ECTS (credits)/year
 45 ECTS worth of free electives in total
-40 hours of study time per week
-Bachelor of Science Degree
+40 hours of study time/week:
+ - 12-15 hrs of lectures
+ - ~10 hrs in working groups or project teams
+ - 15 hrs of self-study, at home/in TU/e working spaces
 
 Future-proof engineer
 Are you thinking of doing a bachelor’s degree program at Eindhoven University of Technology? Then you are on your way to becoming a future-proof engineer. An engineer ready to create technological solutions for the challenges our world faces - not just today, but in the future as well. At TU/e, you will:
@@ -50,12 +51,6 @@ Challenge-Based learning
   - small-scale instructional meetings
   - guided self-study. 
  - you will actively seek additional knowledge
-
-Study week
- ~40hrs of study
- - 12-15 hrs of lectures
- - ~10 hrs in working groups or project teams
- - 15 hrs of self-study, at home/in TU/e working spaces
  
 Credits
  - BSc degree program = 180 ECTS credits worth of courses. You can find the split in the table below. 

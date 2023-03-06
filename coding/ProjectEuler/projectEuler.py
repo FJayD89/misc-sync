@@ -369,7 +369,7 @@ def eulerPhi(num):
 if __name__ == '__main__':
 	startTime = time()
 	
-	print(eulerPhi(10))
+	print(eulerPhi(62716))
 	
 	
 	print(count)

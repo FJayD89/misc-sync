@@ -1,0 +1,10 @@
+Some fun stuff on the Kola superdeep borehole
+depth = 12226m
+human v_t = 
+https://www.quora.com/What-is-the-terminal-velocity-of-a-human-on-earth
+
+atm pressure at depths
+https://earthscience.stackexchange.com/questions/24628/what-is-the-atmospheric-pressure-at-the-deepest-point-of-the-kidd-mine
+
+temp at depths
+https://www.earth.ox.ac.uk/~johne/teaching/pdfs/mckenzie-etal05.pdf
