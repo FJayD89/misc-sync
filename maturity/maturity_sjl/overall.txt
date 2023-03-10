@@ -1,0 +1,58 @@
+	A malinovku nemáte? - častica
+	Á, malinovku nemáte - citoslovce
+	inak spojka
+	
+	okolo = približne => častica (až,len,už,ešte,áno,nie,ahoj)
+	chodil okolo domu => predložka
+	išiel okolo => príslovka
+	
+	Slovesá
+	jednoduchý slov. tvar = jedno sloveso/zvratné
+	zložený slov. tvar = 3.os.min.č/viac slovies, bud.č., podm.sp.
+	
+	sponové = byť, stať sa
+	modálne = môcť, 
+	fázové = začať, skončiť, pokračovať
+	
+	aposiopesis
+	
+expresívne syntaktické konštrukcie:
+	vsuvka, = A, ktorý bol X, ... - celá veta
+	prístavok = , X, len slov. spojenie
+	oslovenie, 
+	výpustka/elipsa, 
+	neukončená výpoveď/apoziopéza
+	
+Nem
+Eng
+Dn
+Holandčina
+Švédčina
+Fín
+
+Rum
+Tal
+Španielčina
+Francúzština
+
+Slovan:
+Pol
+Cze
+Sle
+Lužická Srbčina
+
+Srb
+Chor
+Maced
+Slovin
+
+Rus
+Ukr
+Belaru
+
+Trochej -u
+Daktyl -uu
+Jamb u-
+Časomiera/sylabotonika
+
+sylabika - zachovaný počet slabík

@@ -54,6 +54,8 @@ lines = [[int(numStr) for numStr in line] for line in lines]
 def is_permuted(num1, num2):
 	str_num1 = str(num1)
 	str_num2 = str(num2)
+	if len(str_num1) != len(str_num2):
+		return False
 	digits = {digit:0 for digit in str_num1}
 	for digit in str_num1:
 		digits[digit] += 1
@@ -330,6 +332,14 @@ def conjecture(num):
 
 # </editor-fold>
 
+def prime_multiplicity(num, prime):
+	multip = 0
+	while True:
+		if num % prime**(multip+1) != 0:
+			break
+		multip += 1
+	return multip
+
 trigger = True
 
 mList = []
@@ -337,10 +347,11 @@ sList = []
 
 mSum = 0
 count = 0
-largest = 0
+largest = [0,0]
 smallest = 0
-bigNum = 10**7
-largestPrime = floor(sqrt(bigNum))
+bigNum = 10**5
+largestPrime = bigNum
+# so ceil(sqrt(bigNum)) mistakenly adds 2 nums
 n = 8
 flag = True
 a = 1
@@ -348,30 +359,48 @@ b = 1
 allCombins = {}  # protected
 factSums = [-1 for _ in range(2540160)]  # protected
 
-sieve = makeSieve(largestPrime)
+sieve = makeSieve(largestPrime+1)
 primes = [potential for potential in range(largestPrime) if sieve[potential]]
+
 def eulerPhi(num):
-	numRange = [True for _ in range(0,num)]
+	if sieve[num]:
+		return num-1
+	totient = num
+	primeProd = 1
 	for p in primes:
-		if num//p == num/p:
-			coef = 0
-			while coef*p < num:
-				numRange[p*coef] = False
-				
-				coef += 1
-	totient = 0
-	for isCoprime in numRange:
-		if isCoprime:
-			totient += 1
+		if p >= sqrt(num):
+			break
+		if num%p == 0:
+			primeProd *= p**prime_multiplicity(num, p)
+			totient -= totient//p
+	largePrime = num // primeProd
+	if largePrime == 1:
+		return totient
+	# totient -= (primeProd*totient)//num
+	totient *= 1 - 1 / (num / primeProd)
 	return totient
 		
 
 if __name__ == '__main__':
 	startTime = time()
+	# print(primes)
+	# 62716
+	# someNum = 87109
+	# for i in range(1,10**6):
+	# 	phi = eulerPhi(i)
+	# 	if is_permuted(i, phi):
+	# 		ratio = i/phi
+	# 		if ratio > largest[0]:
+	# 			largest[1] = i
+	# print(largest[1])
+	# print(i, i/phi)
 	
-	print(eulerPhi(62716))
+	for i in range(20):
+	# i = 5 # i != 2
+		print(7**i,eulerPhi(7**i))
 	
+	# print(eulerPhi(someNum))
 	
-	print(count)
 	print("done")
 	print('This took', time() - startTime)
+
