@@ -1,0 +1,7 @@
+So about two hours ago I was having a Slovak class, going over Maturita stuff - grammar, different slovak codification books, some morphological 'exceptions', and I remebered I didn't have the printed sheets listing it all. Fortunately, they're all available online, and as I wasn't the only one to have misplaced them, someone else asked for them, and got notified of the existence of a link in the group chat. Since I was already working on my laptop, I opened it up too, and for some reason decided to copy the entire ~80 pages into SciTE. As is the norm when pasting large blocks of text, I saw the bottom of the document with its complete lack of formatting, and a strange symbol I thought I would have recognized. Looking back at the original, it seemed the character for a thumbs-up had been encoded as an ornate dagger symbol. These things happen all the time, often when copying Slovak diacritic characters into an editor not prepared for that sort of exoticity, which usually leads to them not displaying properly.
+
+As I got to the flat, after stressful English essay-writing, I was watching a miniminuteman yt short, looked at the comments and someone had that exact symbol in their name
+
+What
+
+

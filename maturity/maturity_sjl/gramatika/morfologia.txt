@@ -1,0 +1,48 @@
+R/L
+Muzsky rod
+Ak v Lokali vypadava e -> vzor stroj
+inak dub
+
+o svet_ri/o hoteli
+
+Pomnozne, yay
+
+-a/á = mestá
+-ia = srdcia
+
+e/y:
+v Lokali: 
+	-och = muzsky
+	 - duby/stroje
+	-ach/-iach = zensky
+	 - ženy/ulice
+	 
+Kuliovia
+Kuliov
+Kuliom
+Kuliov
+Kulioch
+Kuliami
+
+Idea.subset_of(Zena) == True
+	Idea
+	Idey
+	Idei
+	Ideu
+	Idei
+	Ideou
+
+Pani	Panie
+Panej	Pani
+Panej	Paniam
+Paniu	Panie
+Panej	Paniach
+Panou	Paniami
+
+S mojím otcom !!!
+Mojim otcom   !!!
+
+Vymedzovacie
+Nik, 
+
+stodvadsiaty štvrtý účastník
