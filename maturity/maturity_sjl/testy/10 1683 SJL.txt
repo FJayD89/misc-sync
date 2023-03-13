@@ -1,0 +1,75 @@
+1 B		10 1683
+2 B
+3 C
+4 A
+5 D
+6 Číslovkou 
+	 Ani jednej zo zavraždených patriť nemohla.
+	(Ona)=nemohla
+	Ani - častica
+	Jednej - predmet nepriamy
+	zo zavraždených - nezhodný prívl.
+7 zo
+8 francúzsky
+9 B - sylab.verš.sys = dodržiavaný #slabík vo verši
+10 D - Snívaj, snívaj o slávy báječnom úslní
+11 !B - Oj spi, duša mladušká, spi pekný, dlhý sen
+12 D - otčina != dedičstvo
+13 A
+14 kontrast
+15 združený
+16 4 - Tak sníva junák väzeň mladosti krásny sen:
+oj, ži mi, ži, junák môj, ži aspoň vo sne len!
+17 C - Zostávalo vykonať len veľmi málo. A môže sa to nechať i na zajtra... Tento deň, tento ostatný deň strávim v pokoji, zmierený s Bohom, so svetom i s tým, čo
+ešte treba vykonať, čo treba zajtra vykonať...
+18 !C 
+19 A - naturizmus = príroda
+20 D
+21 C Salinger != medzivojnový
+22 tešil !sa - chceli vyslovene slovo
+23 vyvalil
+24 ho, znač
+25 D
+26 D - chcel by som časť svojich skúseností z tejto doby venovať všetkým, ktorí s podobnou závislosťou bojujú
+27 B - Miro Válek bol prevažne básnik
+28 D - Zdá sa, že v tejto – na úspech programovanej spoločnosti – nie je miesto pre citlivých, psychicky slabých ľudí
+29 B
+30 sľub
+31 rozprávací - životopis je výklad/úvaha
+32 príslovka (ove urcenie)
+33 B - 
+34 C - 
+35 D
+36 !A citanie
+37 B
+38 Turkyňa
+39 Stevard
+40 sériam ! sériám
+41 B
+42 C
+43 B
+44 C
+45 !C - V klasicizme sa pre umenie stáva najvyšším zákonom súlad pravdy, krásy a dobra.
+46 tri
+47 opytovacia
+48 častica
+49 A
+50 !B meh
+51 D
+52 B
+53 A
+54 krehkou múzou
+55 Paganinim
+56 vtedajší
+57 C
+58 !D - citanie
+59 !B - výkladový
+60 !A - 
+61 B
+62 Jednoduchá
+63 mesto
+64 trh
+
+Process finished with exit code 0
+
+	

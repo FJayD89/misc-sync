@@ -1,0 +1,82 @@
+Reconstruction of tue test
+
+1. 	A - 7:20
+	B - 7:38
+	C - 7:23
+	D - 7:41
+	E - 7:41
+	F - 7:32
+
+How many _ do you need, if each flight needs the _ available 15 mins before takeoff?
+:30 + :45 is not okay
+:30 + :46 is ok
+
+2. 11 cards, 2 players, you tak 1-3 card each turn, lose if you take the last one. How many card do you take to win, if possible?
+
+3. [15,30,25,10,30,45,23,50,55,34,20,24]
+	An ant takes loads to his anthill. Starting from the closest, he picks up loads. If the load exceeds 80, it turns around and heads to the anthill. If it exceeds 100, it puts the last picked up load in a new row, on the end close to the anthill.
+	
+	Choose the correct statement:
+	starts/not the 2nd row
+	carries a load of exactly 100
+	n trips
+	...
+
+4. Bridges
+---------------
+6        4    3
+A----5---B-  -C5F
+7        |4  |  3
+D-|      |E7-|  H
+4 |      8|     |
+G 5      |6     7
+8 |      ||     |
+-----------------
+Find minimal costsum to connect everything and the banks
+
+5. River
+	How many different paths are there?
+
+-->----X---ˇ        
+|    ˇ >--->-ˇ        
+X->-->-->---->-->>>   
+|    ^  ^    |            
+-->--X>-X>---^
+
+6. 
+[example of structure with desc]
+
+Which of the 4 hangings does this code produce?
+(-2,(-2,3)(1,6) 3,(-2,(-1,1)(1,1) 1,4))
+
+7. Translate text:{AEIOU} stay, the rest shift by 1 forward (B->C)
+
+8. Four trees, four acorns, one acorn per tree max. How many max used acorns, if conditions?
+B or !C or !D
+A or B or !D
+!b or !C or D
+!A or !B or !C
+!B or C or !D
+
+9. 3-digit passcode
+	ex 1 out of {1,2,3}, wrong spot
+	ex 2 out of {8,5,7}, both wrong
+	ex 1 out of {9,8,6}, wrong spot
+	ex 1 out of {3,5,1}, correct spot
+	-> 378
+
+10. triangle with toggles at vertices, how many trips to test all combinations?
+
+11. Glasses - 1 correct, 4 upturned. If turning over 3 at once, min steps to have all 5 bottoms up
+
+12. Boss = follows none, is followed by all
+	B > DEK
+	D > EK
+	E > KJ
+	J > BK
+
+13. packed lunches {S,T,O,P} stacked on each other for S,H,D,U
+	D is last
+	S before H
+	
+	D - P

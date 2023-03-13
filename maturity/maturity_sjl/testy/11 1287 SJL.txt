@@ -1,0 +1,65 @@
+1	C	11 1287 SJL
+2	D
+3	A - 
+4	C
+5	D
+6	Klimatológovia
+7	Medzinárodného
+8	apel
+9	A
+10	B
+11	B - priama charakteristika
+12	D
+13	B
+14	lekár
+15	Hneď, na, prichodiť, mal
+16	ziel
+17	C
+18	C
+19	A or zvýraznená replika
+20	!C
+21	D
+22	deväť
+23	Levočanka
+24	so
+25	A
+26	C
+27	A - hriechy osudu = metafora alebo symbol
+28	D
+29	B
+30	Renesancia
+31	nudu, zábavu
+32	!osem 14
+33	B
+34	A
+35	D
+36	A
+37	C
+38	mestský
+39	jeho vnuk
+40	(sa) búril
+41	C
+42	B
+43	A
+44	D
+45	A
+46	cudzie/prevzaté
+47	Vitalizmus
+48	Životopis/autobiografia !VLASTNÝ
+49	C
+50	D
+51	B
+52	D
+53	D
+54	Výstup
+55	gazdovská, želiarskymi
+56	opytovacia
+57	C
+58	C
+59	D
+60	B
+61	A
+62	vari
+63	predmetová
+64	rev
+Process finished with exit code 0
