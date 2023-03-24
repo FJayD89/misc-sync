@@ -1,0 +1,32 @@
+1) Kmitavý pohyb
+Opíšte jednoduchý kmitavý pohyb oscilátora, definujte pojem oscilátor, doba kmitu, frekvencia
+ - máme nejakú veličinu okamžitej výchylky, zväčša v jednotkách dĺžky, ktorá závisí od času podľa nejakého sínusu
+ - d(t) = A*cos((2πt)/T+φ)
+ - oscilátor = sústava, ktorej súčasť sa takto správa
+ - doba kmitu = najkratší čas medzi dvomi rovnakými stavmi
+  - !Nielen výchylka
+ - frekvencia = počet kmitov za daný čas, [Hz] = [1/s]
+
+Opíšte priebeh harmonického kmitavého pohybu v súradnicovej vzťažnej sústave, vysvetlite pojmy rovnovážna poloha, okamžitá výchylka, amplitúda.
+ - viď vzorček vyššie
+ - rovn. poloha (RP) = ΣF = 0
+ - okamžitá výchylka = poloha(t)-RP v rozumnom smere
+ - amplitúda = najväčšia výchylka dosiahnutá počas kmitu, v čase T/4
+
+Vysvetlite súvislosť medzi rovnomerným pohybom hmotného bodu po kružnici a harmonickým kmitavým pohybom, znázorite priebeh kmitavého pohybu fázorovým diagramom 
+ - B = (r*sin(t); r*cos(t)), keď sledujeme len horiz/zvislý smer, máme lineárny harmonický oscilátor
+ - vektor ktorý rotuje okolo O s veľkosťou A
+  - Komplexné číslo Acos(ωt+φ) + i*Asin(ωt+φ) = Ae^i(ωt+φ)
+
+Vyjadrite vzťah medzi kinematickými veličinami okamžitá výchylka (okamžitá rýchlosť, okamžité zrýchlenie) a časom veličinovou rovnicou, vysvetlite význam veličiny fáza kmitavého pohybu 
+ - viď vyššie
+ - v(t) = d'(t) = -ωA*sin(ωt+φ)
+ - a(t) = v'(t) = -ω^2 A*cos(ωt+φ)
+ - fáza = počiatočná výchylka/konštantný rozdiel oproti inému oscilátoru
+
+Vysvetlite pojem rezonancia
+ - výrazne zväčšená amplitúda keď sa frekvencia blíži istej 'prirodzenej' frekvencii 
+  - mechanická, orbitálna, akustická, EM, Nuclear magnetic
+
+Riešte príklad: Za aký čas od začiatočného okamihu dosiahne oscilátor, ktorý kmitá s amplitúdou 8 cm a uhlovou frekvenciou 4π rad/s okamžitú výchylku -8 cm?
+	
