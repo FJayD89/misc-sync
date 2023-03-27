@@ -7,3 +7,6 @@ Should work
 
 When searching diacritic-insensitive in notepad++, use regex [[=X=]], where X is the diacriticless char
  - make a plugin for easier support?
+ 
+Moto phone beeps on unlock:
+	electronic cards in the case connect to NFC

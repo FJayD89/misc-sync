@@ -50,6 +50,7 @@ Which of the 4 hangings does this code produce?
 (-2,(-2,3)(1,6) 3,(-2,(-1,1)(1,1) 1,4))
 
 7. Translate text:{AEIOU} stay, the rest shift by 1 forward (B->C)
+HIWE NE A DAMM
 
 8. Four trees, four acorns, one acorn per tree max. How many max used acorns, if conditions?
 B or !C or !D
@@ -80,3 +81,20 @@ A or B or !D
 	S before H
 	
 	D - P
+
+14. Three machines for returning 2nd largest out of 4 nums
+
+	A M(m(a,b), M(c,d))
+	B M(M(a,b), m(c,d))
+	C M(m(a,b), m(c,d))
+
+	4 choices of input pairs, which pair breaks all of the machines?
+
+15. Balls in a coulumn
+	At each step, the bottom two fall out.
+	If the lower of the two is blue, RBR fall into the top
+	If red, B falls into the top
+	If only two remain at the end of the step (after adding), game ends
+	Find a 3-ball sequence that will go on forever
+	
+16. 

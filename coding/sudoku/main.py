@@ -14,3 +14,6 @@ class SudokuBoard:
 
 	def get_cell(self, pos):
 		return self.board[pos[1]][pos[0]]
+
+	def get_cell_potentials(self, pos):
+		

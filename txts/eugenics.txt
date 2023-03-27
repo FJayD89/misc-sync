@@ -1,0 +1,15 @@
+Some stuff on eugenics and the term 'normal' in stats
+
+https://en.wikipedia.org/wiki/Normal_distribution#History
+https://mathshistory.st-andrews.ac.uk/Miller/mathword/n/
+
+Standard deviation Wiki
+- https://en.wikipedia.org/wiki/Standard_deviation#History
+- The term standard deviation was first used in writing by Karl Pearson in 1894, following his use of it in lectures.[18][19] This was as a replacement for earlier alternative names for the same idea: for example, Gauss used mean error.[20]
+18: Oxford dictionary of statistical terms
+ - https://archive.org/details/oxforddictionary0000unse
+19: Pearson, Karl (1894). "On the dissection of asymmetrical frequency curves"
+ - https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1894.0003
+
+
+
