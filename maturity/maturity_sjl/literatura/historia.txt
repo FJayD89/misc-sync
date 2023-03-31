@@ -16,7 +16,7 @@ ab 500 = Stredovek
     - 863 (ošetri heh) Konštantná Metóda
     - Hlaholika, z malej gr. abecedy	
     - Cyrilika, z veľkej
-    - Breviár, Žaltár, Mysal
+    - Breviár (modlitby), Žaltár (žalmy), Mysal (omšová kniha)
 
 Human/Renes
  - Shakespeare, Dante Alighieri

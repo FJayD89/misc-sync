@@ -1,11 +1,17 @@
 from main import SudokuBoard
+from decoder import get_setup
 
-testSetup = [[1,2,3],
-             [2,3,0],
-             [3,1,2],
-            ]
+testSetup = get_setup()
+
 testBoard = SudokuBoard(testSetup)
 
 print(testBoard.unsolved)
-# for i in range(64):
-#     print(i)
+
+# print(testBoard)
+# print(testBoard.list_potentials(testBoard.unsolved[0]))
+
+print(testBoard)
+
+# testBoard.clear_all_potentials()
+print(94/6)
+print(testBoard)

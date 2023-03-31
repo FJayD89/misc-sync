@@ -62,8 +62,8 @@ def three():
 	if B**2 < 4*A*C:
 		print('nema korene')
 		return
+	root = roots(A,B,C)
 	if B**2 >= 4*A*C:
-		root = roots(A,B,C)
 		print(root[0])
 	if B**2 > 4*A*C:
 		print(root[1])
@@ -71,6 +71,7 @@ def three():
 def four():
 	f = open('04.txt')
 	txt = f.read()
+	print(txt)
 	str = input('Prosim retazec:\n')
 	wasFound = False
 	for charIndex in range(len(txt)-len(str)):
@@ -83,13 +84,37 @@ def four():
 					break
 			if found:
 				wasFound = True
-					
-	out = ''
-	if not wasFound:
-		out += 'ne'
-	out += 'bol najdeny'
+				break
+				
+	out = ('' if wasFound else 'ne') + 'bol najdeny'
 	print(out)
+	
+def five():
+	f = open('05.rle')
+	input = f.read().split('\n')
+	size = [int(num) for num in input[0].split(' ')]
+	image = []
+	encoding = [int(num) for num in input[2].split(' ')]
+	char = int(input[1])
+	newLine = ''
+	for num in encoding:
+		while True:
+			addedToLine = num
+			rollover = (num+len(newLine))%size[0]
+			if rollover < num+len(newLine):
+				addedToLine = num-rollover
+			if addedToLine == 0:
+				addedToLine = num
+			newLine += ('*' if char == 0 else ' ') * addedToLine
+			num -= addedToLine
+			if num <= 0:
+				break
+			image.append(newLine)
+			newLine = ''
 		
+		char = 1-char
+	[print(line) for line in image]
+	
 def six():
 	f = open('06.txt')
 	txt = f.read().split('\n')[:-1]
@@ -186,6 +211,9 @@ def experiments():
 		if rand > 5:
 			count += 1
 	return count
+
+def nine():
+	pass
 	
 def ten():
 	success = [0 for i in range(11)]
@@ -255,6 +283,15 @@ def twelve():
 		print(line4)
 	print(line1)
 	
+def uprava_politikov():
+	f = open('12.html')
+	lines = f.read().split('\n')
+	candidateLines = lines[8:17]
+	candidates = [cL.split('td>') for cL in candidateLines]
+	candidatePrefs = {candidate[1][:-2]:float(candidate[3][:-4]) for candidate in candidates}
+	candSorted = sorted(candidatePrefs.items(), key=lambda x:x[1], reverse=True)
+	print(candSorted)
+	
 def thirteen():
 	attempts = 1
 	done = False
@@ -306,7 +343,7 @@ def fifteen():
 	
 	
 
-fifteen()
+uprava_politikov()
 
 
 
