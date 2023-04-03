@@ -112,6 +112,7 @@ class SudokuBoard:
 			return
 		self.clear_potentials_in_row(pos[1], cell_num)
 		self.clear_potentials_in_col(pos[0], cell_num)
+
 	
 	def is_won(self):
 		for x in range(self.size):
