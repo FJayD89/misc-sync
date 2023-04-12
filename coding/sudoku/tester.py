@@ -12,6 +12,6 @@ print(testBoard.unsolved)
 
 print(testBoard)
 
-# testBoard.clear_all_potentials()
-print(94/6)
+testBoard.clear_potentials()
+print()
 print(testBoard)

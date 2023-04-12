@@ -59,6 +59,9 @@ class SudokuBoard:
 			self.remove_potential(pos, num)
 	
 	def check_potential(self, pos):
+		"""
+		Refreshes the list of potentials on a given cell
+		"""
 		self.check_row(pos)
 		self.check_col(pos)
 		if self.get_cell(pos) != 0:
