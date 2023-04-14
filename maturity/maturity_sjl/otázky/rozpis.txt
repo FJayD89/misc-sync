@@ -10,10 +10,18 @@ Gramatika
 9 Argument
 10 Veta a súvetie
 11 Objektívne funkčné jazykové štýly
+12 
+13 Neverbálna komunikácia
+14 Verbálna komunikácia
+15 Stylistika
+16 Suprasegmentálne javy + reportáž
+17 Nadvetná syntax
+18 Výkladové texty
+19 Vonkajšie(hor)/vnútorné(ver) členenie textu
 
-Literatúra
+Literatúra	
 1 Stredoveka lit na sk
-2 Stur a jeho snahy
+2 Štúr a jeho snahy
 3 balada
 4 sonet
 5 naturalizmus, drak sa vracia, naturizmus
@@ -23,3 +31,13 @@ Literatúra
 9 Romantizmus
 10 Svetová literatúra po '45
 11 Orwell, Mňačko
+12 Láska v slovenskej poézii
+13 Expresionizmus
+14 Svetová dráma v Humanizme a Renesancii, Shakespeare, Moliere
+15 Netradičná epická próza, prúd autorovho vedomia
+16 Lyrika
+17 WW1
+18 WW2
+19 Epos - Gilgameš, Slávy Dcéra, Svätopluk
+20 
+21 

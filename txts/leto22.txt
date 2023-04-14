@@ -251,6 +251,7 @@ Mir talk on differatiating relationships, it got really cold
 
 10.4. = Xennial level 2 done, just made a simple algo always hugging the right wall. Basic is hard, but doable. 
 11.4. = Started on zip password cracking. We know the pass is a date, ddmmyy, but some part of it is wrong. Just a simple brute force, right? How do we automate unzipping? Through console commands maybe? Sure, but that requires running bash scripts, which isn't natively doable on Win. Solution - get WSL, win support for Linux, which basically gets you the full bash experience on Win. Requires an actual distro, I just got ubuntu, though have no idea what it actually is. Works? Nope, 7zip for Win doesn't work in the bash env. Getting new packages in it takes an apt update, got that. Time to learn bash scripting! After slight testing I figured newlines need to be LF, not CRLF. Probably gonna just get a file with a long list of the same command, with a different pass in each. The output is not going to be pretty, though. 
+12.4. = ZipCracking works! Ran it with constant year '23', phyisically looked at 10000 lines of Wrong password, just to see a single long file flash by. Trimming the range from the top  
 
 16. 4. = MatNáboj registr dead
 

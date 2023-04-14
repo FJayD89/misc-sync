@@ -18,23 +18,26 @@ class SudokuBoard:
 	def get_cell(self, pos):
 		return self.board[pos[1]][pos[0]]
 	
-	def get_potential(self, pos):
+	def get_potentials(self, pos):
 		return self.potentials[pos[1]] [pos[0]]
 	
 	def list_potentials(self, pos):
-		# converts the T/F list to a list of included nums
+		"""
+		Converts the T/F list to a list of included nums
+		:type pos: list[bool]
+		"""
 		potentialList = []
-		potential = self.get_potential(pos)
+		potential = self.get_potentials(pos)
 		for numIndex in range(self.size):
 			if potential[numIndex]:
 				potentialList.append(numIndex+1)
 		return potentialList
 	
 	def remove_potential(self, pos, potential_num):
-		potential_list = self.get_potential(pos)
+		potential_list = self.get_potentials(pos)
 		if not potential_list:
 			return
-		self.get_potential(pos)[potential_num-1] = False
+		self.get_potentials(pos)[potential_num - 1] = False
 		
 	def check_row(self, pos):
 		row = pos[0]
@@ -60,6 +63,7 @@ class SudokuBoard:
 	
 	def check_potential(self, pos):
 		"""
+		
 		Refreshes the list of potentials on a given cell
 		"""
 		self.check_row(pos)
@@ -83,18 +87,34 @@ class SudokuBoard:
 		finds = []
 		for col in range(self.size):
 			pos = [col,row]
-			potential_truth_list = self.get_potential(pos)
+			potential_truth_list = self.get_potentials(pos)
 			if potential_truth_list[num-1]:
 				finds.append(col)
 		if len(finds) == 1:
 			foundPos = [finds[0],row]
 			self.write_cell(foundPos, num)
+	
+	def is_potential_unique_in_line(self, statIndex, potential, XorY):
+		finds = []
+		pos = [statIndex, statIndex]
+		for dynIndex in range(self.size):
+			pos[XorY] = dynIndex
+			potential_truth_list = self.get_potentials(pos)
+			if potential_truth_list[potential-1]:
+				finds.append(dynIndex)
+		if len(finds) == 1:
+			foundPos = [statIndex*(1-XorY) + finds[0]*XorY]*2
+			self.write_cell(foundPos, potential)
+		
+	def check_potentials_in_line(self, statIndex, XorY):
+		for potential in range(self.size):
+			self.is_potential_unique_in_line(statIndex, potential, XorY)
 			
 	def is_potential_unique_in_col(self, col, num):
 		finds = []
 		for row in range(self.size):
 			pos = [col,row]
-			potential_truth_list = self.get_potential(pos)
+			potential_truth_list = self.get_potentials(pos)
 			if potential_truth_list[num-1]:
 				finds.append(col)
 		if len(finds) == 1:
@@ -115,7 +135,6 @@ class SudokuBoard:
 			return
 		self.clear_potentials_in_row(pos[1], cell_num)
 		self.clear_potentials_in_col(pos[0], cell_num)
-
 	
 	def is_won(self):
 		for x in range(self.size):
@@ -124,15 +143,12 @@ class SudokuBoard:
 				if cell == 0:
 					return False
 		return True
-	
+		
 	def check_all_potentials(self):
 		old = str(self)
-		for x in range(self.size):
-			for y in range(self.size):
-				self.check_potential([x,y])
-				self.clear_potentials([x,y])
-				self.is_potential_unique_in_row(y)
-			self.is_potential_unique_in_col(x)
+		for XorY in [0,1]:
+			for index in range(self.size):
+				self.check_potentials_in_line(index, XorY)
 		new = str(self)
 		if new != old:
 			self.check_all_potentials()

@@ -1,104 +1,509 @@
 #!/bin/bash
 
-7z x data.zip -y -ounzipped -p000 -so
-7z x data.zip -y -ounzipped -p001 -so
-7z x data.zip -y -ounzipped -p002 -so
-7z x data.zip -y -ounzipped -p003 -so
-7z x data.zip -y -ounzipped -p004 -so
-7z x data.zip -y -ounzipped -p005 -so
-7z x data.zip -y -ounzipped -p006 -so
-7z x data.zip -y -ounzipped -p007 -so
-7z x data.zip -y -ounzipped -p008 -so
-7z x data.zip -y -ounzipped -p009 -so
-7z x data.zip -y -ounzipped -p010 -so
-7z x data.zip -y -ounzipped -p011 -so
-7z x data.zip -y -ounzipped -p012 -so
-7z x data.zip -y -ounzipped -p013 -so
-7z x data.zip -y -ounzipped -p014 -so
-7z x data.zip -y -ounzipped -p015 -so
-7z x data.zip -y -ounzipped -p016 -so
-7z x data.zip -y -ounzipped -p017 -so
-7z x data.zip -y -ounzipped -p018 -so
-7z x data.zip -y -ounzipped -p019 -so
-7z x data.zip -y -ounzipped -p020 -so
-7z x data.zip -y -ounzipped -p021 -so
-7z x data.zip -y -ounzipped -p022 -so
-7z x data.zip -y -ounzipped -p023 -so
-7z x data.zip -y -ounzipped -p024 -so
-7z x data.zip -y -ounzipped -p025 -so
-7z x data.zip -y -ounzipped -p026 -so
-7z x data.zip -y -ounzipped -p027 -so
-7z x data.zip -y -ounzipped -p028 -so
-7z x data.zip -y -ounzipped -p029 -so
-7z x data.zip -y -ounzipped -p030 -so
-7z x data.zip -y -ounzipped -p031 -so
-7z x data.zip -y -ounzipped -p032 -so
-7z x data.zip -y -ounzipped -p033 -so
-7z x data.zip -y -ounzipped -p034 -so
-7z x data.zip -y -ounzipped -p035 -so
-7z x data.zip -y -ounzipped -p036 -so
-7z x data.zip -y -ounzipped -p037 -so
-7z x data.zip -y -ounzipped -p038 -so
-7z x data.zip -y -ounzipped -p039 -so
-7z x data.zip -y -ounzipped -p040 -so
-7z x data.zip -y -ounzipped -p041 -so
-7z x data.zip -y -ounzipped -p042 -so
-7z x data.zip -y -ounzipped -p043 -so
-7z x data.zip -y -ounzipped -p044 -so
-7z x data.zip -y -ounzipped -p045 -so
-7z x data.zip -y -ounzipped -p046 -so
-7z x data.zip -y -ounzipped -p047 -so
-7z x data.zip -y -ounzipped -p048 -so
-7z x data.zip -y -ounzipped -p049 -so
-7z x data.zip -y -ounzipped -p050 -so
-7z x data.zip -y -ounzipped -p051 -so
-7z x data.zip -y -ounzipped -p052 -so
-7z x data.zip -y -ounzipped -p053 -so
-7z x data.zip -y -ounzipped -p054 -so
-7z x data.zip -y -ounzipped -p055 -so
-7z x data.zip -y -ounzipped -p056 -so
-7z x data.zip -y -ounzipped -p057 -so
-7z x data.zip -y -ounzipped -p058 -so
-7z x data.zip -y -ounzipped -p059 -so
-7z x data.zip -y -ounzipped -p060 -so
-7z x data.zip -y -ounzipped -p061 -so
-7z x data.zip -y -ounzipped -p062 -so
-7z x data.zip -y -ounzipped -p063 -so
-7z x data.zip -y -ounzipped -p064 -so
-7z x data.zip -y -ounzipped -p065 -so
-7z x data.zip -y -ounzipped -p066 -so
-7z x data.zip -y -ounzipped -p067 -so
-7z x data.zip -y -ounzipped -p068 -so
-7z x data.zip -y -ounzipped -p069 -so
-7z x data.zip -y -ounzipped -p070 -so
-7z x data.zip -y -ounzipped -p071 -so
-7z x data.zip -y -ounzipped -p072 -so
-7z x data.zip -y -ounzipped -p073 -so
-7z x data.zip -y -ounzipped -p074 -so
-7z x data.zip -y -ounzipped -p075 -so
-7z x data.zip -y -ounzipped -p076 -so
-7z x data.zip -y -ounzipped -p077 -so
-7z x data.zip -y -ounzipped -p078 -so
-7z x data.zip -y -ounzipped -p079 -so
-7z x data.zip -y -ounzipped -p080 -so
-7z x data.zip -y -ounzipped -p081 -so
-7z x data.zip -y -ounzipped -p082 -so
-7z x data.zip -y -ounzipped -p083 -so
-7z x data.zip -y -ounzipped -p084 -so
-7z x data.zip -y -ounzipped -p085 -so
-7z x data.zip -y -ounzipped -p086 -so
-7z x data.zip -y -ounzipped -p087 -so
-7z x data.zip -y -ounzipped -p088 -so
-7z x data.zip -y -ounzipped -p089 -so
-7z x data.zip -y -ounzipped -p090 -so
-7z x data.zip -y -ounzipped -p091 -so
-7z x data.zip -y -ounzipped -p092 -so
-7z x data.zip -y -ounzipped -p093 -so
-7z x data.zip -y -ounzipped -p094 -so
-7z x data.zip -y -ounzipped -p095 -so
-7z x data.zip -y -ounzipped -p096 -so
-7z x data.zip -y -ounzipped -p097 -so
-7z x data.zip -y -ounzipped -p098 -so
-7z x data.zip -y -ounzipped -p099 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p000923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p001923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p002923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p003923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p004923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p005923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p006923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p007923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p008923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p009923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p010923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p011923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p012923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p013923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p014923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p015923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p016923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p017923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p018923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p019923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p020923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p021923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p022923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p023923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p024923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p025923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p026923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p027923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p028923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p029923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p030923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p031923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p032923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p033923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p034923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p035923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p036923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p037923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p038923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p039923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p040923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p041923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p042923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p043923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p044923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p045923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p046923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p047923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p048923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049523 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049623 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049723 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049823 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p049923 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p050023 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p050123 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p050223 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p050323 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p050423 -so
+7z x "TomasB 3-2023 -Zmeny v pracovnej zmluve_ .pdf.zip" -y -ounzipped -p050523 -so
 
-# cat unzipped/data.txt
