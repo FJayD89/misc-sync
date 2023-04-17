@@ -95,6 +95,13 @@ class SudokuBoard:
 			self.write_cell(foundPos, num)
 	
 	def is_potential_unique_in_line(self, statIndex, potential, XorY):
+		"""
+		If a given potential is only found once in a line, make it the value of the cell
+		:param statIndex:
+		:param potential:
+		:param XorY:
+		:return:
+		"""
 		finds = []
 		pos = [statIndex, statIndex]
 		for dynIndex in range(self.size):
@@ -128,11 +135,16 @@ class SudokuBoard:
 	def clear_potentials_in_col(self, col, num):
 		for row in range(self.size):
 			self.remove_potential([col, row], num)
-	
-	def clear_potentials(self, pos):
-		cell_num = self.get_cell(pos)
-		if cell_num == 0:
-			return
+
+	def clear_potentials_in_line(self, statIndex, XorY):
+		for dynIndex in range(self.size):
+			pos = [statIndex*(1-XorY)+dynIndex*XorY]
+			self.remove_potential(pos, num)
+
+	def clear_all_potentials(self):
+		for XorY in [0, 1]:
+			for index in range(self.size):
+				self.clear_potentials_in_line(index, XorY)
 		self.clear_potentials_in_row(pos[1], cell_num)
 		self.clear_potentials_in_col(pos[0], cell_num)
 	
