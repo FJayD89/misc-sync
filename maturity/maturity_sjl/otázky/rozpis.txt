@@ -18,6 +18,11 @@ Gramatika
 17 Nadvetná syntax
 18 Výkladové texty
 19 Vonkajšie(hor)/vnútorné(ver) členenie textu
+20 Expresívne syntaktické konštrukcie
+21 Motivačný list
+22 Slovo, SZ
+23 Obohacovanie SZ
+24 Členenie SZ
 
 Literatúra	
 1 Stredoveka lit na sk
@@ -37,7 +42,16 @@ Literatúra
 15 Netradičná epická próza, prúd autorovho vedomia
 16 Lyrika
 17 WW1
-18 WW2
+18 WW2, Lost Gen
 19 Epos - Gilgameš, Slávy Dcéra, Svätopluk
-20 
-21 
+20 Veľká svetová epika = Zločin a trest, Anna Karenina, Otec Goriot
+21 Veľká epická próza, druhy románu
+22 Avantgarda
+23 Lit. moderna
+24 Rúfus, Válek - poézia 20. st.
+25 Krátka epická próza - poviedka, novela
+26 Humor v Slovenskej dráme.
+27 Dráma ako lit. druh
+28 Fantasy, SciFi, druhy rozprávačov
+29 Symbolizmus
+30 Postmoderna - Mitana, Dušek, Vilikovský

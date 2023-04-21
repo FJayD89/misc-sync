@@ -255,6 +255,7 @@ Mir talk on differatiating relationships, it got really cold
 11.4. = Started on zip password cracking. We know the pass is a date, ddmmyy, but some part of it is wrong. Just a simple brute force, right? How do we automate unzipping? Through console commands maybe? Sure, but that requires running bash scripts, which isn't natively doable on Win. Solution - get WSL, win support for Linux, which basically gets you the full bash experience on Win. Requires an actual distro, I just got ubuntu, though have no idea what it actually is. Works? Nope, 7zip for Win doesn't work in the bash env. Getting new packages in it takes an apt update, got that. Time to learn bash scripting! After slight testing I figured newlines need to be LF, not CRLF. Probably gonna just get a file with a long list of the same command, with a different pass in each. The output is not going to be pretty, though. 
 15. 4. = Got my TU/e results in, 24# bby! Commence dread of having to actually find accommodation. I still have absolutely no clue where I'll be half a year from now.  
 16. 4. = MatNáboj registr dead
+17. = 
 
 21. 4. = MatNáboj
 

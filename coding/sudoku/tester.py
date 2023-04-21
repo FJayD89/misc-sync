@@ -1,7 +1,7 @@
 from main import SudokuBoard
-from decoder import get_setup
+from decoder import get_setup, setup
 
-testSetup = get_setup()
+testSetup = setup()
 
 testBoard = SudokuBoard(testSetup)
 
@@ -12,6 +12,7 @@ print(testBoard.unsolved)
 
 print(testBoard)
 
-testBoard.clear_potentials()
-print()
+testBoard.solve()
 print(testBoard)
+# pots = testBoard.list_potentials([5,3])
+# print(pots)
