@@ -177,8 +177,7 @@ class SudokuBoard:
 		topRight = [index*self.subdiv_size[XorY] % self.size for XorY in [0,1]]
 		for x_index in range(self.subdiv_size[0]):
 			for y_index in range(self.subdiv_size[1]):
-			
-		subdivision.append()
+				subdivision.append([x_index, y_index])
 	
 	def solve_cycle(self):
 		self.refresh_all_potentials()
