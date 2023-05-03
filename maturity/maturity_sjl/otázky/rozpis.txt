@@ -1,8 +1,8 @@
 Gramatika
 1 Schéma tvorby textu
 2 Jazyk a reč
-3 Neplnovýznamové slovné druhy
-4 Administratívny štýl
+3 Slovníky a kodif. príručky
+4 Neplnovýznamové slovné druhy
 5 Publicistický štýl
 6 Rečníckehy štýlu
 7 Slohové postupy + úvaha
@@ -10,7 +10,7 @@ Gramatika
 9 Argument
 10 Veta a súvetie
 11 Objektívne funkčné jazykové štýly
-12 
+12 Administratívny štýl
 13 Neverbálna komunikácia
 14 Verbálna komunikácia
 15 Stylistika
