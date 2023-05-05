@@ -25,7 +25,9 @@ Expr. výrazy
   = deminutíva/augumentatíva
  
  - eufemizmus/dysfemizmus
+  - zjemnenie/zdrsnenie
  - hypokoristiká
+  - pet name/affectionate
  - pejoratíva
   - vulgarizmy
  - 

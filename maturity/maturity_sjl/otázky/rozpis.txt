@@ -1,7 +1,7 @@
 Gramatika
 1 Schéma tvorby textu
 2 Jazyk a reč
-3 Slovníky a kodif. príručky
+3 Slovniky
 4 Neplnovýznamové slovné druhy
 5 Publicistický štýl
 6 Rečníckehy štýlu
@@ -23,6 +23,7 @@ Gramatika
 22 Slovo, SZ
 23 Obohacovanie SZ
 24 Členenie SZ
+25
 
 Literatúra	
 1 Stredoveka lit na sk
@@ -39,10 +40,10 @@ Literatúra
 12 Láska v slovenskej poézii
 13 Expresionizmus
 14 Svetová dráma v Humanizme a Renesancii, Shakespeare, Moliere
-15 Netradičná epická próza, prúd autorovho vedomia
-16 Lyrika
-17 WW1, Lost Gen
-18 WW2
+15 Netradičná epická próza, prúd autorovho vedomia - Kafka, Mitana, Dušek
+16 Lyrika                   
+17 WW1
+18 WW2, Lost Gen
 19 Epos - Gilgameš, Slávy Dcéra, Svätopluk
 20 Veľká svetová epika = Zločin a trest, Anna Karenina, Otec Goriot
 21 Veľká epická próza, druhy románu
