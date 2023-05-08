@@ -23,7 +23,12 @@ Gramatika
 22 Slovo, SZ
 23 Obohacovanie SZ
 24 Členenie SZ
-25
+25 Bibliografický záznam
+26 Jazykové prostriedky
+27 Funkcie jazykového prejavu
+28 Osnova, koncept, anotácia
+29 Vývin spisovného jazyka
+30 Jazykové rodiny
 
 Literatúra	
 1 Stredoveka lit na sk
