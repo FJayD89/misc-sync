@@ -1,0 +1,5 @@
+XorringPokec
+
+So I open up Can You Hack It, find my solved stuff all gone, look for an ID, and I find one with 240 pts. Not great. Either I find a better ID, or actually go solve the problems again. Let's solve. 
+
+For xorring, I have my old code, but no idea how it actually worked - I remember the final solution being terribly hacked together, which I'm sorta afraid of. 

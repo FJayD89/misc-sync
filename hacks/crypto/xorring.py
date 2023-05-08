@@ -1,13 +1,19 @@
 plaintext = 'This is a sentence'
 hex_plaintext = '1653474602117a555b0719053f165c1305422e4452021e1633595d071b423b42470f03173e53131218422e5e5646140d3445471402012e5f5c08570d3c164314180528575e154d421358401212033e165c00570b3757540f190b345113121f032e165c13054237575a0857163b4558461e117a425c461e0c2942411314167a571305180f2a43470305422d5e52125716351657095b423653474602117a555c0814073442410703077a4452121f0728165c08570722465f071e0c33585446030d7a5e460b160c7a54560f19052916440e16167a4156460003344213075701355b431303072816470957063518'
 # key_extended =
-short_hex_plaintext = '28fa7f8cd83e8c5b0719053f165c1305422e4452021e1633595d071b423b42470'
+short_hex_plaintext = '0a1d307d1d0730172b700110291535311c0f2f1c207018116615283f1542201d3570050a235237221e0534132a3d1410610167231e172a5c'
 
+test_key = '615a1c'
 banned_chars = '@#$%^&*(){}[]|\\<>`~_=+/'
 banned_nums = [ord(char) for char in banned_chars]
 
 
 def eval_hex_array(hex_str):
+	"""
+
+	:param hex_str:
+	:return:
+	"""
 	hexArray = []
 	length = len(hex_str)
 	if length % 2 == 1:
@@ -56,6 +62,7 @@ key = [90, 54, 51, 102, 119, 98]
 
 decoded = ''
 for i in range(len(nums)):
+	#
 	decoded_num = nums[i] ^ key[i % len(key)]
 	decoded_char = chr(decoded_num)
 	decoded += decoded_char
@@ -65,5 +72,5 @@ for mod_choice in range(6):
 	texts = get_texts(nums, 6, mod_choice)
 	[print(text) for text in texts]
 	print('')
-# print(decoded)
+print(decoded)
 # 90, 54, 51, 102, 119, 98

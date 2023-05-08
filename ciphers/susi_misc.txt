@@ -1,27 +1,34 @@
-Heslo sa končí na písmeno H.
-- skutok, konanie
-akt
-- pohrebná hostina
-kar
-- náter slúžiaci na ochranu povrchu
-lak
-- oprávnená požiadavka, právo
+Terka, viktor, Viki, Havoš, Pajty, Kika či Janči?
 
-- pravidelný jav, kde mesiac neodráža na zem žiadne slnečné lúče
-nov
-- tradičné zariadenie na tepelnú úpravu
-
-- najbežnejší materiál na výrobu fliaš
-
-- nemelodický veľmi hlasný hluk
-- dofotoshopovanie fotografie po zhotovení
-retuš
-- hĺbkové narušenie povrchu alebo predmetu iným, ostrým predmetom
-- používaj stoličku
-- cenný papier, banková poukážka
-- pohyb nahor odrazom nôh od zeme
-- masívny kameň nárečovo
-- mliečny výrobok
-- alternatíva k citoslovcu výskoku, napríklad pri riskovaní
-- považuj za pravdivé, nie nutne z racionálnych dôvodov
-- úvodný akt futbalového zápasu
+Aký je tvoj obľúbený predmet v škole?
+	fyzika: -2 b. Terka
+	hudobná výchova: -3 b. Pajty
+	informatika: 6 b. viktor/Viki
+	matematika: 4 b. Kika 
+	slovenský jazyk: -3 b. Havoš
+	sú viaceré, ale biológia: 0 b. Janči
+Čo zvykneš robiť vo svojom voľnom čase?
+	hrám na gitare: 1 b. Pajty
+	hrám sa s grafikou všetkého druhu: 2 b. Janči
+	chodím na turistiku: -5 b. Kika
+	kadejaké nemysliteľné veci: 4 b. 
+	trávim čas s kamarátmi: -9 b.
+	vymýšľam epické veci: 0 b. viktor
+Ktorá je tvoja obľúbená krajina?
+	Česko: 8 b. viktor/Viki/Pajty
+	Československo: 0 b. Janči
+	Holandsko: 9 b. Havoš
+	Slovensko: 10 b. Kika
+	Veľká Británia: 7 b. Terka
+Čo nosievaš na hlave?
+	klobúk alebo čokoľvek, čo sa naň podobá: 0 b.
+	náhrdelník: 10 b.
+	okuliare: 1 b. Kika/viktor/Pajty
+	rúško: 9b. Havoš
+Aké šifry sa ti najviac páčia?
+	akékoľvek, ktoré nie sú vedomostné: 2 b.
+	geometrické: 1 b.
+	metašifry: 9 b.
+	stimulujúce môj intelekt: 0 b.
+	tie s pekným vzorákom: 4 b.
+	všetky vizuálne pekné: 10 b.
