@@ -3,7 +3,7 @@ from decoder import get_setup, setup
 
 testSetup = setup()
 
-testBoard = SudokuBoard(testSetup)
+testBoard = SudokuBoard(testSetup, 3)
 
 print(testBoard.unsolved)
 
@@ -12,7 +12,9 @@ print(testBoard.unsolved)
 
 print(testBoard)
 
-testBoard.solve()
-print(testBoard)
+print(testBoard.get_subdivision(2))
+
+# testBoard.solve()
+# print(testBoard)
 # pots = testBoard.list_potentials([5,3])
 # print(pots)

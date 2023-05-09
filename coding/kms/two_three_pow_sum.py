@@ -11,6 +11,7 @@ def isSimple(x):
 		return exp
 	return False
 
+
 def isSumLegit(current_sum, added):
 	# deduce future placement
 	if not current_sum:
@@ -41,6 +42,7 @@ def isSumLegit(current_sum, added):
 		return -1
 	return newIndex
 
+
 def islComplex(current_sum, added_list):
 	dynSum = current_sum
 	for item in added_list:
@@ -50,13 +52,16 @@ def islComplex(current_sum, added_list):
 		dynSum = addToSum(dynSum, item, newIndex)
 	return dynSum
 
+
 def addToSum(old_sum, added, new_index):
 	newSum = old_sum[:new_index]
 	newSum.append(added)
 	newSum += old_sum[new_index:]
 	return newSum
 
+
 sumList = []
+
 
 def build_num(goal, min_num, sum_so_far):
 	global sumList
@@ -94,8 +99,7 @@ def format_num_list(n_list):
 	formatted += str(betterList[-1])
 	return formatted
 
-for num in range(1,50):
-	# fix 14
+for num in range(1,200):
 	simplified = isSimple(num)
 	if simplified:
 		sumList.append([simplified])

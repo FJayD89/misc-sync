@@ -1,8 +1,8 @@
 Gramatika
 1 Schéma tvorby textu
 2 Jazyk a reč
-3 Neplnovýznamové slovné druhy
-4 Administratívny štýl
+3 Slovniky
+4 Neplnovýznamové slovné druhy
 5 Publicistický štýl
 6 Rečníckehy štýlu
 7 Slohové postupy + úvaha
@@ -10,7 +10,7 @@ Gramatika
 9 Argument
 10 Veta a súvetie
 11 Objektívne funkčné jazykové štýly
-12 
+12 Administratívny štýl
 13 Neverbálna komunikácia
 14 Verbálna komunikácia
 15 Stylistika
@@ -23,6 +23,12 @@ Gramatika
 22 Slovo, SZ
 23 Obohacovanie SZ
 24 Členenie SZ
+25 Bibliografický záznam
+26 Jazykové prostriedky
+27 Funkcie jazykového prejavu
+28 Osnova, koncept, anotácia
+29 Vývin spisovného jazyka
+30 Jazykové rodiny
 
 Literatúra	
 1 Stredoveka lit na sk
@@ -39,8 +45,8 @@ Literatúra
 12 Láska v slovenskej poézii
 13 Expresionizmus
 14 Svetová dráma v Humanizme a Renesancii, Shakespeare, Moliere
-15 Netradičná epická próza, prúd autorovho vedomia
-16 Lyrika
+15 Netradičná epická próza, prúd autorovho vedomia - Kafka, Mitana, Dušek
+16 Lyrika                   
 17 WW1
 18 WW2, Lost Gen
 19 Epos - Gilgameš, Slávy Dcéra, Svätopluk

@@ -8,7 +8,7 @@ class SudokuBoard:
 		if subdiv_size >= self.size:
 			raise ValueError("Section size is too large!")
 
-		self.subdiv_size = [subdiv_size, self.size/subdiv_size]
+		self.subdiv_size = [subdiv_size, int(self.size/subdiv_size)]
 		# in the x direction
 		
 		self.potentials = [[[True]*self.size for _ in range(self.size)] for _ in range(self.size)]
@@ -174,10 +174,11 @@ class SudokuBoard:
 		Return a list of all the positions in a given subdivision
 		"""
 		subdivision = []
-		topRight = [index*self.subdiv_size[XorY] % self.size for XorY in [0,1]]
+		topRight = [index % self.subdiv_size[XorY] for XorY in [0,1]]
 		for x_index in range(self.subdiv_size[0]):
 			for y_index in range(self.subdiv_size[1]):
-				subdivision.append([x_index, y_index])
+				subdivision.append([topRight[0] + x_index, topRight[1] + y_index])
+		return subdivision
 	
 	def solve_cycle(self):
 		self.refresh_all_potentials()

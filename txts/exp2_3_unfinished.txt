@@ -1,0 +1,28 @@
+[a,b] = 2^a + 3^b = simple numbers
+show if we can work with simples up to n, we can create all until the next simple
+
+if there is such n that can't be written as a sum, n-1
+Let n be the smallest num that can't be written as a sum.
+Thus, all up to n-1 can be
+So there just isn't a valid combination of previous sums that would sum to n
+Actually, just a pair of sums
+For ex., 19 = [0,2] + [1,1] + [2,0] = 
+	([0,2] + [1,1]) + [2,0] = 15 + 4
+	[0,2] + ([1,1] + [2,0]) = 9 + 10
+	
+That's the same as saying there's no sum we could add a simple to make it equal n
+There's only so many simples though, way less than n, that could be a starting point
+
+If you have a sum [a1,b1] + [a2,b2] + ... + [a_n,b_n]
+How many simples can you add?
+Say a1=bn=0, ie worst case
+Well worst case is completed
+
+For at least one simple < n there apparently is 
+
+Take that one, what with it?
+
+[1,2] + [2,1] = 12 + 18 = 30
+
+no asi nič
+30 can't be written with a zero
