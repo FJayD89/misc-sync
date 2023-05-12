@@ -132,10 +132,15 @@ class SudokuBoard:
 		for dynIndex in range(self.size):
 			pos[XorY] = dynIndex
 			self.remove_potential(pos, num)
+			
+	def clear_potential_in_subdivision(self, subdiv_index, num):
+		subdivision = self.get_subdivision(subdiv_index)
+		for dynIndex in range(self.size):
+			self.remove_potential(subdivision[dynIndex], num)
 	
 	def collect_filled_cells_in_line(self, stat_index, XorY):
 		"""
-		Returns a list of filled cells in this row
+		Returns a list of filled cells in this line
 		"""
 		collected = []
 		pos = [stat_index]*2
@@ -174,10 +179,10 @@ class SudokuBoard:
 		Return a list of all the positions in a given subdivision
 		"""
 		subdivision = []
-		topRight = [index % self.subdiv_size[XorY] for XorY in [0,1]]
+		topLeft = [index // self.subdiv_size[XorY] * self.subdiv_size[XorY] for XorY in [0,1]]
 		for x_index in range(self.subdiv_size[0]):
 			for y_index in range(self.subdiv_size[1]):
-				subdivision.append([topRight[0] + x_index, topRight[1] + y_index])
+				subdivision.append([topLeft[0] + x_index, topLeft[1] + y_index])
 		return subdivision
 	
 	def solve_cycle(self):

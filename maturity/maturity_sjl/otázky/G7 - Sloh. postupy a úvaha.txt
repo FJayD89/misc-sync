@@ -1,8 +1,37 @@
-G7 - Sloh. postupy a úvaha
+G7 Slohové postupy + úvaha, text, jazykové štýly
 
-IRozOV/Ú
+Slohové postupy: IRozOV/Ú
+ - charakterizujú formu, na čo sa text používa
+ 
+HARPUN
+ - štýl textu, slovná zásoba, jaz. štýlotvorné prostriedky
+
+- schéma tvorby textu
+ - téma		= je zadaná/vyberie sa téma textu
+ - postup	= na základe témy a cieľa textu sa zvolí vhodný postup
+ - štýl		= na základe cieľovej skupiny a média sa zvolí jaz. štýl
+ - osnova
+ - koncept = nečistopis
+ - čistopis
+ 
+ - konspekt
+ 
+Hovorový sa dá natrepať hocikam 
+
+I -> A,P,
+R -> R,U,
+O -> U(Umelecký opis),N
+V -> A,R,N
 
 Charakterizujte postupy
- - životopis = výklad
+
+
+!! životopis = výklad
 
 Popísať znaky úvahy
+ - subjektívna
+
+Úvahový sloh. postup
+- kinda pod výkladom, ale skôr nie
+- subjektívno-objektívny
+- zvažovanie argumentov, porovnávanie dôležitosti

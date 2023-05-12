@@ -7,7 +7,7 @@ Should work
 
 When searching diacritic-insensitive in notepad++, use regex [[=X=]], where X is the diacriticless char
  - make a plugin for easier support?
- 
+ntw 
 Moto phone beeps on unlock:
 	electronic cards in the case connect to NFC
 
@@ -16,3 +16,9 @@ set ubuntu dim time
 	gsettings set org.gnome.desktop.session idle-delay <seconds>
 screen lock
 	gsettings set org.gnome.desktop.screensaver lock-enabled false
+
+
+NetworkManager not working:
+	ifconfig -a
+	sudo dhclient <ethernet_device>
+	sudo systemctl start NetworkManager
