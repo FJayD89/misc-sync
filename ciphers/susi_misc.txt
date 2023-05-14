@@ -1,5 +1,13 @@
 Terka, viktor, Viki, Havoš, Pajty, Kika či Janči?
 
+T = -2-9+7+10+10= 16 P
+v = 6+0+8+1+	= 	 
+V = 6+4+8+0+1	= 19 T
+H = -3+2+9+9+9	= 26 Z
+P = -3+1+8+1+2	= 9  I
+K = 4-5+10+1+4	= 14 N
+J = 0+1+0+0+0	= 1  A
+
 Aký je tvoj obľúbený predmet v škole?
 	fyzika: -2 b. Terka
 	hudobná výchova: -3 b. Pajty
@@ -8,11 +16,11 @@ Aký je tvoj obľúbený predmet v škole?
 	slovenský jazyk: -3 b. Havoš
 	sú viaceré, ale biológia: 0 b. Janči
 Čo zvykneš robiť vo svojom voľnom čase?
-	hrám na gitare: 1 b. Pajty
-	hrám sa s grafikou všetkého druhu: 2 b. Janči
+	hrám na gitare: 1 b. Pajty/Janči
+	hrám sa s grafikou všetkého druhu: 2 b. Havoš
 	chodím na turistiku: -5 b. Kika
-	kadejaké nemysliteľné veci: 4 b. 
-	trávim čas s kamarátmi: -9 b.
+	kadejaké nemysliteľné veci: 4 b. Viki
+	trávim čas s kamarátmi: -9 b. Terka
 	vymýšľam epické veci: 0 b. viktor
 Ktorá je tvoja obľúbená krajina?
 	Česko: 8 b. viktor/Viki/Pajty
@@ -21,14 +29,14 @@ Ktorá je tvoja obľúbená krajina?
 	Slovensko: 10 b. Kika
 	Veľká Británia: 7 b. Terka
 Čo nosievaš na hlave?
-	klobúk alebo čokoľvek, čo sa naň podobá: 0 b.
-	náhrdelník: 10 b.
+	klobúk alebo čokoľvek, čo sa naň podobá: 0 b. Janči/Viki
+	náhrdelník: 10 b. Terka
 	okuliare: 1 b. Kika/viktor/Pajty
 	rúško: 9b. Havoš
 Aké šifry sa ti najviac páčia?
-	akékoľvek, ktoré nie sú vedomostné: 2 b.
-	geometrické: 1 b.
-	metašifry: 9 b.
-	stimulujúce môj intelekt: 0 b.
-	tie s pekným vzorákom: 4 b.
-	všetky vizuálne pekné: 10 b.
+	akékoľvek, ktoré nie sú vedomostné: 2 b. Pajty
+	geometrické: 1 b. Viki
+	metašifry: 9 b. Havoš
+	stimulujúce môj intelekt: 0 b. Janči
+	tie s pekným vzorákom: 4 b. Kika
+	všetky vizuálne pekné: 10 b. Terka
