@@ -28,6 +28,7 @@ Expr. výrazy
   - zjemnenie/zdrsnenie
  - hypokoristiká
   - pet name/affectionate
- - pejoratíva
-  - vulgarizmy
+ - pejoratíva - hanlivý výraz, slur - do ľudí
+  - vulgarizmy = prívlastky na whatever
+   - telesné/náb.
  - 

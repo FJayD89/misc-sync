@@ -1,14 +1,12 @@
 G15 Stylistika
 
 Členenie SZ podľa príznakovosti
-bez
-podľa niečoho
- obsah textu
-  termíny
-   kancl, publicizmy
-  hovor.
+- bezpríznakové
+- podľa obsahu textu
+ - termíny = kancelarizmy (splatnosť, dávka, lehota => admin. štýl), publicizmy (publ. štýl)
+ - hovor.
   knižné ~ básnické
  pôvod jazyk
- spisovnost
+ spisovnosť
  dobovost - Neo, archo
- expr.
+ expresívne - 
