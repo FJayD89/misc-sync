@@ -1,0 +1,13 @@
+G30 - Jazykové rodiny
+Indoeurópske:
+- germánske
+ - nemčina
+ - holandčina
+ - angličtina
+- románske
+- baltské
+- slovanské
+ - E:CZ, SK, PL
+ - S:HR, BG, MAK
+ - W:RU, UK, BLR
+- keltské

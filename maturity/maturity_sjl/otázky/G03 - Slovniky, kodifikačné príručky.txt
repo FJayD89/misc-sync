@@ -1,0 +1,18 @@
+G3 - Slovníky, kodifikačné príručky
+Hlavné kodif.prír.:
+KSSJ
+PSP - pravopis
+MSJ - morfológia
+PSV - výslovnosť
+Vedľajšie:
+- Cudzích slov
+- synonymický
+- frazeologický
+- prekladové (zvyšok sú výkladové)
+Historické:
+- Filologicko-kritická rozprava o slovenských písmenách
+ - Bernolák, 1787
+- Nauka reči Slovenskej
+ - Štúr, 1846 
+- Krátka mluvnica slovenská
+ - Martin Hattala, 1852

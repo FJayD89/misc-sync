@@ -1,0 +1,14 @@
+G01 - schéma tvorby textu
+
+Štýlotvorný proces:
+	Téma
+	Postup
+	Štýl
+	Žáner
+	Text
+	
+Štýlotvorné činitele:
+- Objektívne: čo určovalo tesxt "nezávisle" od autora
+ - téma, funkcia txtu, adresát, histor. obdobie
+- Subjektívne: prečo ten text nemohol napísať nikto iný
+ - povaha autora, bio. faktory, intelekt, psych. stav,

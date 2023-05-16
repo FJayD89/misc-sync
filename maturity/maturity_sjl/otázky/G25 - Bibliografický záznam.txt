@@ -1,0 +1,33 @@
+G25 - Bibliografický záznam, informácie
+
+Význam informácií
+ - info = správa s údajmi/ponaučením
+ 
+Dezinformácia
+ - zdroje
+
+Pojmová mapa
+
+Záznam
+- Monografia:
+	Autor
+	Názov
+	# vydania 
+	Miesto vydania
+	Vydavateľ
+	Rok vyd.
+	# strán
+	ISBN
+- elektronické dokumenty:
+	Autor
+	Názov
+	(Druh nosiča)
+	Miesto vyd.
+	Vydavateľ
+	Rok vyd.
+	Dátum aktualizácie
+	Dátum citovania
+	Dostupné na <URL>
+	ISBN/ISSN
+
+Resumé
