@@ -1,14 +1,23 @@
 G02 - Jazyk a reč
 
 znaky
+jazyk vs reč 
+j= systém znakov&pravidiel
+r= aplikovaný jazyk
+ - mimojazykové prostriedky
 
-systém
+natural/umelé 
+ - conlanging
 
 Funkcie:
 - komunikatívna
 - estetická
+ - umelecká tvorba
 - poznávacia
+ - vnútorné myslenie
 - reprezentatívna
+ - repuje národ 
+- historická
 
 národný
 cieľový, krajiny kde žijeme
@@ -18,3 +27,9 @@ cudzí
 úradný
 
 nárečia
+- nespisovný jazyk podobný národnému, 
+
+sémantický ∆
+objekt: 'fyzický'
+pojem: ako si v mysli definujeme objekt, najmä podľa vlastností 
+pomenovanie: znaky/fonémy = jazykový znak
