@@ -2,13 +2,22 @@ G01 - schéma tvorby textu
 
 Štýlotvorný proces:
 	Téma
-	Postup
-	Štýl
-	Žáner
-	Text
+ Cieľ =	Postup +	Štýl + Žáner
+ Zhromaždiť info
+ Osnova = body
+ Koncept = nečistopis
+ Úprava konceptu
+	Čistopis
 	
 Štýlotvorné činitele:
 - Objektívne: čo určovalo tesxt "nezávisle" od autora
  - téma, funkcia txtu, adresát, histor. obdobie
 - Subjektívne: prečo ten text nemohol napísať nikto iný
  - povaha autora, bio. faktory, intelekt, psych. stav,
+
+sloh. postup IROV: čo je cieľom textu
+I: fakty, údaje, info o niečom minulom/budúcom 
+R: príbeh, udalosť 
+O: vec, osoba, vlastnosti
+V: etw. obj. vysvetliť
+Ú: podať názor, predstavu
