@@ -2,12 +2,12 @@ G01 - schéma tvorby textu
 
 Štýlotvorný proces:
 	Téma
- Cieľ =	Postup +	Štýl + Žáner
+ Cieľ =	Postup+Štýl+Žáner
  Zhromaždiť info
  Osnova = body
  Koncept = nečistopis
  Úprava konceptu
-	Čistopis
+ Čistopis
 	
 Štýlotvorné činitele:
 - Objektívne: čo určovalo tesxt "nezávisle" od autora
