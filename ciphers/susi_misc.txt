@@ -1,8 +1,8 @@
 Terka, viktor, Viki, Havoš, Pajty, Kika či Janči?
 
 T = -2-9+7+10+10= 16 P
-v = 6+0+8+1+	= 	 
-V = 6+4+8+0+1	= 19 T
+v = 6+0+10+1+1	= 	 U
+V = 6+4+10+0+1	= 21 V
 H = -3+2+9+9+9	= 26 Z
 P = -3+1+8+1+2	= 9  I
 K = 4-5+10+1+4	= 14 N
@@ -23,10 +23,10 @@ Aký je tvoj obľúbený predmet v škole?
 	trávim čas s kamarátmi: -9 b. Terka
 	vymýšľam epické veci: 0 b. viktor
 Ktorá je tvoja obľúbená krajina?
-	Česko: 8 b. viktor/Viki/Pajty
+	Česko: 8 b. Pajty
 	Československo: 0 b. Janči
 	Holandsko: 9 b. Havoš
-	Slovensko: 10 b. Kika
+	Slovensko: 10 b. Kika/viktor/Viki
 	Veľká Británia: 7 b. Terka
 Čo nosievaš na hlave?
 	klobúk alebo čokoľvek, čo sa naň podobá: 0 b. Janči/Viki
@@ -35,7 +35,7 @@ Ktorá je tvoja obľúbená krajina?
 	rúško: 9b. Havoš
 Aké šifry sa ti najviac páčia?
 	akékoľvek, ktoré nie sú vedomostné: 2 b. Pajty
-	geometrické: 1 b. Viki
+	geometrické: 1 b. Viki/viktorq
 	metašifry: 9 b. Havoš
 	stimulujúce môj intelekt: 0 b. Janči
 	tie s pekným vzorákom: 4 b. Kika

@@ -1,11 +1,40 @@
 G24 - členenie SZ
 
 Citovosť
+ Expr. výrazy
+ - zdrobneniny/zveličené slová
+  = deminutíva/augumentatíva
+ 
+ - eufemizmus/dysfemizmus
+  - zjemnenie/zdrsnenie
+ - hypokoristiká
+  - pet name/affectionate
+ - pejoratíva - hanlivý výraz, slur - do ľudí, prenesene, na základe vlastnosti
+  - vulgarizmy = prívlastky na whatever
+   - telesné/náb.
+ - 
 
 Spisovnosť
+- nespisovné:
+ - nárečia
+ - slang
+ - argoty
+ - profesionalizmy
+  - do kanclu
+  
+Obsah
+ - termíny
+ - hovorové
+ - knižné/básn. výrazy
 
 Dobovosť
  - Archaizmy
   - nahradené novším výrazom
  - historizmy
   - zastaraný aj objekt
+  
+ Pôvod
+ - domáce
+ - cudzie:
+  - prevzaté
+  - internacionalizmy

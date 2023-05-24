@@ -4,15 +4,19 @@
 #CaesarCipher
 text = 'AbCdEfGh'
 setting = input('encrypt or decrypt? (e/d)')
-setting = 'd'
+# setting = 'd'
 shift = -1
 if setting == 'c':
 	shift = 1
 	# encrypt 
 encrypted = ''
+upperStart = ord('A')  # 65
+lowerStart = ord('a') # 97
+alphabetLength = 26
+
 for char in text:
 	code = ord(char)
-	if code >= 65 and code <= 65+25:
+	if 65 <= code <= 65+25:
 		newCode = code+3*shift
 		if newCode > 65+25:
 			newCode -=26
@@ -21,7 +25,7 @@ for char in text:
 		encrypted += chr(newCode)
 		continue
 	
-	if code >= 97 and code <= 97+25:
+	if 97 <= code <= 97+25:
 		newCode = code+3*shift
 		if newCode > 97+25:
 			newCode -=26

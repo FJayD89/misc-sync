@@ -1,6 +1,8 @@
 PIE
 proto-indo-european
 
+Praslovančina = čisto skonštruovaný pôvodný jazyk, z ktorého sa vyvinuli všetky ďalšie
+
 863 - K&M
  - Byzancia -> Veľkú Moravu
  - Rastislav -> Michal III

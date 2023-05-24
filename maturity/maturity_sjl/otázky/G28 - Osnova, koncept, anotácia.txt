@@ -1,1 +1,8 @@
 G28 - Osnova, koncept, anotácia
+
+Osnova = bodové zhrnutie textu pred samotnou tvorbou
+
+Koncept = nečistopis, prvotný text ešte určený na opravy
+
+Anotácia = kritické/subjektívne hodnotenie diela 
+ - zahrnuté v bibliografii/citácii

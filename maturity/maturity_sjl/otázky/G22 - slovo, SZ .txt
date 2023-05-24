@@ -6,3 +6,6 @@ G22 - slovo, SZ
    - jadro = najmenej sa podriaďuje zmenám
    - okraj = nové/rýchlo sa meniace slová, aj staré, na pokraji nepoužívanosti
    - spektrum, obvs
+ 
+ - individuálna vs národná SZ
+  - indiv: aktívna/pasívna

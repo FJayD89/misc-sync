@@ -21,3 +21,4 @@ R: príbeh, udalosť
 O: vec, osoba, vlastnosti
 V: etw. obj. vysvetliť
 Ú: podať názor, predstavu
+
