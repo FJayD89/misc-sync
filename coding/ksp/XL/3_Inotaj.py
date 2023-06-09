@@ -15,13 +15,15 @@ def allTuples(max_len, so_far):
 		notAdd.append(False)
 		toAdd.append(add)
 		toAdd.append(notAdd)
-	return
+	return allTuples(max_len, toAdd)
 
 
 for _ in range(iCount):
 	inotaje.append(input())
 
 for inotajLen in range(maxLen):
+	pass
 
 
 print(inotaje)
+print(allTuples(5, []))
