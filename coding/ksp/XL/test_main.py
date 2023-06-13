@@ -1,4 +1,4 @@
-from AerolinkoveCeny import main
+from coding.ksp.XL.Z1.AerolinkoveCeny import main
 
 test1 = [
 	'4 3',
