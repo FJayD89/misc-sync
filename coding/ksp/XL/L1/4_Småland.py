@@ -2,24 +2,41 @@ init = [int(num) for num in input().split(' ')]
 islandCount = init[0]
 queryCount = init[1]
 archipelagae = [{i} for i in range(islandCount)]
+color = [i for i in range(islandCount)]
+archipelagos = [{i} for i in range(islandCount)]
+archSpecialCount = [0 for i in range(islandCount)]
+
 
 def mergeArches(a,b):
-	for island in archipelagae[a]:
-		archipelagae[b].append(island)
-	for island in archipelagae[b]:
-		archipelagae[a].append(island)
+	archA = color[a]
+	archB = color[b]
+	for island in archipelagos[archB]:
+		color[island] = archA
+	
+	archipelagos[archA].update(archipelagos[archB])
+	
+	archSpecialCount[archA] += isSpecial[a] + isSpecial[b]
+	if archA != archB:
+		archSpecialCount[archA] += archSpecialCount[archB]
+
 
 def makeBridge(a,b):
+	global isSpecial
+	mergeArches(a, b)
 	for island in [a,b]:
-		if isSpecial[island] == 2:
+		if isSpecial[island] == 1:
+			isSpecial[island] = -1
 			continue
+		if isSpecial[island] == 0:
+			continue
+			
 		isSpecial[island] += 1
+	
+
 
 def countSpecials(island):
-	score = 0
-	if isSpecial[island] == 0:
-		score = 0
-	print(score)
+	print(archSpecialCount[color[island]])
+
 
 def parseLine(line):
 	args = line.split(' ')
@@ -29,7 +46,8 @@ def parseLine(line):
 	if cmd == '?':
 		countSpecials(int(args[1]))
 
-isSpecial = [0 for _ in range(islandCount)]  # 0 = isolated, 1 = special, 2 = not special
+
+isSpecial = [1 for _ in range(islandCount)]  # 0 = isolated, 1 = special, 2 = not special
 
 for _ in range(queryCount):
 	parseLine(input())
