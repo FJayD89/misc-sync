@@ -5,16 +5,25 @@ archipelagae = [{i} for i in range(islandCount)]
 color = [i for i in range(islandCount)]
 archipelagos = [{i} for i in range(islandCount)]
 archSpecialCount = [0 for i in range(islandCount)]
+# references
+# indexes represent islands
+# if the reference is >=0, it's pointing to another island
+# if negative, do -x-1, that's the # of specials connected to it
+ref = [i for i in range(islandCount)]
+
+
 
 
 def mergeArches(a,b):
+
+
 	archA = color[a]
 	archB = color[b]
 	for island in archipelagos[archB]:
 		color[island] = archA
-	
+
 	archipelagos[archA].update(archipelagos[archB])
-	
+
 	archSpecialCount[archA] += isSpecial[a] + isSpecial[b]
 	if archA != archB:
 		archSpecialCount[archA] += archSpecialCount[archB]

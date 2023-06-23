@@ -349,7 +349,7 @@ mSum = 0
 count = 0
 largest = [0,0]
 smallest = 0
-bigNum = 10**5
+bigNum = 10**7
 largestPrime = bigNum
 # so ceil(sqrt(bigNum)) mistakenly adds 2 nums
 n = 8
@@ -359,10 +359,10 @@ b = 1
 allCombins = {}  # protected
 factSums = [-1 for _ in range(2540160)]  # protected
 
-sieve = makeSieve(largestPrime+1)
-primes = [potential for potential in range(largestPrime) if sieve[potential]]
+Sieve = makeSieve(largestPrime+1)
+Primes = [potential for potential in range(largestPrime) if Sieve[potential]]
 
-def eulerPhi(num):
+def eulerPhi(num, sieve, primes):
 	if sieve[num]:
 		return num-1
 	totient = num
@@ -383,24 +383,25 @@ def eulerPhi(num):
 
 if __name__ == '__main__':
 	startTime = time()
+	print("started")
 	# print(primes)
 	# 62716
 	# someNum = 87109
-	# for i in range(1,10**6):
-	# 	phi = eulerPhi(i)
-	# 	if is_permuted(i, phi):
-	# 		ratio = i/phi
-	# 		if ratio > largest[0]:
-	# 			largest[1] = i
-	# print(largest[1])
+	for i in range(1,10**6):
+		phi = eulerPhi(i, Sieve, Primes)
+		if is_permuted(i, phi):
+			ratio = i/phi
+			if ratio > largest[0]:
+				largest[1] = i
+	print(largest[1])
 	# print(i, i/phi)
-	
-	for i in range(20):
-	# i = 5 # i != 2
-		print(7**i,eulerPhi(7**i))
-	
+
+	# for i in range(7):
+	# # i = 5 # i != 2
+	# 	print(7**i,eulerPhi(7**i, Sieve, Primes))
+
 	# print(eulerPhi(someNum))
-	
+
 	print("done")
 	print('This took', time() - startTime)
 
